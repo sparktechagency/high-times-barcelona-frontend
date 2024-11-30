@@ -1,11 +1,17 @@
-import React from 'react'
+import HowToJoin from '@/components/pages/home/HowToJoin';
+import ExploreClubs from '@/components/pages/home/ExploreClubs';
+import GallerySlider from '@/components/pages/home/GallerySlider';
 
-type Props = {}
+type Props = {};
 
 const HomePage = () => {
-  return (
-    <div>HomePage</div>
-  )
-}
+      return (
+            <main>
+                  <HowToJoin />
+                  <ExploreClubs />
+                  <GallerySlider />
+            </main>
+      );
+};
 
-export default HomePage
+export default HomePage;

@@ -8,6 +8,8 @@ import Logo from '@/assets/images/footer-logo.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Icons
+
 interface SubscribeFormData {
       email: string;
 }
