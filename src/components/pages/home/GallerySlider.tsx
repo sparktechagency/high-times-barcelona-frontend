@@ -73,7 +73,9 @@ const GallerySlider = () => {
             autoplay: true,
             autoplaySpeed: 5000,
             pauseOnHover: true,
-            // customPaging: (i: number) => <div className="w-3 h-3 flex mx-1 rounded-full bg-white transition-colors" />,
+            customPaging: (i: number) => {
+                  return <div className="w-2 h-2 rounded-full bg-primary"></div>;
+            },
 
             // beforeChange: (_: number, next: number) => {
             //       const slides = document.querySelectorAll('.slick-slide');
@@ -99,7 +101,7 @@ const GallerySlider = () => {
                               />
                         </svg>
                   </div>
-                  <div className="absolute right-0 bottom-0 w-[400px] h-[400px] opacity-10 rotate-180">
+                  <div className="absolute right-0 bottom-0 z-[-0] w-[400px] h-[400px] opacity-10 rotate-180">
                         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                               <path
                                     fill="#FFFFFF"
