@@ -75,16 +75,16 @@ const GallerySlider = () => {
             pauseOnHover: true,
             // customPaging: (i: number) => <div className="w-3 h-3 flex mx-1 rounded-full bg-white transition-colors" />,
 
-            beforeChange: (_: number, next: number) => {
-                  const slides = document.querySelectorAll('.slick-slide');
-                  slides.forEach((slide) => {
-                        slide.classList.remove('scale-125', 'z-20');
-                  });
-                  const currentSlide = slides[next + 1];
-                  if (currentSlide) {
-                        currentSlide.classList.add('scale-125', 'z-20', 'rotate-6');
-                  }
-            },
+            // beforeChange: (_: number, next: number) => {
+            //       const slides = document.querySelectorAll('.slick-slide');
+            //       slides.forEach((slide) => {
+            //             slide.classList.remove('scale-125', 'z-20');
+            //       });
+            //       const currentSlide = slides[next + 1];
+            //       if (currentSlide) {
+            //             currentSlide.classList.add('scale-125', 'z-20', '     ');
+            //       }
+            // },
       };
 
       return (
