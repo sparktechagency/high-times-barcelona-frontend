@@ -1,10 +1,24 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Button } from 'antd';
 import Ganja from '@/assets/images/ganja2.svg';
 import Explorer from '@/assets/images/explorer.png';
 import { BsClock, BsGeoAlt, BsStarFill } from 'react-icons/bs';
+
+// Add keyframes animation
+const fadeInAnimation = `
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+`;
 
 // Club data
 const clubs = [
@@ -61,6 +75,16 @@ const clubs = [
 const ExploreClubs = () => {
       const [showAll, setShowAll] = useState(false);
       const displayedClubs = showAll ? clubs : clubs.slice(0, 4);
+
+      // Inject animation styles
+      React.useEffect(() => {
+            const styleSheet = document.createElement("style");
+            styleSheet.textContent = fadeInAnimation;
+            document.head.appendChild(styleSheet);
+            return () => {
+                  document.head.removeChild(styleSheet);
+            };
+      }, []);
 
       const ClubCard = ({ club, index }: { club: (typeof clubs)[0]; index: number }) => (
             <div
