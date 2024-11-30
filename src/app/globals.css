@@ -7,3 +7,11 @@
       font-weight: 400;
       font-style: normal;
 }
+
+.footer-bg {
+      background-image: url('../assets//images/footer-bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #173616;
+}

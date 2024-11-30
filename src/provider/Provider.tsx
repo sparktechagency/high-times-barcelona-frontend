@@ -18,6 +18,12 @@ const Provider = ({ children }: { children: ReactNode }) => {
                                           fontSize: 16,
                                           paddingInline: 24,
                                     },
+                                    Input: {
+                                          controlHeight: 42,
+
+                                          fontSize: 16,
+                                          paddingInline: 24,
+                                    },
                               },
                         }}
                   >

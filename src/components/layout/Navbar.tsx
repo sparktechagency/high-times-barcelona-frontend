@@ -22,9 +22,9 @@ const Navbar = () => {
       const items = [
             { label: 'Home', path: '/' },
 
-            { label: 'About Us', path: '/about-us' },
             { label: 'Cannabis Club', path: '/cannabis-club' },
-            { label: 'FAQ', path: '/faq' },
+            { label: 'FAQs', path: '/faqs' },
+            { label: 'Blogs', path: '/blogs' },
             { label: 'Contact', path: '/contact' },
       ];
       const languageOptions = [
@@ -40,14 +40,8 @@ const Navbar = () => {
             </div>
       );
 
-      const customValue = (option: any) => (
-            <div className="flex items-center gap-2">
-                  <span>{option.shortLabel}</span>
-            </div>
-      );
-
       return (
-            <header className={`bg-[#F9FDF9] shadow-sm`}>
+            <header className={`bg-[#F9FDF9] shadow-lg`}>
                   <nav className="container  h-[96px]  relative z-[99]">
                         <div className="flex justify-between items-center h-full">
                               {/* Logo */}
