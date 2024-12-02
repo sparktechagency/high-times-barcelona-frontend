@@ -55,7 +55,7 @@ const Navbar = () => {
                                     <Image alt="Logo" src={Logo} width={131} height={30} />
                               </Link>
                               {/* Nav Items for Desktop */}
-                              <div className="hidden md:flex bg-secondary/20 p-2 rounded items-center gap-8">
+                              <div className="hidden md:flex bg-secondary/20 p-2 py-4 rounded items-center gap-8">
                                     <NavItems items={items} />
                               </div>
                               <div className="flex items-center space-x-6">

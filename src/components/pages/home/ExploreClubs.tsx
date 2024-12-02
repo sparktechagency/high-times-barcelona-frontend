@@ -131,6 +131,7 @@ const ExploreClubs = () => {
 
                         {/* CTA Button */}
                         <Button
+                              href={`/cannabis-club/${club.id}`}
                               type="primary"
                               style={{
                                     backgroundColor: '#00863D',
