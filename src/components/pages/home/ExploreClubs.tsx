@@ -78,8 +78,14 @@ const ExploreClubs = () => {
 
       // Inject animation styles
       React.useEffect(() => {
-            const styleSheet = document.createElement("style");
-            styleSheet.textContent = fadeInAnimation;
+            const styleSheet = document.createElement('style');
+            styleSheet.textContent =
+                  fadeInAnimation +
+                  `
+                  html {
+                        scroll-behavior: smooth;
+                  }
+            `;
             document.head.appendChild(styleSheet);
             return () => {
                   document.head.removeChild(styleSheet);
@@ -145,7 +151,7 @@ const ExploreClubs = () => {
 
       return (
             <section className="py-20">
-                  <div className="container">
+                  <div id="cannabis-clubs" className="container">
                         {/* Header */}
                         <div className="text-center mb-16">
                               <div className="flex items-center justify-center gap-2 mb-4">

@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Logo from '@/assets/images/logo.png';
 import Ganja from '@/assets/images/ganja.svg';
 
-import { AiOutlineMenu, AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai';
-import { BiWorld } from 'react-icons/bi';
+import { AiOutlineMenu } from 'react-icons/ai';
+
 import { useState } from 'react';
 
 import { usePathname } from 'next/navigation';
@@ -13,20 +13,26 @@ import { Button, Select } from 'antd';
 
 import NavItems from './NavItems';
 import MobileDrawer from './MobileDrawer';
-import { BsArrowDown } from 'react-icons/bs';
 import { TbChevronDown, TbWorld } from 'react-icons/tb';
 
 const Navbar = () => {
       const [showDrawer, setShowDrawer] = useState(false);
       const pathname = usePathname();
-      const items = [
-            { label: 'Home', path: '/' },
-
-            { label: 'Cannabis Club', path: '/cannabis-club' },
-            { label: 'FAQs', path: '/faqs' },
-            { label: 'Blogs', path: '/blogs' },
-            { label: 'Contact', path: '/contact' },
-      ];
+      const items =
+            pathname === '/'
+                  ? [
+                          { label: 'Home', path: '/' },
+                          { label: 'Cannabis Club', path: '/#cannabis-clubs' },
+                          { label: 'FAQs', path: '/faqs' },
+                          { label: 'Blogs', path: '/blogs' },
+                          { label: 'Contact', path: '/contact' },
+                    ]
+                  : [
+                          { label: 'Home', path: '/' },
+                          { label: 'FAQs', path: '/faqs' },
+                          { label: 'Blogs', path: '/blogs' },
+                          { label: 'Contact', path: '/contact' },
+                    ];
       const languageOptions = [
             { value: 'en', label: 'English', shortLabel: 'EN' },
             { value: 'bn', label: 'Bengali', shortLabel: 'BN' },
@@ -49,7 +55,7 @@ const Navbar = () => {
                                     <Image alt="Logo" src={Logo} width={131} height={30} />
                               </Link>
                               {/* Nav Items for Desktop */}
-                              <div className="hidden md:flex bg-secondary/20 p-2 items-center gap-8">
+                              <div className="hidden md:flex bg-secondary/20 p-2 rounded items-center gap-8">
                                     <NavItems items={items} />
                               </div>
                               <div className="flex items-center space-x-6">
