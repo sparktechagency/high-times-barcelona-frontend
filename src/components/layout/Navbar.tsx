@@ -25,13 +25,13 @@ const Navbar = () => {
                           { label: 'Cannabis Club', path: '/#cannabis-clubs' },
                           { label: 'FAQs', path: '/faqs' },
                           { label: 'Blogs', path: '/blogs' },
-                          { label: 'Contact', path: '/contact' },
+                          { label: 'Contact', path: '/contact-us' },
                     ]
                   : [
                           { label: 'Home', path: '/' },
                           { label: 'FAQs', path: '/faqs' },
                           { label: 'Blogs', path: '/blogs' },
-                          { label: 'Contact', path: '/contact' },
+                          { label: 'Contact', path: '/contact-us' },
                     ];
       const languageOptions = [
             { value: 'en', label: 'English', shortLabel: 'EN' },

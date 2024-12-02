@@ -15,7 +15,7 @@ const MembershipRequirements: FC = () => {
       return (
             <div className="bg-white rounded-xl p-6 space-y-6">
                   {/* Top Requirements */}
-                  <div className="flex items-center flex-wrap gap-4">
+                  <div className="flex items-center gap-4">
                         <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-full">
                               <span>
                                     <TiBusinessCard size={20} color="#009343" />
@@ -79,10 +79,13 @@ const MembershipRequirements: FC = () => {
                         </h2>
                         <ul className="space-y-3 list-decimal pl-5">
                               <li>You must be at least 18 years old</li>
-                              <li>You must have a valid ID</li>
-                              <li>You must be a resident of the city</li>
-                              <li>You must agree to the club rules</li>
-                              <li>You must pay the membership fee</li>
+                              <li>Membership requires official identification(Passport, driver Licence, or any governement ID)</li>
+                              <li>A membership to the club is 20 euros per person, which must be paid At the reception.</li>
+                              <li>The only way to be allowed to become a member is to Have an Invitation.</li>
+                              <li>
+                                    This club's membership is valid for a whole year. Once a member, you are free to come and go as often as
+                                    you wish.
+                              </li>
                         </ul>
                   </div>
             </div>
