@@ -2,14 +2,16 @@ import ClubDetailsImage from '@/assets/images/club-details/club-details.png';
 import Image from 'next/image';
 import Gallery from '@/assets/images/club-details/gallery.png';
 import Play from '@/assets/images/club-details/play.png';
-import { BsClock, BsGeoAlt, BsStar, BsStarFill } from 'react-icons/bs';
-import { RiGoogleLine } from 'react-icons/ri';
+import CustomMap from './CustomMap';
+import ClubRatingDetails from './ClubRatingDetails';
+import MembershipRequirements from './MembershipRequirements';
+import MembershipForm from './MembershipForm';
 const CannabisClubDetails = ({ id }: { id: string }) => {
       return (
             <div className="container">
                   <div className="my-10">
-                        <div className="grid grid-cols-2">
-                              <div className="relative">
+                        <div className="grid grid-cols-12 gap-8">
+                              <div className="col-span-12 md:col-span-7 relative">
                                     <Image
                                           src={ClubDetailsImage}
                                           alt="Cannabis Club Details"
@@ -32,38 +34,18 @@ const CannabisClubDetails = ({ id }: { id: string }) => {
                                           </div>
                                     </div>
                               </div>
-                              <div>
-                                    <div className="bg-[#f4fcf5] rounded-xl p-6 ml-6">
-                                          <div className="flex items-center gap-2 mb-4">
-                                                <RiGoogleLine size={24} color="#FFC313" />
-                                                <div className="flex items-center gap-2">
-                                                      <span className="font-semibold">
-                                                            <BsStarFill size={20} color="#FFC313" />
-                                                      </span>
-                                                      <span>4.8</span>
-                                                      <span className="">(110 reviews)</span>
-                                                </div>
-                                          </div>
+                              <div className="col-span-12 md:col-span-5 space-y-6">
+                                    <ClubRatingDetails />
+                                    <CustomMap />
+                              </div>
+                        </div>
 
-                                          <div className="space-y-4">
-                                                <div className="flex items-center gap-2">
-                                                      <BsGeoAlt size={24} color="#FFC313" className=" mt-1" />
-                                                      <span>Tetuan /Monumental, Barcelona</span>
-                                                </div>
-
-                                                <div className="flex items-center gap-2">
-                                                      <BsClock size={24} color="#FFC313" className=" mt-1" />
-                                                      <div className="flex gap-3">
-                                                            <p>Mon-Sat</p>
-                                                            <p>10:00 - 23:00</p>
-                                                      </div>
-                                                </div>
-
-                                                <div className="inline-block border border-primary bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">
-                                                      Open
-                                                </div>
-                                          </div>
-                                    </div>
+                        <div className="grid grid-cols-12 gap-8">
+                              <div className="col-span-12 md:col-span-7">
+                                    <MembershipRequirements />
+                              </div>
+                              <div className="col-span-12 md:col-span-5  mt-4">
+                                    <MembershipForm />
                               </div>
                         </div>
                   </div>

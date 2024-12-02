@@ -24,6 +24,11 @@ const Provider = ({ children }: { children: ReactNode }) => {
                                           fontSize: 16,
                                           paddingInline: 24,
                                     },
+                                    Form: {
+                                          marginLG: 12,
+                                    },
+
+                                    Radio: {},
                               },
                         }}
                   >
