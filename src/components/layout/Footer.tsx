@@ -37,7 +37,7 @@ const linkSections = [
                   { label: 'Privacy Policy', href: '#' },
                   { label: 'Terms & Conditions', href: '#' },
                   { label: 'Weed Map', href: '#' },
-                  { label: 'Add Your Club', href: '#' },
+                  { label: 'Add Your Club', href: '/new-club' },
             ],
       },
 ];
