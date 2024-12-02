@@ -56,7 +56,7 @@ const EssentialItems = () => {
                                                 key={item.title}
                                                 className="bg-white border border-primary rounded-xl p-6 flex gap-4 items-start shadow-sm transition-transform duration-300 hover:scale-[1.02]"
                                           >
-                                                <div className="bg-[#E7F6ED] p-3 rounded-xl">
+                                                <div className="bg-[#E7F6ED] min-w-[80px] h-[80px] rounded-full">
                                                       <Image src={item.icon} alt={item.title} className="size-[80px] m-auto" />
                                                 </div>
                                                 <div>

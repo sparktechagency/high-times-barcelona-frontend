@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import SliderImage from '@/assets/images/image-slider.jpg';
 import 'slick-carousel/slick/slick.css';
+import SectionBackground from '@/components/ui/SectionBackgound';
 // Gallery data
 const galleryImages = [
       {
@@ -91,25 +92,7 @@ const GallerySlider = () => {
 
       return (
             <section className="py-20 bg-[#002611] relative overflow-hidden">
-                  {/* Background Pattern */}
-                  <div className="absolute left-0 top-0 w-[400px] h-[400px] opacity-10">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                    fill="#FFFFFF"
-                                    d="M47.5,-61.5C59.2,-52.9,65,-35.9,67.7,-19.2C70.4,-2.5,69.9,14,63.1,27.2C56.3,40.4,43.2,50.4,28.6,57.3C14,64.2,-2.1,68,-17.9,65.2C-33.7,62.4,-49.2,53,-61.3,38.7C-73.4,24.4,-82.1,5.3,-78.9,-11.6C-75.7,-28.5,-60.6,-43.2,-44.8,-51.1C-29,-59,-14.5,-60.1,2.1,-62.8C18.7,-65.5,37.4,-69.8,47.5,-61.5Z"
-                                    transform="translate(100 100)"
-                              />
-                        </svg>
-                  </div>
-                  <div className="absolute right-0 bottom-0 z-[-0] w-[400px] h-[400px] opacity-10 rotate-180">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                    fill="#FFFFFF"
-                                    d="M47.5,-61.5C59.2,-52.9,65,-35.9,67.7,-19.2C70.4,-2.5,69.9,14,63.1,27.2C56.3,40.4,43.2,50.4,28.6,57.3C14,64.2,-2.1,68,-17.9,65.2C-33.7,62.4,-49.2,53,-61.3,38.7C-73.4,24.4,-82.1,5.3,-78.9,-11.6C-75.7,-28.5,-60.6,-43.2,-44.8,-51.1C-29,-59,-14.5,-60.1,2.1,-62.8C18.7,-65.5,37.4,-69.8,47.5,-61.5Z"
-                                    transform="translate(100 100)"
-                              />
-                        </svg>
-                  </div>
+                  <SectionBackground />
 
                   <div className="container relative">
                         {/* Header */}

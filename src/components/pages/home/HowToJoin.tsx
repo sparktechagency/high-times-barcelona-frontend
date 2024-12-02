@@ -6,12 +6,10 @@ import ClubIcon from '@/assets/images/club.png';
 import InvitationIcon from '@/assets/images/invite.png';
 import HandshakeIcon from '@/assets/images/handshake.png';
 import EditIcon from '@/assets/images/edit.png';
-
 import Ganja from '@/assets/images/ganja2.svg';
-import HowToJoinBgImage from '@/assets/images/how-to-join-bg.png';
-import Earth from '@/assets/images/earth-round.png';
 import Link from 'next/link';
 import { Button } from 'antd';
+import SectionBackground from '@/components/ui/SectionBackgound';
 const steps = [
       {
             id: '01',
@@ -43,14 +41,7 @@ const HowToJoin = () => {
       return (
             <section className="relative bg-how-to-join bg-[#033f1b] py-20">
                   {/* Background Pattern */}
-                  <div className="absolute inset-0 overflow-hidden">
-                        <div className="absolute left-10 top-0 w-[400px] h-[400px] opacity-100">
-                              <Image src={HowToJoinBgImage.src} alt="pattern" width={400} height={400} className="object-contain" />
-                        </div>
-                        <div className="absolute right-0 top-10 w-[400px] h-[400px] opacity-100">
-                              <Image src={Earth.src} alt="pattern" width={250} height={250} className="object-contain" />
-                        </div>
-                  </div>
+                  <SectionBackground />
                   <div className="container relative z-10">
                         {/* Heading */}
                         <div className="text-center mb-8 md:mb-16 px-4">
