@@ -3,10 +3,13 @@ import ExploreClubs from '@/components/pages/home/ExploreClubs';
 import GallerySlider from '@/components/pages/home/GallerySlider';
 import EssentialItems from '@/components/pages/home/EssentialItems';
 import InsideTheClub from '@/components/pages/home/InsideTheClub';
+import FAQSection from '@/components/pages/home/FAQSection';
+import ClubGuideLines from '@/components/pages/home/ClubGuideLines';
+import LeavingClub from '@/components/pages/home/LeavingClub';
 
 type Props = {};
 
-const HomePage = () => {
+const HomePage = ({}: Props) => {
       return (
             <main>
                   <HowToJoin />
@@ -14,6 +17,9 @@ const HomePage = () => {
                   <GallerySlider />
                   <EssentialItems />
                   <InsideTheClub />
+                  <FAQSection />
+                  <ClubGuideLines />
+                  <LeavingClub />
             </main>
       );
 };

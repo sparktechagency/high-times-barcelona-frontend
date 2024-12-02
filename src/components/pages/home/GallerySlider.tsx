@@ -91,7 +91,7 @@ const GallerySlider = () => {
       };
 
       return (
-            <section className="py-20 bg-[#002611] relative overflow-hidden">
+            <section className="py-20 bg-[#033f1b] relative overflow-hidden">
                   <SectionBackground />
 
                   <div className="container relative">
