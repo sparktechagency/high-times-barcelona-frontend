@@ -6,6 +6,7 @@ import InsideTheClub from '@/components/pages/home/InsideTheClub';
 import FAQSection from '@/components/pages/home/FAQSection';
 import ClubGuideLines from '@/components/pages/home/ClubGuideLines';
 import LeavingClub from '@/components/pages/home/LeavingClub';
+import ClubVibe from '@/components/pages/home/ClubVibe';
 
 type Props = {};
 
@@ -20,6 +21,7 @@ const HomePage = ({}: Props) => {
                   <FAQSection />
                   <ClubGuideLines />
                   <LeavingClub />
+                  <ClubVibe />
             </main>
       );
 };

@@ -39,7 +39,7 @@ const leavingClubData = [
 
 const LeavingClub = () => {
       return (
-            <section className="py-20 bg-[#ebf8ed] relative">
+            <section className="py-32 bg-[#ebf8ed] relative">
                   <div className="container relative">
                         {/* Header */}
                         <div className="text-center mb-16">
