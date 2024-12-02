@@ -15,6 +15,12 @@
       background-repeat: no-repeat;
       background-color: #033f1b;
 }
+.page-header-bg {
+      background-image: url('../assets//images/page-header-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+}
 
 /* Gallery Slider Styles */
 .gallery-slider .slick-slide {
