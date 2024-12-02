@@ -7,6 +7,8 @@ import FAQSection from '@/components/pages/home/FAQSection';
 import ClubGuideLines from '@/components/pages/home/ClubGuideLines';
 import LeavingClub from '@/components/pages/home/LeavingClub';
 import ClubVibe from '@/components/pages/home/ClubVibe';
+import ClubRules from '@/components/pages/home/ClubRules';
+import BasicVocabulary from '@/components/pages/home/BasicVocabulary';
 
 type Props = {};
 
@@ -22,6 +24,8 @@ const HomePage = ({}: Props) => {
                   <ClubGuideLines />
                   <LeavingClub />
                   <ClubVibe />
+                  <ClubRules />
+                  <BasicVocabulary />
             </main>
       );
 };

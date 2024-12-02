@@ -21,7 +21,7 @@ const InsideTheClub = () => {
                         </h2>
 
                         {/* Content Grid */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                               {/* Dispensary Section */}
                               <div>
                                     <div className="bg-white rounded-3xl p-6 overflow-hidden">
@@ -46,7 +46,7 @@ const InsideTheClub = () => {
                                                 enhance your experience.
                                           </p>
                                     </div>
-                                    <div className="mt-12 flex gap-6 items-center ">
+                                    <div className="mt-6 flex gap-6 items-center ">
                                           <div className="bg-white flex justify-center items-center w-[159px] h-[143px] p-5 rounded-xl ">
                                                 <Image
                                                       src={cannabisLeaf}
@@ -65,7 +65,7 @@ const InsideTheClub = () => {
                               </div>
 
                               {/* Right Side Sections */}
-                              <div className="space-y-8">
+                              <div className="space-y-6">
                                     {/* Lounge Zone */}
                                     <div className="bg-white rounded-3xl p-6">
                                           <div className="flex justify-between items-start gap-6">
