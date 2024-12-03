@@ -1,18 +1,16 @@
 'use client';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Icon } from 'leaflet';
 import L, { Map } from 'leaflet';
 import MarkerImage from '@/assets/images/maps/marker.svg';
 import MapCardImage from '@/assets/images/maps/map-card.jpg';
-
 import Image from 'next/image';
-
 import { Clock, Star } from 'lucide-react';
 import { LuMapPin } from 'react-icons/lu';
-import { AutoComplete, ConfigProvider, Input } from 'antd';
-import ResetView from './ResetView';
+import { AutoComplete, Input } from 'antd';
 import { useState, useEffect } from 'react';
+import ResetView from './ResetView';
 
 const ClubMap = () => {
       const [searchQuery, setSearchQuery] = useState('');
@@ -128,7 +126,7 @@ const ClubMap = () => {
       }));
 
       return (
-            <div className="container py-20">
+            <div className="">
                   <div className="relative">
                         <MapContainer center={[41.3851, 2.1734]} zoom={13} style={{ height: '600px', width: '100%' }} ref={setMap}>
                               <div className="search-bar absolute top-4 left-20 z-[1000]">
