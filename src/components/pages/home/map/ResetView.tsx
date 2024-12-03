@@ -1,12 +1,16 @@
 import Image from 'next/image';
 import MarkerImage2 from '@/assets/images/maps/markar2.svg';
 import { useMap } from 'react-leaflet';
-
-const ResetView = ({ center }: { center: [number, number] }) => {
+interface ResetViewProps {
+      center?: [number, number];
+      onReset?: () => void;
+}
+const ResetView = ({ center = [40.7128, -74.006], onReset }: ResetViewProps) => {
       const map = useMap();
 
       const handleResetView = () => {
             map.setView(center, 13);
+            onReset?.();
       };
 
       return (
