@@ -8,7 +8,7 @@ const ContactInfo: FC = () => {
             <div className="container py-20">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Phone Number */}
-                        <div className="bg-white drop-shadow-lg rounded-xl p-8 text-center border border-t-[10px] border-t-[#005125]">
+                        <div className="bg-white drop-shadow-lg rounded-xl p-8 text-center border border-t-[10px] border-t-primary">
                               <div className="w-20 h-20 mx-auto bg-[#F2FFF5] rounded-full flex items-center justify-center mb-6">
                                     <Image src={Tele} alt="Phone" />
                               </div>
@@ -20,7 +20,7 @@ const ContactInfo: FC = () => {
                         </div>
 
                         {/* Email */}
-                        <div className="bg-white drop-shadow-lg rounded-xl p-8 text-center border border-t-[10px] border-t-[#005125]">
+                        <div className="bg-white drop-shadow-lg rounded-xl p-8 text-center border border-t-[10px] border-t-primary">
                               <div className="w-20 h-20 mx-auto bg-[#F2FFF5] rounded-full flex items-center justify-center mb-6">
                                     <Image src={Email} alt="Email" />
                               </div>
@@ -32,7 +32,7 @@ const ContactInfo: FC = () => {
                         </div>
 
                         {/* Address */}
-                        <div className="bg-white drop-shadow-lg rounded-xl p-8 text-center border border-t-[10px] border-t-[#005125]">
+                        <div className="bg-white drop-shadow-lg rounded-xl p-8 text-center border border-t-[10px] border-t-primary">
                               <div className="w-20 h-20 mx-auto bg-[#F2FFF5] rounded-full flex items-center justify-center mb-6">
                                     <Image src={Location} alt="Location" />
                               </div>

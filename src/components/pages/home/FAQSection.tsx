@@ -1,9 +1,5 @@
 'use client';
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
@@ -54,11 +50,11 @@ export default function FAQSection() {
       ];
 
       return (
-            <section className="py-20 bg-[#ebf8ed]">
+            <section className="py-20 bg-gradient-to-b from-[#F8F8F899] to-[#F2FFF4]">
                   <div className="container">
                         <div className="text-center mb-16">
                               <div className="flex items-center justify-center gap-2 mb-4">
-                                    <Image src={Ganja} alt="Cannabis" className="size-12" />
+                                    <Image width={100} height={100} src={Ganja} alt="Cannabis" className="size-12" />
                                     <h2 className="text-3xl md:text-5xl font-medium text-[#1A1A1A]">Frequently</h2>
                               </div>
                               <h3 className="text-3xl md:text-5xl font-medium text-primary">Asked Questions</h3>
@@ -89,7 +85,7 @@ export default function FAQSection() {
                         >
                               {faqData.map((faq, index) => (
                                     <SwiperSlide key={index}>
-                                          <div className="bg-white rounded-[32px] p-8 shadow-sm h-full flex flex-col">
+                                          <div className="bg-white rounded-2xl p-8 shadow-sm h-full flex flex-col border-t-[5px] border-t-primary">
                                                 <div className="mb-6">
                                                       <Image
                                                             src={faq.icon}

@@ -4,7 +4,7 @@ const PopularTag = () => {
       const tags = ['New', 'Cannabis', 'Spain', 'Barcelona', 'Weed', 'Smoke'];
 
       return (
-            <div className="bg-white rounded-lg shadow-sm p-6 border-t-[5px] border-t-[#005125] mt-3">
+            <div className="bg-white rounded-lg shadow-sm p-6 border-t-[5px] border-t-primary mt-3">
                   <h2 className="text-2xl font-medium text-[#3F3F3F] mb-6">Popular Tag</h2>
                   <div className="flex flex-wrap gap-3">
                         {tags.map((tag, index) => (

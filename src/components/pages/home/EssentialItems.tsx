@@ -31,7 +31,7 @@ const essentialItems = [
 
 const EssentialItems = () => {
       return (
-            <section className="py-20 bg-[#F8F8F899]">
+            <section className="py-20 bg-gradient-to-b from-[#F8F8F899] to-[#F2FFF4]">
                   <div className="container">
                         {/* Header */}
                         <div className="text-center mb-16">

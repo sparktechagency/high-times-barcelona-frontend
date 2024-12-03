@@ -7,7 +7,7 @@ type TBlogsProps = { title: string; author: string; date: string; description: s
 
 const BlogCard = ({ blog }: { blog: TBlogsProps }) => {
       return (
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow border-t-[5px] border-t-[#005125] p-2 h-full">
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow border-t-[5px] border-t-primary p-2 h-full">
                   <div className="flex flex-col h-full">
                         <img src={blog.image.src} alt={blog.title} className="w-full h-48 object-cover flex-1" />
                         <div className="p-4 flex flex-col justify-between flex-1">

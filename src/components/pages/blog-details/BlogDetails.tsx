@@ -4,7 +4,7 @@ import BlogDetailsImage from '@/assets/images/blogs/blog-details.png';
 export default function BlogDetails() {
       return (
             <div className="bg-[#F8F8F8] py-10 ">
-                  <article className="container  bg-white border-t-[5px] border-t-[#005125] rounded-lg">
+                  <article className="container  bg-white border-t-[5px] border-t-primary rounded-lg">
                         {/* Hero Image */}
                         <div className="relative w-full  rounded-lg pt-4">
                               <Image

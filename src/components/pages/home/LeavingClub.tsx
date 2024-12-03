@@ -39,7 +39,7 @@ const leavingClubData = [
 
 const LeavingClub = () => {
       return (
-            <section className="py-32 bg-[#ebf8ed] relative">
+            <section className="py-32 bg-gradient-to-b from-[#F8F8F899] to-[#F2FFF4] relative">
                   <div className="container relative">
                         {/* Header */}
                         <div className="text-center mb-16">
@@ -51,8 +51,8 @@ const LeavingClub = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
                               {leavingClubData.map((leavingClub, index) => (
-                                    <div key={index} className="bg-white rounded-[32px] p-8 shadow-sm">
-                                          <div className="bg-[#ebf8ed] rounded-full size-[70px] flex items-center justify-center mb-6">
+                                    <div key={index} className="bg-white rounded-[32px] p-8 shadow-sm border-t-[5px] border-t-primary">
+                                          <div className="bg-gradient-to-b from-[#F8F8F899] to-[#F2FFF4] rounded-full size-[70px] flex items-center justify-center mb-6">
                                                 <Image
                                                       src={leavingClub.icon}
                                                       alt={leavingClub.title.part1}

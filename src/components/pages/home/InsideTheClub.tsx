@@ -5,9 +5,9 @@ import Image from 'next/image';
 // Import images
 
 import cannabisLeaf from '@/assets/images/ganja-leaf.png';
-import clubImage from '@/assets/images/inside.png';
-import coworkingSpace from '@/assets/images/inside1.png';
+import clubImage from '@/assets/images/inside2.svg';
 import medicalPlant from '@/assets/images/inside2.png';
+import InsideImage from '@/assets/images/inside.png';
 import SectionBackground from '@/components/ui/SectionBackgound';
 
 const InsideTheClub = () => {
@@ -24,12 +24,12 @@ const InsideTheClub = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                               {/* Dispensary Section */}
                               <div>
-                                    <div className="bg-white rounded-3xl p-6 overflow-hidden">
+                                    <div className="bg-[#F9FDF9] rounded-3xl p-6 overflow-hidden">
                                           <div className="rounded-2xl overflow-hidden mb-6">
                                                 <Image
                                                       height={320}
                                                       width={320}
-                                                      src={medicalPlant}
+                                                      src={clubImage}
                                                       alt="Dispensary"
                                                       className="w-full h-[320px] object-cover"
                                                 />
@@ -47,7 +47,7 @@ const InsideTheClub = () => {
                                           </p>
                                     </div>
                                     <div className="mt-6 flex gap-6 items-center ">
-                                          <div className="bg-white flex justify-center items-center w-[159px] h-[143px] p-5 rounded-xl ">
+                                          <div className="bg-[#F9FDF9] flex justify-center items-center w-[159px] h-[143px] p-5 rounded-xl ">
                                                 <Image
                                                       src={cannabisLeaf}
                                                       alt="Leaf Icon"
@@ -55,7 +55,7 @@ const InsideTheClub = () => {
                                                 ] "
                                                 />
                                           </div>
-                                          <div className="bg-white flex justify-center items-center w-[100%] h-[143px] p-5 rounded-xl ">
+                                          <div className="bg-[#F9FDF9] flex justify-center items-center w-[100%] h-[143px] p-5 rounded-xl ">
                                                 <p className="">
                                                       <span className="font-bold">N.B.</span> Members are restricted to a monthly
                                                       consumption limit of 100 grams per person, promoting responsible and balanced usage.
@@ -65,9 +65,9 @@ const InsideTheClub = () => {
                               </div>
 
                               {/* Right Side Sections */}
-                              <div className="space-y-6">
+                              <div className="space-y-4">
                                     {/* Lounge Zone */}
-                                    <div className="bg-white rounded-3xl p-6">
+                                    <div className="bg-[#F9FDF9] rounded-3xl p-6">
                                           <div className="flex justify-between items-start gap-6">
                                                 <div>
                                                       <h3 className="text-2xl  mb-4">
@@ -84,7 +84,7 @@ const InsideTheClub = () => {
                                                 </div>
                                                 <div className="min-w-[263px] h-[315px]">
                                                       <Image
-                                                            src={clubImage}
+                                                            src={medicalPlant}
                                                             alt="Lounge Zone"
                                                             className="w-full h-full object-cover rounded-xl"
                                                       />
@@ -93,7 +93,7 @@ const InsideTheClub = () => {
                                     </div>
 
                                     {/* Coworking Area */}
-                                    <div className="bg-white rounded-3xl p-6">
+                                    <div className="bg-[#F9FDF9] rounded-3xl p-6">
                                           <div className="flex justify-between items-start gap-6">
                                                 <div>
                                                       <h3 className="text-2xl  mb-4">
@@ -110,7 +110,7 @@ const InsideTheClub = () => {
                                                 </div>
                                                 <div className="min-w-[263px] h-[315px]">
                                                       <Image
-                                                            src={coworkingSpace}
+                                                            src={InsideImage}
                                                             alt="Coworking Area"
                                                             className="w-full h-full object-cover rounded-xl"
                                                       />

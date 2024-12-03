@@ -3,7 +3,7 @@ import { RiGoogleLine } from 'react-icons/ri';
 
 const ClubRatingDetails = () => {
       return (
-            <div className="bg-[#f4fcf5] rounded-xl p-6 ">
+            <div className="bg-[#f4fcf5] rounded-xl p-6 border-t-[5px] border-t-primary ">
                   <div className="flex items-center gap-2 mb-4">
                         <RiGoogleLine size={24} color="#FFC313" />
                         <div className="flex items-center gap-2">

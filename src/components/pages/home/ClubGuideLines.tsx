@@ -92,8 +92,11 @@ const ClubGuideLines = () => {
                         >
                               {guidelineData.map((guideline, index) => (
                                     <SwiperSlide key={index}>
-                                          <div key={index} className="bg-white rounded-[32px] p-8 shadow-sm">
-                                                <div className="bg-[#ebf8ed] rounded-full size-[70px] flex items-center justify-center mb-6">
+                                          <div
+                                                key={index}
+                                                className="bg-white rounded-[32px] p-8 shadow-sm border-t-[5px] border-t-primary"
+                                          >
+                                                <div className="bg-gradient-to-b from-[#F8F8F899] to-[#F2FFF4] rounded-full size-[70px] flex items-center justify-center mb-6">
                                                       <Image
                                                             src={guideline.icon}
                                                             alt={guideline.title.part1}

@@ -73,7 +73,7 @@ const BasicVocabulary = () => {
             }));
 
       return (
-            <section className="py-20 bg-[#fafbfa]">
+            <section className="py-20 bg-gradient-to-b from-[#F8F8F899] to-[#F2FFF4]">
                   <div className="container">
                         <div className="flex flex-col items-center mb-16">
                               <Image src={Ganja} alt="Cannabis" width={40} height={40} className="mb-4" />

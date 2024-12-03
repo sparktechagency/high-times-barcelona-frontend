@@ -57,7 +57,7 @@ const blogs = [
 
 const PopularBlog = () => {
       return (
-            <div className="bg-white border-t-[5px] border-t-[#005125] rounded-xl p-2">
+            <div className="bg-white border-t-[5px] border-t-primary rounded-xl p-2">
                   <div className="search-bar pt-10 ">
                         <ConfigProvider theme={{ token: { colorPrimary: '#0E7A31' } }}>
                               <Input
