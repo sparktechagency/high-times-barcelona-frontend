@@ -1,4 +1,4 @@
-import BlogsSection from '@/components/blogs/BlogsSection';
+import BlogsSection from '@/components/pages/blogs/BlogsSection';
 import PageHeader from '@/components/shared/PageHeader';
 
 const Blogspage = () => {
