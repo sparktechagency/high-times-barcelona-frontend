@@ -10,7 +10,7 @@ import Image from 'next/image';
 import { Clock, Star } from 'lucide-react';
 import { LuMapPin } from 'react-icons/lu';
 import { Input } from 'antd';
-import ResetView from './map/ResetView';
+import ResetView from './ResetView';
 
 const ClubMap = () => {
       const clubs = [
