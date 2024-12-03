@@ -1,4 +1,5 @@
 import BlogDetails from '@/components/pages/blog-details/BlogDetails';
+import RelativeBlogs from '@/components/pages/blog-details/RelativeBlogs';
 import PageHeader from '@/components/shared/PageHeader';
 
 const BlogDetailsPage = () => {
@@ -6,6 +7,7 @@ const BlogDetailsPage = () => {
             <div>
                   <PageHeader title="Blog Details" />
                   <BlogDetails />
+                  <RelativeBlogs />
             </div>
       );
 };
