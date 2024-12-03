@@ -1,10 +1,7 @@
 import { Button } from 'antd';
 import { Calendar } from 'lucide-react';
 import { StaticImageData } from 'next/image';
-import Link from 'next/link';
-import React from 'react';
 import { LiaUserEditSolid } from 'react-icons/lia';
-import { PiUserGearDuotone } from 'react-icons/pi';
 
 type TBlogsProps = { title: string; author: string; date: string; description: string; readMoreLink: string; image: StaticImageData };
 

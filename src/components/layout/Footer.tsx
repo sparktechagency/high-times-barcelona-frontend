@@ -34,8 +34,8 @@ const linkSections = [
       {
             title: 'Resources',
             links: [
-                  { label: 'Privacy Policy', href: '#' },
-                  { label: 'Terms & Conditions', href: '#' },
+                  { label: 'Privacy Policy', href: '/privacy-policy' },
+                  { label: 'Terms & Conditions', href: '/terms-and-condition' },
                   { label: 'Weed Map', href: '#' },
                   { label: 'Add Your Club', href: '/new-club' },
             ],
