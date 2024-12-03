@@ -9,12 +9,14 @@ import LeavingClub from '@/components/pages/home/LeavingClub';
 import ClubVibe from '@/components/pages/home/ClubVibe';
 import ClubRules from '@/components/pages/home/ClubRules';
 import BasicVocabulary from '@/components/pages/home/BasicVocabulary';
+import ClubMap from '@/components/pages/home/ClubMap';
 
 type Props = {};
 
 const HomePage = ({}: Props) => {
       return (
             <main>
+                  <ClubMap />
                   <HowToJoin />
                   <ExploreClubs />
                   <GallerySlider />
