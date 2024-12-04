@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@font-face {
+      font-family: 'Clash_Display';
+      src: url('/public/fonts/ClashDisplay-Regular.otf') format('truetype');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +15,13 @@
 }
 p {
       font-family: 'Rubik', sans-serif;
+}
+h1,
+h2,
+h3 {
+      font-family: 'Clash_Display';
+      font-weight: 400;
+      font-style: normal;
 }
 
 .footer-bg {

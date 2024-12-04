@@ -35,9 +35,11 @@ const Navbar = () => {
                     ];
       const languageOptions = [
             { value: 'en', label: 'English', shortLabel: 'EN' },
-            { value: 'bn', label: 'Bengali', shortLabel: 'BN' },
-            { value: 'hi', label: 'Hindi', shortLabel: 'HI' },
+            { value: 'it', label: 'Italian', shortLabel: 'IT' },
+            { value: 'fr', label: 'French', shortLabel: 'FR' },
             { value: 'es', label: 'Spanish', shortLabel: 'ES' },
+            { value: 'de', label: 'German', shortLabel: 'DE' },
+            { value: 'nl', label: 'Dutch', shortLabel: 'NL' },
       ];
 
       const customLabel = (option: any) => (
@@ -55,11 +57,11 @@ const Navbar = () => {
                                     <Image alt="Logo" src={Logo} width={131} height={30} />
                               </Link>
                               {/* Nav Items for Desktop */}
-                              <div className="hidden md:flex bg-secondary/20 p-2 px-3 h-12 rounded items-center gap-8">
+                              <div className="hidden md:flex bg-[#fffae2] p-2 px-3 h-12 rounded-lg items-center gap-8">
                                     <NavItems items={items} />
                               </div>
-                              <div className="flex items-center space-x-6">
-                                    <Link href="/">
+                              <div className="flex md:items-center w-full md:w-auto justify-end md:justify-center space-x-6">
+                                    <Link className="hidden md:block" href="/">
                                           <Button iconPosition="end" icon={<Image src={Ganja} alt="Ganja" />} type="primary">
                                                 Join Now
                                           </Button>
@@ -76,7 +78,7 @@ const Navbar = () => {
                                                 </div>
                                           }
                                           labelInValue
-                                          optionLabelProp="label"
+                                          optionLabelProp="shortLabel"
                                           menuItemSelectedIcon={null}
                                           onChange={(value) => console.log(value)}
                                           optionRender={customLabel}

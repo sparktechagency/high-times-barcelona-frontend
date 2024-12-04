@@ -8,7 +8,7 @@ const MobileDrawer = ({ open, setOpen, items }: { open: boolean; setOpen: Dispat
 
       return (
             <Drawer placement="left" onClose={onClose} open={open}>
-                  <div className="flex flex-col items-center gap-8">
+                  <div className="flex flex-col text-start items-start px-4 gap-8">
                         <NavItems items={items} onClose={onClose} />
                   </div>
             </Drawer>
