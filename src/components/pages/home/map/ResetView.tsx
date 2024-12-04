@@ -5,11 +5,11 @@ interface ResetViewProps {
       center?: [number, number];
       onReset?: () => void;
 }
-const ResetView = ({ center = [40.7128, -74.006], onReset }: ResetViewProps) => {
+const ResetView = ({ center = [41.3851, 2.1734], onReset }: ResetViewProps) => {
       const map = useMap();
 
       const handleResetView = () => {
-            map.setView(center, 13);
+            map.setView(center, 14);
             onReset?.();
       };
 

@@ -12,7 +12,7 @@ import { AutoComplete, Input } from 'antd';
 import { useState, useEffect } from 'react';
 import ResetView from './ResetView';
 
-const ClubMap = () => {
+const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
       const [searchQuery, setSearchQuery] = useState('');
       const [map, setMap] = useState<Map | null>(null);
 
@@ -115,6 +115,16 @@ const ClubMap = () => {
                   }
             }
       }, [filteredClubs, map]);
+
+      useEffect(() => {
+            if (map && selectedClub) {
+                  const club = clubs.find((c) => c.name === selectedClub);
+                  if (club) {
+                        map.setView(club.location, 15);
+                  }
+            }
+      }, [selectedClub, map]);
+
       const options = filteredClubs.map((club) => ({
             value: club.name,
             label: (
@@ -126,9 +136,19 @@ const ClubMap = () => {
       }));
 
       return (
-            <div className="">
-                  <div className="relative">
-                        <MapContainer center={[41.3851, 2.1734]} zoom={13} style={{ height: '600px', width: '100%' }} ref={setMap}>
+            <div className="h-full">
+                  <div className="h-full">
+                        <MapContainer
+                              center={[41.3851, 2.1734]}
+                              zoom={13}
+                              style={{
+                                    height: 710,
+                                    width: '100%',
+                                    borderRadius: '10px',
+                                    overflow: 'hidden', // Crucial to enforce borderRadius
+                              }}
+                              ref={setMap}
+                        >
                               <div className="search-bar absolute top-4 left-20 z-[1000]">
                                     <AutoComplete
                                           options={options}
@@ -159,38 +179,31 @@ const ClubMap = () => {
 
                               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-                              {filteredClubs.map((club, index) => (
-                                    <Marker key={index} position={club.location} icon={customIcon}>
-                                          <Popup className="w-[300px] bg-white border rounded-xl border-primary">
-                                                <div className="relative">
-                                                      {/* Rating Badge */}
-                                                      <div className="absolute top-2 left-2 bg-white rounded-full px-2 py-1 flex items-center gap-1 shadow-md">
-                                                            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                                                            <span className="font-semibold text-sm">4.9</span>
+                              {filteredClubs.map((club) => (
+                                    <Marker key={club.name} position={club.location} icon={customIcon}>
+                                          <Popup>
+                                                <div className="w-[250px]">
+                                                      <div className="relative h-[120px] mb-2">
+                                                            <Image
+                                                                  src={club.image}
+                                                                  alt={club.name}
+                                                                  fill
+                                                                  className="object-cover rounded-lg"
+                                                            />
                                                       </div>
-
-                                                      {/* Main Image */}
-                                                      <Image
-                                                            src={club.image}
-                                                            alt={club.name}
-                                                            width={400}
-                                                            height={300}
-                                                            className="w-full h-48 object-cover rounded-xl"
-                                                      />
-                                                      <div className="my-2">
-                                                            {/* Title */}
-                                                            <h3 className="text-xl font-bold text-emerald-600">{club.name}</h3>
-                                                            <div className="flex items-start gap-2">
-                                                                  <p>
-                                                                        <LuMapPin size={20} className="text-secondary mr-2" />
-                                                                  </p>
-                                                                  <p className="text-[17px]">{club.address}</p>
+                                                      <div>
+                                                            <h3 className="text-lg font-semibold mb-1">{club.name}</h3>
+                                                            <div className="flex items-center gap-1 mb-1">
+                                                                  <Star size={14} className="text-yellow-400" />
+                                                                  <span className="text-sm">{club.rating}</span>
                                                             </div>
-                                                            <div className="flex items-start gap-2 -mt-5">
-                                                                  <p>
-                                                                        <Clock size={20} className="text-secondary mr-2" />
-                                                                  </p>
-                                                                  <p className="text-[17px]">{club.openingHour + ' - ' + club.endHour}</p>
+                                                            <div className="flex items-center gap-1 mb-1">
+                                                                  <Clock size={14} className="text-gray-500" />
+                                                                  <span className="text-sm">{club.hours}</span>
+                                                            </div>
+                                                            <div className="flex items-center gap-1">
+                                                                  <LuMapPin size={14} className="text-gray-500" />
+                                                                  <span className="text-sm">{club.address}</span>
                                                             </div>
                                                       </div>
                                                 </div>

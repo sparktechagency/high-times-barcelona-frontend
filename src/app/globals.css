@@ -25,6 +25,15 @@ p {
       background-position: center;
       background-repeat: no-repeat;
 }
+.scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow-y: scroll;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+      display: none;
+}
 
 /* Gallery Slider Styles */
 .gallery-slider .slick-slide {
