@@ -52,7 +52,7 @@ export const Footer = () => {
       };
 
       return (
-            <footer className="footer-bg md:max-h-[407px] text-[#EFFBF0]">
+            <footer className="footer-bg md:max-h-[407px] overflow-hidden text-[#EFFBF0]">
                   <div className="container px-4 py-16">
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                               {/* Logo and Description Section */}
