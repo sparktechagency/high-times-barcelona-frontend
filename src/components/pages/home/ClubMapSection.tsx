@@ -88,7 +88,7 @@ const ClubMapSection = () => {
             },
       ];
       return (
-            <div className="bg-gradient-to-b from-[#F8F8F899] to-[#F2FFF4]">
+            <div id="weed-map" className="bg-gradient-to-b from-[#F8F8F899] to-[#F2FFF4]">
                   <div className="container py-20 ">
                         <div className="text-center mb-16 capitalize space-y-3">
                               <h1 className="text-3xl md:text-5xl font-medium text-black">Looking for a legit</h1>

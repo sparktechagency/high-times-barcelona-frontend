@@ -40,10 +40,10 @@ const GallerySlider = () => {
 
       // Custom arrow components
       const PrevArrow = () => (
-            <div className="absolute left-[80px] bottom-[150px] z-30 cursor-pointer">
+            <div className="absolute left-5 md:left-[80px] bottom-[150px] z-30 cursor-pointer">
                   <button
                         onClick={() => sliderRef.current?.slickPrev()}
-                        className="bg-[#FFD700] rounded-full p-4 transform hover:scale-110 transition-transform"
+                        className="bg-[#FFD700] rounded-full md:p-4 p-2 transform hover:scale-110 transition-transform"
                   >
                         <BsChevronLeft className="text-black text-2xl" />
                   </button>
@@ -51,16 +51,15 @@ const GallerySlider = () => {
       );
 
       const NextArrow = () => (
-            <div className="absolute right-[80px] bottom-[150px] z-30 cursor-pointer">
+            <div className="absolute right-5 md:right-[80px] bottom-[150px] z-30 cursor-pointer">
                   <button
                         onClick={() => sliderRef.current?.slickNext()}
-                        className="bg-[#FFD700] rounded-full p-4 transform hover:scale-110 transition-transform"
+                        className="bg-[#FFD700] rounded-full md:p-4 p-2 transform hover:scale-110 transition-transform"
                   >
                         <BsChevronRight className="text-black text-2xl" />
                   </button>
             </div>
       );
-
       // Slider settings
       const settings = {
             dots: true,
@@ -77,6 +76,36 @@ const GallerySlider = () => {
             customPaging: (i: number) => {
                   return <div className="size-3 rounded-full bg-primary"></div>;
             },
+            accessibility: true,
+            focusOnSelect: true,
+            draggable: true,
+            swipe: true,
+            responsive: [
+                  {
+                        breakpoint: 1024,
+                        settings: {
+                              slidesToShow: 2,
+                              slidesToScroll: 1,
+                              infinite: true,
+                              dots: true,
+                        },
+                  },
+                  {
+                        breakpoint: 600,
+                        settings: {
+                              slidesToShow: 1,
+                              slidesToScroll: 1,
+                              initialSlide: 2,
+                        },
+                  },
+                  {
+                        breakpoint: 480,
+                        settings: {
+                              slidesToShow: 1,
+                              slidesToScroll: 1,
+                        },
+                  },
+            ],
       };
 
       return (

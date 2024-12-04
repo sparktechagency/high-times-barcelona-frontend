@@ -25,10 +25,10 @@ const linkSections = [
       {
             title: 'Useful Link',
             links: [
-                  { label: 'Cannabis Social Clubs', href: '#' },
-                  { label: 'Faq', href: '#' },
-                  { label: 'Blog', href: '#' },
-                  { label: 'Contact Us', href: '#' },
+                  { label: 'Cannabis Social Clubs', href: '/#cannabis-clubs' },
+                  { label: 'Faq', href: '/faqs' },
+                  { label: 'Blog', href: '/blogs' },
+                  { label: 'Contact Us', href: '/contact-us' },
             ],
       },
       {
@@ -36,7 +36,7 @@ const linkSections = [
             links: [
                   { label: 'Privacy Policy', href: '/privacy-policy' },
                   { label: 'Terms & Conditions', href: '/terms-and-condition' },
-                  { label: 'Weed Map', href: '#' },
+                  { label: 'Weed Map', href: '/#weed-map' },
                   { label: 'Add Your Club', href: '/new-club' },
             ],
       },
