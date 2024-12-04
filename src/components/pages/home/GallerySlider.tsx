@@ -75,19 +75,8 @@ const GallerySlider = () => {
             autoplaySpeed: 5000,
             pauseOnHover: true,
             customPaging: (i: number) => {
-                  return <div className="w-2 h-2 rounded-full bg-primary"></div>;
+                  return <div className="size-3 rounded-full bg-primary"></div>;
             },
-
-            // beforeChange: (_: number, next: number) => {
-            //       const slides = document.querySelectorAll('.slick-slide');
-            //       slides.forEach((slide) => {
-            //             slide.classList.remove('scale-125', 'z-20');
-            //       });
-            //       const currentSlide = slides[next + 1];
-            //       if (currentSlide) {
-            //             currentSlide.classList.add('scale-125', 'z-20', '     ');
-            //       }
-            // },
       };
 
       return (

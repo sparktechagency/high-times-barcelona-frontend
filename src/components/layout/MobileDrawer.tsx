@@ -7,7 +7,14 @@ const MobileDrawer = ({ open, setOpen, items }: { open: boolean; setOpen: Dispat
       };
 
       return (
-            <Drawer placement="left" onClose={onClose} open={open}>
+            <Drawer
+                  style={{
+                        backgroundColor: '#F9FDF9',
+                  }}
+                  placement="right"
+                  onClose={onClose}
+                  open={open}
+            >
                   <div className="flex flex-col text-start items-start px-4 gap-8">
                         <NavItems items={items} onClose={onClose} />
                   </div>

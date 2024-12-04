@@ -14,10 +14,10 @@ const InsideTheClub = () => {
       return (
             <section className="py-20 bg-[#033f1b] relative">
                   <SectionBackground />
-                  <div className="container">
+                  <div className="container z-10 relative">
                         {/* Header */}
                         <h2 className="text-4xl md:text-5xl  text-white mb-16 text-center">
-                              Inside The <span className="text-secondary">Club</span>
+                              Inside The <span className="text-secondary ">Club</span>
                         </h2>
 
                         {/* Content Grid */}
@@ -46,7 +46,7 @@ const InsideTheClub = () => {
                                                 enhance your experience.
                                           </p>
                                     </div>
-                                    <div className="mt-6 flex gap-6 items-center ">
+                                    <div className="mt-6 flex flex-col md:flex-row gap-6 items-center ">
                                           <div className="bg-[#F9FDF9] flex justify-center items-center w-[159px] h-[143px] p-5 rounded-xl ">
                                                 <Image
                                                       src={cannabisLeaf}
@@ -55,7 +55,7 @@ const InsideTheClub = () => {
                                                 ] "
                                                 />
                                           </div>
-                                          <div className="bg-[#F9FDF9] flex justify-center items-center w-[100%] h-[143px] p-5 rounded-xl ">
+                                          <div className="bg-[#F9FDF9] flex  justify-center items-center w-[100%] h-[143px] p-5 rounded-xl ">
                                                 <p className="">
                                                       <span className="font-bold">N.B.</span> Members are restricted to a monthly
                                                       consumption limit of 100 grams per person, promoting responsible and balanced usage.
@@ -68,7 +68,7 @@ const InsideTheClub = () => {
                               <div className="space-y-4">
                                     {/* Lounge Zone */}
                                     <div className="bg-[#F9FDF9] rounded-3xl p-6">
-                                          <div className="flex justify-between items-start gap-6">
+                                          <div className="flex justify-between flex-col md:flex-row items-start gap-6">
                                                 <div>
                                                       <h3 className="text-2xl  mb-4">
                                                             Lounge <span className="text-primary">Zone</span>
@@ -82,7 +82,7 @@ const InsideTheClub = () => {
                                                             personal and comfortable experience.
                                                       </p>
                                                 </div>
-                                                <div className="min-w-[263px] h-[315px]">
+                                                <div className="w-full md:min-w-[263px] h-[315px]">
                                                       <Image
                                                             src={medicalPlant}
                                                             alt="Lounge Zone"
@@ -94,7 +94,7 @@ const InsideTheClub = () => {
 
                                     {/* Coworking Area */}
                                     <div className="bg-[#F9FDF9] rounded-3xl p-6">
-                                          <div className="flex justify-between items-start gap-6">
+                                          <div className="flex flex-col md:flex-row justify-between items-start gap-6">
                                                 <div>
                                                       <h3 className="text-2xl  mb-4">
                                                             Coworking <span className="text-primary">Area</span>
@@ -108,7 +108,7 @@ const InsideTheClub = () => {
                                                             relaxed yet functional environment.
                                                       </p>
                                                 </div>
-                                                <div className="min-w-[263px] h-[315px]">
+                                                <div className="w-full md:min-w-[263px] h-[315px]">
                                                       <Image
                                                             src={InsideImage}
                                                             alt="Coworking Area"

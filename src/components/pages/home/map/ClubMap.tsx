@@ -154,13 +154,14 @@ const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
                               }}
                               ref={setMap}
                         >
-                              <div className="search-bar absolute top-4 left-20 z-[1000]">
+                              <div className="search-bar absolute top-4 left-1/2 transform -translate-x-1/2 md:left-20 md:translate-x-0 z-[1000]">
                                     <AutoComplete
                                           options={options}
                                           onSelect={(value) => setSearchQuery(value)}
                                           onSearch={(value) => setSearchQuery(value)}
                                           style={{
                                                 height: 46,
+                                                minWidth: 250,
                                                 borderRadius: 24,
                                                 backgroundColor: '#fff',
                                                 borderColor: 'transparent',
@@ -171,6 +172,7 @@ const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
                                                 placeholder="Search clubs..."
                                                 value={searchQuery}
                                                 style={{
+                                                      minWidth: 200,
                                                       height: 46,
                                                       borderRadius: 24,
                                                       backgroundColor: '#fff',

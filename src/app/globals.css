@@ -23,6 +23,10 @@ h3 {
       font-weight: 400;
       font-style: normal;
 }
+h1,
+span {
+      font-family: 'Clash_Display';
+}
 
 .footer-bg {
       background-image: url('../assets//images/footer-bg.png');

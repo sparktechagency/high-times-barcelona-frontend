@@ -3,7 +3,7 @@ import HowToJoinBgImage from '@/assets/images/how-to-join-bg.png';
 import Image from 'next/image';
 const SectionBackground = () => (
       <section>
-            <div className="absolute inset-0 overflow-hidden">
+            <div className="hidden md:block absolute z-[-0] inset-0 overflow-hidden">
                   <div className="absolute left-10 top-0 w-[400px] h-[400px] opacity-100">
                         <Image src={HowToJoinBgImage.src} alt="pattern" width={400} height={400} className="object-contain" />
                   </div>
