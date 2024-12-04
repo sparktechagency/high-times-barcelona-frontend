@@ -182,8 +182,10 @@ const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
                                     </AutoComplete>
                               </div>
 
-                              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-
+                              <TileLayer
+                                    url={`https://api.mapbox.com/styles/v1/mapbox/navigation-day-v1/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoib2huYWRpciIsImEiOiJjbGYzbXB2cG4wcjNsM3FuZGkyeXgzaGp3In0.UW7J5lIaWc-P3nXa2WmRxQ`}
+                                    attribution='Map data &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
+                              />
                               {filteredClubs.map((club) => (
                                     <Marker key={club.name} position={club.location} icon={customIcon}>
                                           <Popup>
