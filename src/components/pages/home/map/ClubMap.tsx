@@ -11,6 +11,7 @@ import { LuMapPin } from 'react-icons/lu';
 import { AutoComplete, Input } from 'antd';
 import { useState, useEffect } from 'react';
 import ResetView from './ResetView';
+import { BsStarFill } from 'react-icons/bs';
 
 const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
       const [searchQuery, setSearchQuery] = useState('');
@@ -26,6 +27,7 @@ const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
                   image: MapCardImage.src,
                   openingHour: '10:00',
                   endHour: '00:00',
+                  isOpen: true,
             },
             {
                   name: 'Green Point Cannabis Club',
@@ -36,6 +38,7 @@ const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
                   image: MapCardImage.src,
                   openingHour: '10:00',
                   endHour: '00:00',
+                  isOpen: true,
             },
             {
                   name: 'Five For Club',
@@ -46,6 +49,7 @@ const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
                   image: MapCardImage.src,
                   openingHour: '10:00',
                   endHour: '00:00',
+                  isOpen: true,
             },
             {
                   name: 'Cannabis Social Club',
@@ -76,6 +80,7 @@ const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
                   image: MapCardImage.src,
                   openingHour: '10:00',
                   endHour: '00:00',
+                  isOpen: true,
             },
             {
                   name: 'The Joint',
@@ -145,7 +150,7 @@ const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
                                     height: 710,
                                     width: '100%',
                                     borderRadius: '10px',
-                                    overflow: 'hidden', // Crucial to enforce borderRadius
+                                    overflow: 'hidden',
                               }}
                               ref={setMap}
                         >
@@ -182,27 +187,28 @@ const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
                               {filteredClubs.map((club) => (
                                     <Marker key={club.name} position={club.location} icon={customIcon}>
                                           <Popup>
-                                                <div className="w-[250px]">
-                                                      <div className="relative h-[120px] mb-2">
+                                                <div className="w-[213px]  h-full">
+                                                      <div className="mb-2">
                                                             <Image
                                                                   src={club.image}
                                                                   alt={club.name}
-                                                                  fill
-                                                                  className="object-cover rounded-lg"
+                                                                  width={1000}
+                                                                  height={120}
+                                                                  className="object-cover rounded-lg w-full h-full"
                                                             />
                                                       </div>
+                                                      <div className="absolute border-secondary top-6 left-6 bg-white rounded-full px-2 py-1 text-sm font-medium flex items-center gap-1">
+                                                            {club.rating} <BsStarFill color="#FFC313" />
+                                                      </div>
                                                       <div>
-                                                            <h3 className="text-lg font-semibold mb-1">{club.name}</h3>
-                                                            <div className="flex items-center gap-1 mb-1">
-                                                                  <Star size={14} className="text-yellow-400" />
-                                                                  <span className="text-sm">{club.rating}</span>
-                                                            </div>
-                                                            <div className="flex items-center gap-1 mb-1">
-                                                                  <Clock size={14} className="text-gray-500" />
+                                                            <h3 className="text-lg text-primary font-semibold mb-1">{club.name}</h3>
+
+                                                            <div className="flex items-start gap-1 mb-1">
+                                                                  <Clock color="#FFC313" size={18} />
                                                                   <span className="text-sm">{club.hours}</span>
                                                             </div>
-                                                            <div className="flex items-center gap-1">
-                                                                  <LuMapPin size={14} className="text-gray-500" />
+                                                            <div className="flex items-start gap-1">
+                                                                  <LuMapPin color="#FFC313" size={18} />
                                                                   <span className="text-sm">{club.address}</span>
                                                             </div>
                                                       </div>

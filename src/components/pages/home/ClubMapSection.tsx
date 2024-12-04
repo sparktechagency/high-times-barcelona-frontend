@@ -19,6 +19,7 @@ const ClubMapSection = () => {
                   image: MapCardImage.src,
                   openingHour: '10:00',
                   endHour: '00:00',
+                  isOpen: true,
             },
             {
                   name: 'Green Point Cannabis Club',
@@ -29,6 +30,7 @@ const ClubMapSection = () => {
                   image: MapCardImage.src,
                   openingHour: '10:00',
                   endHour: '00:00',
+                  isOpen: false,
             },
             {
                   name: 'Five For Club',
@@ -39,6 +41,7 @@ const ClubMapSection = () => {
                   image: MapCardImage.src,
                   openingHour: '10:00',
                   endHour: '00:00',
+                  isOpen: false,
             },
             {
                   name: 'Cannabis Social Club',
@@ -59,6 +62,7 @@ const ClubMapSection = () => {
                   image: MapCardImage.src,
                   openingHour: '12:00',
                   endHour: '22:00',
+                  isOpen: true,
             },
             {
                   name: 'Green Planet',
@@ -69,6 +73,7 @@ const ClubMapSection = () => {
                   image: MapCardImage.src,
                   openingHour: '10:00',
                   endHour: '00:00',
+                  isOpen: true,
             },
             {
                   name: 'The Joint',
@@ -79,6 +84,7 @@ const ClubMapSection = () => {
                   image: MapCardImage.src,
                   openingHour: '11:00',
                   endHour: '23:00',
+                  isOpen: true,
             },
       ];
       return (

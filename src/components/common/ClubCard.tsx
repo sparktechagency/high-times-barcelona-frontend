@@ -10,15 +10,13 @@ type ClubCardProps = {
       image: string;
       openingHour: string;
       endHour: string;
+      isOpen?: boolean;
       onClick?: () => void;
 };
 
 const ClubCard = ({ club, onClick }: { club: ClubCardProps; onClick?: () => void }) => {
       return (
-            <div 
-                  className="relative w-full h-[200px] rounded-xl overflow-hidden cursor-pointer group"
-                  onClick={onClick}
-            >
+            <div className="relative w-full h-[200px] rounded-xl overflow-hidden cursor-pointer group" onClick={onClick}>
                   {/* Background Image with Gradient Overlay */}
                   <div className="absolute inset-0">
                         <Image src={club.image} alt={club.name} fill className="object-cover" />
@@ -38,10 +36,11 @@ const ClubCard = ({ club, onClick }: { club: ClubCardProps; onClick?: () => void
                                     <p className="text-gray-200 text-sm">{club.address}</p>
                               </div>
                               <span
-                                    className={`px-3 py-1 rounded-full text-sm font-medium 
-                                    {isOpen ? 'bg-green-500 text-white' : 'bg-red-500 text-white'}`}
+                                    className={`px-3 py-1 rounded-full text-sm font-medium ${
+                                          club.isOpen ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
+                                    }`}
                               >
-                                    Open
+                                    {club.isOpen ? 'Open' : 'Closed'}
                               </span>
                         </div>
                   </div>
