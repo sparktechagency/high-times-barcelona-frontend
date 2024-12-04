@@ -147,7 +147,7 @@ const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
                               center={[41.3851, 2.1734]}
                               zoom={13}
                               style={{
-                                    height: 710,
+                                    height: '100%',
                                     width: '100%',
                                     borderRadius: '10px',
                                     overflow: 'hidden',

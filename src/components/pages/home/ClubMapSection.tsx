@@ -100,21 +100,18 @@ const ClubMapSection = () => {
                               </p>
                         </div>
                         <div className="grid grid-cols-12 gap-5 ">
-                              <div className="col-span-12 md:col-span-8 ">
+                              <div className="col-span-12 md:col-span-8 h-[710px]">
                                     <ClubMap selectedClub={selectedClub} />
                               </div>
 
-                              <div
-                                    className="col-span-12 max-h-[710px] overflow-y-scroll overflow-x-hidden 
-                                    scrollbar-none md:col-span-4 p-4 bg-white h-screen border-t-[5px] border-t-primary rounded-xl"
-                              >
-                                    <h1 className="text-xl md:text-2xl flex items-center justify-center gap-2 font-medium text-primary text-center my-4">
+                              <div className="col-span-12 md:col-span-4 h-[710px] bg-white  shadow-md border-t-[5px] border-t-primary rounded-xl">
+                                    <h1 className="text-xl md:text-2xl flex items-center justify-center gap-2 font-medium text-primary text-center p-4">
                                           <span>
                                                 <Image width={30} height={30} src={Spades} alt="Spades" />
                                           </span>
                                           <span className="text-black">POPULAR</span> CLUB
                                     </h1>
-                                    <div className="space-y-3">
+                                    <div className="h-[calc(100%-88px)] overflow-y-auto px-4 space-y-3 scrollbar-none">
                                           {/* cards */}
                                           {clubs.map((club, index) => (
                                                 <ClubCard key={index} club={club} onClick={() => setSelectedClub(club.name)} />
