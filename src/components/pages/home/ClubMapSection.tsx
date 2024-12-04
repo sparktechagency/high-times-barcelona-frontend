@@ -1,10 +1,18 @@
 'use client';
 import Image from 'next/image';
-import ClubMap from './map/ClubMap';
+import dynamic from 'next/dynamic';
 import Spades from '@/assets/images/spades.svg';
 import MapCardImage from '@/assets/images/maps/map-card.jpg';
 import ClubCard from '@/components/common/ClubCard';
 import { useState } from 'react';
+
+// Dynamically import ClubMap with no SSR
+const ClubMap = dynamic(() => import('./map/ClubMap'), {
+      ssr: false,
+      loading: () => (
+            <div className="w-full h-[500px] bg-gray-100 animate-pulse rounded-lg flex items-center justify-center">Loading map...</div>
+      ),
+});
 
 const ClubMapSection = () => {
       const [selectedClub, setSelectedClub] = useState<string | null>(null);
