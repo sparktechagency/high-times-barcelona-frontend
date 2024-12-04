@@ -50,7 +50,7 @@ const Navbar = () => {
 
       return (
             <header className={`bg-[#F9FDF9] shadow-lg`}>
-                  <nav className="container  h-[96px]  relative z-[99]">
+                  <nav className="container  h-[90px]  relative z-[99]">
                         <div className="flex justify-between items-center h-full">
                               {/* Logo */}
                               <Link href={'/'}>

@@ -151,7 +151,7 @@ const ExploreClubs = () => {
       );
 
       return (
-            <section className="py-20">
+            <section className="py-20 bg-gradient-to-b from-[#F8F8F899] to-[#F2FFF4]">
                   <div id="cannabis-clubs" className="container">
                         {/* Header */}
                         <div className="text-center mb-16">
