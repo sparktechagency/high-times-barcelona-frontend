@@ -76,8 +76,8 @@ const ClubRules = () => {
                   <div className="container">
                         <div className="flex flex-col items-center mb-16">
                               <Image src={Ganja} alt="Cannabis" width={40} height={40} className="mb-4" />
-                              <h2 className="text-4xl md:text-5xl font-medium text-black mb-2">Cannabis</h2>
-                              <h3 className="text-4xl md:text-5xl font-medium text-[#00A651]">Social Club Basic Rules</h3>
+                              <h2 className="text-4xl md:text-5xl font-bold text-black mb-2">Cannabis</h2>
+                              <h3 className="text-4xl md:text-5xl font-bold text-[#00A651]">Social Club Basic Rules</h3>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-start">

@@ -37,9 +37,9 @@ const EssentialItems = () => {
                         <div className="text-center mb-16">
                               <div className="flex items-center justify-center gap-2 mb-4">
                                     <Image src={Ganja} alt="Cannabis" className="size-12" />
-                                    <h2 className="text-3xl md:text-5xl font-medium text-[#1A1A1A]">Essential</h2>
+                                    <h1 className="text-3xl md:text-5xl font-bold text-[#1A1A1A]">Essential</h1>
                               </div>
-                              <h3 className="text-3xl md:text-5xl font-medium text-primary">To Bring With You</h3>
+                              <h1 className="text-3xl md:text-5xl font-bold text-primary">To Bring With You</h1>
                         </div>
 
                         {/* Content Grid */}
