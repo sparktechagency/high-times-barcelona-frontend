@@ -23,20 +23,19 @@ h3 {
       font-weight: 400;
       font-style: normal;
 }
-h1,
-span {
+h1 > span {
       font-family: 'Clash_Display';
 }
 
 .footer-bg {
-      background-image: url('../assets//images/footer-bg.png');
+      background-image: url('/images/footer-bg.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-color: #033f1b;
 }
 .page-header-bg {
-      background-image: url('../assets//images/page-header-bg.jpg');
+      background-image: url('/images/page-header-bg.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;

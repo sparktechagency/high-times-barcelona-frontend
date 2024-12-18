@@ -10,22 +10,23 @@ const Provider = ({ children }: { children: ReactNode }) => {
                               token: {
                                     colorPrimary: '#FFC61D',
                                     colorTextLightSolid: '#000000',
+
+                                    fontSize: 16,
                               },
                               components: {
                                     Button: {
                                           controlHeight: 42,
 
-                                          fontSize: 16,
                                           paddingInline: 24,
                                     },
                                     Input: {
                                           controlHeight: 42,
 
-                                          fontSize: 16,
                                           paddingInline: 24,
                                     },
                                     Form: {
                                           marginLG: 12,
+                                          fontFamily: 'Poppins, sans-serif',
                                     },
 
                                     Radio: {},
