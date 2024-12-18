@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { BsStarFill } from 'react-icons/bs';
+import { BsClock, BsStarFill } from 'react-icons/bs';
 
 type ClubCardProps = {
       name: string;
@@ -33,15 +33,20 @@ const ClubCard = ({ club, onClick }: { club: ClubCardProps; onClick?: () => void
                         <div className="flex justify-between items-center">
                               <div>
                                     <h3 className="text-white text-xl font-bold mb-1">{club.name}</h3>
-                                    <p className="text-gray-200 text-sm">{club.address}</p>
+                                    <p className="text-gray-200 flex items-center gap-2 text-sm">
+                                          <span>
+                                                <BsClock color="#FFC313" />
+                                          </span>
+                                          {club.openingHour} - {club.endHour}
+                                    </p>
                               </div>
-                              <span
+                              <div
                                     className={`px-3 py-1 rounded-full text-sm font-medium ${
                                           club.isOpen ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
                                     }`}
                               >
                                     {club.isOpen ? 'Open' : 'Closed'}
-                              </span>
+                              </div>
                         </div>
                   </div>
 

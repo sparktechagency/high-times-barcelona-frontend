@@ -8,10 +8,11 @@ import MapCardImage from '@/assets/images/maps/map-card.jpg';
 import Image from 'next/image';
 import { Clock, Star } from 'lucide-react';
 import { LuMapPin } from 'react-icons/lu';
-import { AutoComplete, Input } from 'antd';
+import { AutoComplete, Button, Input } from 'antd';
 import { useState, useEffect } from 'react';
 import ResetView from './ResetView';
 import { BsStarFill } from 'react-icons/bs';
+import Ganja from '@/assets/images/ganja.svg';
 
 const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
       const [searchQuery, setSearchQuery] = useState('');
@@ -214,6 +215,18 @@ const ClubMap = ({ selectedClub }: { selectedClub: string | null }) => {
                                                             <div className="flex items-start gap-1">
                                                                   <LuMapPin color="#FFC313" size={18} />
                                                                   <span className="text-sm">{club.address}</span>
+                                                            </div>
+                                                            <div className="flex justify-center my-4">
+                                                                  <Button
+                                                                        style={{
+                                                                              width: '100%',
+                                                                        }}
+                                                                        iconPosition="end"
+                                                                        icon={<Image src={Ganja} alt="Ganja" />}
+                                                                        type="primary"
+                                                                  >
+                                                                        Join Now
+                                                                  </Button>
                                                             </div>
                                                       </div>
                                                 </div>
