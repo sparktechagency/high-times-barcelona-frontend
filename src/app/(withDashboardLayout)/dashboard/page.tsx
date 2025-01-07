@@ -19,6 +19,7 @@ import {
       Select,
       TimePicker,
       Tooltip,
+      Upload,
 } from 'antd';
 import Title from 'antd/es/typography/Title';
 import ImageIcon from '@/assets/images/club-image.png';
@@ -189,6 +190,14 @@ const ClubsManagement: React.FC = () => {
                   onFinish={handleSubmit}
             >
                   <Title level={5}>Club Details</Title>
+
+                  <Row>
+                        <Form.Item name="image" rules={[{ required: true, message: 'Please upload an image' }]}>
+                              <Upload maxCount={1} beforeUpload={() => false} accept="image/*" listType="picture" multiple={false}>
+                                    <Button>Upload Image</Button>
+                              </Upload>
+                        </Form.Item>
+                  </Row>
                   <Row gutter={[16, 16]}>
                         <Col span={12}>
                               <Form.Item label="Club Name" name="name" rules={[{ required: true, message: 'Please enter the club name' }]}>
