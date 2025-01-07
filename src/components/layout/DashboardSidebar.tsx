@@ -1,15 +1,19 @@
+'use client';
 import { ConfigProvider, Layout, Menu, Modal } from 'antd';
 import Link from 'next/link';
 import Logo from '@/assets/images/logo.png';
 import Image from 'next/image';
-import { ClubIcon } from 'lucide-react';
+import { ClubIcon, LogOutIcon } from 'lucide-react';
 import { GrTextWrap } from 'react-icons/gr';
 import { BsQuestionCircle } from 'react-icons/bs';
-import { FcPrivacy } from 'react-icons/fc';
 import { MdOutlinePrivacyTip } from 'react-icons/md';
 import { PiBookOpenText } from 'react-icons/pi';
+import { usePathname } from 'next/navigation';
 const { Sider } = Layout;
 const DashboardSidebar = () => {
+      const pathname = usePathname();
+      const activeKey: string = pathname.split('/').pop() ?? '';
+
       const handleLogout = () => {
             Modal.confirm({
                   title: 'Confirm Logout',
@@ -17,6 +21,19 @@ const DashboardSidebar = () => {
                   okText: 'Yes',
                   cancelText: 'No',
                   centered: true,
+                  icon: <LogOutIcon className="mx-2" color="#006830" />,
+                  okButtonProps: {
+                        style: {
+                              backgroundColor: '#006830',
+                              borderColor: '#006830',
+                        },
+                  },
+                  cancelButtonProps: {
+                        style: {
+                              backgroundColor: 'transparent',
+                              borderColor: '#414446',
+                        },
+                  },
                   onOk: () => {
                         // dispatch(removeUser());
                   },
@@ -55,7 +72,7 @@ const DashboardSidebar = () => {
                         <Menu
                               theme="light"
                               mode="inline"
-                              defaultSelectedKeys={['dashboard']}
+                              selectedKeys={[activeKey]}
                               items={[
                                     {
                                           key: 'dashboard',
@@ -63,24 +80,34 @@ const DashboardSidebar = () => {
                                           label: <Link href="/dashboard">Clubs</Link>,
                                     },
                                     {
-                                          key: '',
+                                          key: 'blogs-management',
                                           icon: <GrTextWrap size={20} />,
-                                          label: <Link href="/dashboard/blogs">Blogs</Link>,
+                                          label: <Link href="/blogs-management">Blogs</Link>,
                                     },
                                     {
-                                          key: 'faqs',
+                                          key: 'faqs-management',
                                           icon: <BsQuestionCircle size={20} />,
-                                          label: <Link href="/dashboard/faqs">FAQs</Link>,
+                                          label: <Link href="/faqs-management">FAQs</Link>,
                                     },
                                     {
-                                          key: 'privacy-policy',
+                                          key: 'privacy-policy-management',
                                           icon: <MdOutlinePrivacyTip size={20} />,
-                                          label: <Link href="/dashboard/privacy-policy">Privacy Policy</Link>,
+                                          label: <Link href="/privacy-policy-management">Privacy Policy</Link>,
                                     },
                                     {
-                                          key: 'terms-and-conditions',
+                                          key: 'terms-and-conditions-management',
                                           icon: <PiBookOpenText size={20} />,
-                                          label: <Link href="/dashboard/terms-and-conditions">Terms & Conditions</Link>,
+                                          label: <Link href="/terms-and-conditions-management">Terms & Conditions</Link>,
+                                    },
+                                    {
+                                          key: 'logout',
+                                          //   icon: <LogOutIcon size={20} />,
+                                          label: (
+                                                <button className="w-full flex items-center gap-2 text-center " onClick={handleLogout}>
+                                                      <LogOutIcon size={20} />
+                                                      Logout
+                                                </button>
+                                          ),
                                     },
                               ]}
                         />

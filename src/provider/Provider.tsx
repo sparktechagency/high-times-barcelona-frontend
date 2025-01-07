@@ -24,12 +24,34 @@ const Provider = ({ children }: { children: ReactNode }) => {
 
                                           paddingInline: 24,
                                     },
+
+                                    InputNumber: {
+                                          controlHeight: 42,
+                                    },
                                     Form: {
                                           marginLG: 12,
                                           fontFamily: 'Poppins, sans-serif',
                                     },
 
                                     Radio: {},
+                                    Table: {
+                                          headerBg: '#006830',
+                                          headerColor: '#fff',
+                                    },
+                                    DatePicker: {
+                                          controlHeight: 42,
+                                    },
+                                    Select: {
+                                          controlHeight: 42,
+                                    },
+                                    Divider: {
+                                          margin: -20,
+                                          padding: -110,
+                                    },
+                                    Tooltip: {
+                                          colorTextLightSolid: '#000000',
+                                          colorBgContainer: '#fff',
+                                    },
                               },
                         }}
                   >

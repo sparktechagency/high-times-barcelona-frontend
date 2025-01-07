@@ -135,3 +135,16 @@ h1 > span {
       opacity: 1;
       background: #ffd700;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+      background-color: #00683117;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #006830;
+}

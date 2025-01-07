@@ -1,18 +1,24 @@
 'use client';
-
-import Provider from '@/provider/Provider';
-import { AntdRegistry } from '@ant-design/nextjs-registry';
-import { Layout, theme } from 'antd';
 import dynamic from 'next/dynamic';
+import { AntdRegistry } from '@ant-design/nextjs-registry';
+import { Layout, Skeleton, theme } from 'antd';
+import { useState } from 'react';
 
 const { Content } = Layout;
 
+const DashboardHeader = dynamic(() => import('@/components/layout/DashboardHeader'), {
+      ssr: false,
+});
+
+const DashboardSidebar = dynamic(() => import('@/components/layout/DashboardSidebar'), {
+      ssr: false,
+});
+
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
-      const DashboardHeader = dynamic(() => import('@/components/layout/DashboardHeader'), { ssr: false });
-      const DashboardSidebar = dynamic(() => import('@/components/layout/DashboardSidebar'), { ssr: false });
       const {
             token: { borderRadiusLG },
       } = theme.useToken();
+      // const [openKeys, setOpenKeys] = useState<string[]>([]);
 
       return (
             <AntdRegistry>
@@ -23,8 +29,6 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
                   >
                         <DashboardSidebar />
                         <Layout>
-                              {/* header */}
-
                               <DashboardHeader />
                               <Content style={{ margin: 20 }}>
                                     <div
