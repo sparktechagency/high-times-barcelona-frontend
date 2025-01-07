@@ -83,6 +83,12 @@ const Navbar = () => {
                                           onChange={(value) => console.log(value)}
                                           optionRender={customLabel}
                                     />
+
+                                    <Link className="" href="/dashboard">
+                                          <Button iconPosition="end" icon={<Image src={Ganja} alt="Ganja" />} type="text">
+                                                Dashboard
+                                          </Button>
+                                    </Link>
                               </div>
                               <div className="md:hidden">
                                     <AiOutlineMenu
