@@ -9,12 +9,16 @@ import { TFaq, useCreateFaqMutation, useDeleteFaqMutation, useGetFaqsQuery, useU
 import { toast } from 'react-toastify';
 
 const FaqsManagement: React.FC = () => {
+      const [page, setPage] = useState(1);
       const [isModalOpen, setIsModalOpen] = useState(false);
       const [selectedFaq, setSelectedFaq] = useState<TFaq | null>(null);
       const [form] = Form.useForm();
 
       // Note: Redux Integration
-      const { data: faqData } = useGetFaqsQuery([]);
+      const { data: faqData } = useGetFaqsQuery([
+            { name: 'page', value: page },
+            { name: 'limit', value: 8 },
+      ]);
       const [createBlog] = useCreateFaqMutation();
       const [updateBlog] = useUpdateFaqMutation();
       const [deleteBlog] = useDeleteFaqMutation();
@@ -169,7 +173,18 @@ const FaqsManagement: React.FC = () => {
                   </div>
 
                   {/* FAQs Table */}
-                  <Table dataSource={faqData?.result} columns={columns} bordered />
+                  <Table
+                        pagination={{
+                              pageSize: faqData?.meta.limit,
+                              total: faqData?.meta.total,
+                              onChange: (page) => {
+                                    setPage(page);
+                              },
+                        }}
+                        dataSource={faqData?.result}
+                        columns={columns}
+                        bordered
+                  />
 
                   {/* Custom Modal */}
                   <Modal
