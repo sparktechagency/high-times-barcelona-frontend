@@ -1,5 +1,7 @@
 import { Layout } from 'antd';
 const { Header } = Layout;
+import Ganja from '@/assets/images/ganja.svg';
+import Image from 'next/image';
 
 const HeaderDashboard = () => {
       return (
@@ -8,10 +10,12 @@ const HeaderDashboard = () => {
                         <div>
                               {/* Profile */}
                               <div className="flex items-center gap-3 rounded-md p-2">
-                                    <img
-                                          src="https://via.placeholder.com/44"
+                                    <Image
+                                          width={48}
+                                          height={48}
+                                          src={Ganja}
                                           alt="Profile"
-                                          className="w-11 h-11 rounded-full border-2 border-yellow-400"
+                                          className="w-11 h-11 rounded-full border-2 border-green-100"
                                     />
                                     <h2 className=" text-sm font-semibold">Admin Dashboard</h2>
                               </div>
