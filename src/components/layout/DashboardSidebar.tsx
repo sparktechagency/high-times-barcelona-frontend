@@ -9,8 +9,12 @@ import { BsQuestionCircle } from 'react-icons/bs';
 import { MdOutlinePrivacyTip } from 'react-icons/md';
 import { PiBookOpenText } from 'react-icons/pi';
 import { usePathname } from 'next/navigation';
+import { removeAccessToken } from '@/utils/tokenManagement';
+import { logout } from '@/redux/features/auth/authSlice';
+import { useAppDispatch } from '@/redux/hooks';
 const { Sider } = Layout;
 const DashboardSidebar = () => {
+      const dispatch = useAppDispatch();
       const pathname = usePathname();
       const activeKey: string = pathname.split('/').pop() ?? '';
 
@@ -35,7 +39,8 @@ const DashboardSidebar = () => {
                         },
                   },
                   onOk: () => {
-                        // dispatch(removeUser());
+                        dispatch(logout());
+                        removeAccessToken();
                   },
             });
       };

@@ -8,16 +8,23 @@ import { AiOutlineMenu } from 'react-icons/ai';
 
 import { useState } from 'react';
 
-import { usePathname } from 'next/navigation';
-import { Button, Select } from 'antd';
+import { usePathname, useRouter } from 'next/navigation';
+import { Button, Dropdown, Modal, Select, Space } from 'antd';
 
 import NavItems from './NavItems';
 import MobileDrawer from './MobileDrawer';
 import { TbChevronDown, TbWorld } from 'react-icons/tb';
+import { LogOutIcon } from 'lucide-react';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
+import { logout } from '@/redux/features/auth/authSlice';
+import { removeAccessToken } from '@/utils/tokenManagement';
 
 const Navbar = () => {
       const [showDrawer, setShowDrawer] = useState(false);
       const pathname = usePathname();
+      const router = useRouter();
+      const dispatch = useAppDispatch();
+      const { user } = useAppSelector((state) => state.auth);
       const items =
             pathname === '/'
                   ? [
@@ -48,6 +55,34 @@ const Navbar = () => {
             </div>
       );
 
+      const handleLogout = () => {
+            Modal.confirm({
+                  title: 'Confirm Logout',
+                  content: 'Are you sure you want to log out?',
+                  okText: 'Yes',
+                  cancelText: 'No',
+                  centered: true,
+                  icon: <LogOutIcon className="mx-2" size={20} color="#006830" />,
+                  okButtonProps: {
+                        style: {
+                              backgroundColor: '#006830',
+                              borderColor: '#006830',
+                        },
+                  },
+                  cancelButtonProps: {
+                        style: {
+                              backgroundColor: '#006830',
+                              borderColor: '#006830',
+                              color: '#fff',
+                        },
+                  },
+                  onOk: () => {
+                        dispatch(logout());
+                        removeAccessToken();
+                  },
+            });
+      };
+
       return (
             <header className={`bg-[#F9FDF9] shadow-lg`}>
                   <nav className="container  h-[90px]  relative z-[99]">
@@ -61,11 +96,16 @@ const Navbar = () => {
                                     <NavItems items={items} />
                               </div>
                               <div className="flex md:items-center w-full md:w-auto justify-end md:justify-center space-x-6">
-                                    <Link className="hidden md:block" href="/">
-                                          <Button iconPosition="end" icon={<Image src={Ganja} alt="Ganja" />} type="primary">
+                                    <div className="hidden md:block">
+                                          <Button
+                                                href="/#cannabis-clubs"
+                                                iconPosition="end"
+                                                icon={<Image src={Ganja} alt="Ganja" />}
+                                                type="primary"
+                                          >
                                                 Join Now
                                           </Button>
-                                    </Link>
+                                    </div>
 
                                     <Select
                                           defaultValue="en"
@@ -84,11 +124,42 @@ const Navbar = () => {
                                           optionRender={customLabel}
                                     />
 
-                                    <Link className="" href="/dashboard">
-                                          <Button iconPosition="end" icon={<Image src={Ganja} alt="Ganja" />} type="text">
-                                                Dashboard
+                                    {user ? (
+                                          <Dropdown
+                                                trigger={['click']}
+                                                menu={{
+                                                      items: [
+                                                            {
+                                                                  label: 'Dashboard',
+                                                                  key: 'dashboard',
+                                                                  onClick: () => router.push('/dashboard'),
+                                                            },
+                                                            {
+                                                                  label: 'Logout',
+                                                                  key: 'logout',
+                                                                  onClick: () => handleLogout(),
+                                                            },
+                                                      ],
+                                                }}
+                                                placement="bottomRight"
+                                                arrow={{
+                                                      pointAtCenter: true,
+                                                }}
+                                          >
+                                                <Button type="text" className="text-primaryText">
+                                                      <Space>
+                                                            <div className="bg-[#FFFAE2] p-2 rounded-full">
+                                                                  <Image src={Ganja} alt="Ganja" width={20} height={20} />
+                                                            </div>
+                                                            <TbChevronDown />
+                                                      </Space>
+                                                </Button>
+                                          </Dropdown>
+                                    ) : (
+                                          <Button href="/login" iconPosition="end" icon={<Image src={Ganja} alt="Ganja" />} type="primary">
+                                                Login
                                           </Button>
-                                    </Link>
+                                    )}
                               </div>
                               <div className="md:hidden">
                                     <AiOutlineMenu

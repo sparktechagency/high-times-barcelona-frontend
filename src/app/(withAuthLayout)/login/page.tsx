@@ -1,15 +1,37 @@
 'use client';
 
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, message } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import { useRouter } from 'next/navigation';
+import { useLoginUserMutation } from '@/redux/features/auth/authApi';
+import { decodedUser } from '@/utils/decodeUser';
+import { useAppDispatch } from '@/redux/hooks';
+import { setUser } from '@/redux/features/auth/authSlice';
+import { setAccessToken } from '@/utils/tokenManagement';
+import { toast } from 'react-toastify';
 
 const Login = () => {
       const router = useRouter();
+      const [loginUser, { isLoading }] = useLoginUserMutation();
+      const dispatch = useAppDispatch();
 
-      const onFinish = (values: any) => {
-            console.log('Success:', values);
-            router.push('/'); // Navigate to the homepage
+      const onFinish = async (values: any) => {
+            // console.log('Success:', values);
+            try {
+                  const res = await loginUser(values).unwrap();
+                  if (res.success) {
+                        const accessToken = res.data.accessToken;
+                        const user = decodedUser(accessToken);
+                        dispatch(setUser({ user, token: accessToken }));
+                        setAccessToken(accessToken);
+
+                        toast.success(res.message);
+                        router.push('/dashboard');
+                  }
+            } catch (error: any) {
+                  console.log(error);
+                  toast.error(error?.data?.message);
+            }
       };
 
       return (
@@ -81,7 +103,7 @@ const Login = () => {
                                                 color: '#fff',
                                           }}
                                     >
-                                          Sign In
+                                          {isLoading ? 'Loading...' : 'Log In'}
                                     </Button>
                               </Form.Item>
                         </Form>

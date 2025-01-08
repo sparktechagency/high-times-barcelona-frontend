@@ -1,9 +1,14 @@
 'use client';
-import ReduxProvider from '@/redux/lib/ReduxProvider';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { ConfigProvider } from 'antd';
 import React, { ReactNode } from 'react';
 
+import dynamic from 'next/dynamic';
+import { ToastContainer } from 'react-toastify';
+
+const ReduxProvider = dynamic(() => import('@/redux/lib/ReduxProvider'), {
+      ssr: false,
+});
 const Provider = ({ children }: { children: ReactNode }) => {
       return (
             <ReduxProvider>
@@ -57,7 +62,10 @@ const Provider = ({ children }: { children: ReactNode }) => {
                               },
                         }}
                   >
-                        <AntdRegistry>{children}</AntdRegistry>
+                        <AntdRegistry>
+                              {children}
+                              <ToastContainer />
+                        </AntdRegistry>
                   </ConfigProvider>
             </ReduxProvider>
       );
