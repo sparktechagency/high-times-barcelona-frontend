@@ -1,10 +1,12 @@
+'use client';
+import ReduxProvider from '@/redux/lib/ReduxProvider';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { ConfigProvider } from 'antd';
 import React, { ReactNode } from 'react';
 
 const Provider = ({ children }: { children: ReactNode }) => {
       return (
-            <div>
+            <ReduxProvider>
                   <ConfigProvider
                         theme={{
                               token: {
@@ -57,7 +59,7 @@ const Provider = ({ children }: { children: ReactNode }) => {
                   >
                         <AntdRegistry>{children}</AntdRegistry>
                   </ConfigProvider>
-            </div>
+            </ReduxProvider>
       );
 };
 
