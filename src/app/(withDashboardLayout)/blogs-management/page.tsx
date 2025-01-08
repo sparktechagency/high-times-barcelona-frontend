@@ -5,34 +5,26 @@ import { Table, Button, Form, Input, Space, Popconfirm, message, Tooltip, Tag, R
 import Title from 'antd/es/typography/Title';
 import { FaRegEdit, FaTrashAlt } from 'react-icons/fa';
 import Modal from '@/components/shared/Modal';
-import ImageIcon from '@/assets/images/club-image.png';
-interface Blog {
-      id: string;
-      title: string;
-      description: string;
-      image: string;
-      tags: string[];
-      createdAt: string;
-      updatedAt: string;
-}
+import {
+      TBlog,
+      useCreateBlogMutation,
+      useDeleteBlogMutation,
+      useGetBlogsQuery,
+      useUpdateBlogMutation,
+} from '@/redux/features/blog/blogApi';
+import { getImageUrl } from '@/utils/getImageUrl';
+import { toast } from 'react-toastify';
 
 const BlogsManagement: React.FC = () => {
-      const [blogs, setBlogs] = useState<Blog[]>([
-            {
-                  id: '677387f93fecb0cfd6278ff6',
-                  title: 'Exploring the Future of Backend Development',
-                  description:
-                        'In this blog, we explore the latest trends in backend development, focusing on performance optimization, microservices, and cloud-native technologies.',
-                  image: '/blogs/4-1735625269366.jpg',
-                  tags: ['Backend', 'Development'],
-                  createdAt: '2024-12-31T05:58:17.237Z',
-                  updatedAt: '2024-12-31T06:07:49.369Z',
-            },
-      ]);
-
       const [isModalOpen, setIsModalOpen] = useState(false);
-      const [selectedBlog, setSelectedBlog] = useState<Blog | null>(null);
+      const [selectedBlog, setSelectedBlog] = useState<TBlog | null>(null);
       const [form] = Form.useForm();
+
+      // Todo: Redux Integration
+      const { data: blogData, isFetching } = useGetBlogsQuery([]);
+      const [createBlog] = useCreateBlogMutation();
+      const [updateBlog] = useUpdateBlogMutation();
+      const [deleteBlog] = useDeleteBlogMutation();
 
       useEffect(() => {
             if (selectedBlog) {
@@ -43,16 +35,62 @@ const BlogsManagement: React.FC = () => {
             }
       }, [selectedBlog, form]);
 
-      const handleDelete = (id: string) => {
-            setBlogs((prev) => prev.filter((blog) => blog.id !== id));
-            message.success('Blog deleted successfully.');
+      const handleDelete = async (id: string) => {
+            try {
+                  const res = await deleteBlog(id).unwrap();
+                  if (res.success) {
+                        toast.success(res.message);
+                  }
+            } catch (error: any) {
+                  console.log(error);
+                  toast.error(error?.data?.message);
+            }
       };
 
-      const handleSubmit = (values: any) => {
-            console.log('Form values:', values);
-            setIsModalOpen(false);
-            setSelectedBlog(null);
-            form.resetFields();
+      const handleSubmit = async (values: any) => {
+            console.log('Form values:', values.image);
+            if (selectedBlog) {
+                  try {
+                        const formData = new FormData();
+                        if (values?.image?.fileList?.[0]) {
+                              formData.append('blogImage', values.image.fileList[0].originFileObj);
+                        }
+                        delete values.image;
+                        formData.append('data', JSON.stringify(values));
+                        const updatedInfo = {
+                              id: selectedBlog._id,
+                              data: formData,
+                        };
+
+                        const data = await updateBlog(updatedInfo).unwrap();
+                        if (data.success) {
+                              toast.success(data.message);
+                              setIsModalOpen(false);
+                              setSelectedBlog(null);
+                              form.resetFields();
+                        }
+                  } catch (error: any) {
+                        console.log(error);
+                        toast.error(error?.data?.message);
+                  }
+            } else {
+                  try {
+                        const formData = new FormData();
+                        formData.append('blogImage', values.image.fileList[0].originFileObj);
+                        delete values.image;
+                        formData.append('data', JSON.stringify(values));
+                        const res = await createBlog(formData).unwrap();
+                        if (res.success) {
+                              toast.success(res.message);
+                              setIsModalOpen(false);
+                              setSelectedBlog(null);
+                              form.resetFields();
+                        }
+                  } catch (error: any) {
+                        console.log(error);
+                        toast.error(error?.data?.message);
+                  }
+            }
       };
 
       const columns = [
@@ -60,9 +98,20 @@ const BlogsManagement: React.FC = () => {
                   title: 'Title',
                   dataIndex: 'title',
                   key: 'title',
-                  render: (text: string) => (
-                        <div className="flex items-end gap-2">
-                              <Image className="size-[50px] rounded-full" src={ImageIcon.src} alt="Ganja Leaf" width={50} height={50} />
+                  render: (text: string, record: TBlog) => (
+                        <div className="flex items-center gap-2">
+                              <div className="">
+                                    <Image
+                                          className=""
+                                          src={getImageUrl(record.image)}
+                                          alt="Ganja Leaf"
+                                          style={{
+                                                height: 60,
+                                                width: '100%',
+                                                borderRadius: '100%',
+                                          }}
+                                    />
+                              </div>
                               <p>{text}</p>
                         </div>
                   ),
@@ -79,7 +128,7 @@ const BlogsManagement: React.FC = () => {
                   key: 'tags',
                   render: (tags: string[]) => (
                         <>
-                              {tags.map((tag) => (
+                              {tags?.map((tag) => (
                                     <Tag key={tag} color="blue">
                                           {tag}
                                     </Tag>
@@ -96,7 +145,7 @@ const BlogsManagement: React.FC = () => {
             {
                   title: 'Actions',
                   key: 'actions',
-                  render: (_: any, record: Blog) => (
+                  render: (_: any, record: TBlog) => (
                         <Space size="middle">
                               <Tooltip title="Edit Blog" overlayInnerStyle={{ backgroundColor: '#fff', color: '#006830' }}>
                                     <Button
@@ -112,7 +161,7 @@ const BlogsManagement: React.FC = () => {
                               <Tooltip title="Delete Blog" overlayInnerStyle={{ backgroundColor: '#fff', color: '#006830' }}>
                                     <Popconfirm
                                           title="Are you sure you want to delete this blog?"
-                                          onConfirm={() => handleDelete(record.id)}
+                                          onConfirm={() => handleDelete(record._id)}
                                     >
                                           <Button type="text" danger>
                                                 <FaTrashAlt size={20} />
@@ -147,20 +196,12 @@ const BlogsManagement: React.FC = () => {
                   </Row>
                   <Row gutter={[16, 16]}>
                         <Col span={12}>
-                              <Form.Item
-                                    label="Tags (comma-separated)"
-                                    name="tags"
-                                    rules={[{ required: true, message: 'Please enter at least one tag' }]}
-                              >
+                              <Form.Item label="Tags" name="tags" rules={[{ required: true, message: 'Please enter at least one tag' }]}>
                                     <Select mode="tags" placeholder="Tags" />
                               </Form.Item>
                         </Col>
                         <Col span={12}>
-                              <Form.Item
-                                    label="Image URL"
-                                    name="image"
-                                    rules={[{ required: true, message: 'Please enter the blog image URL' }]}
-                              >
+                              <Form.Item label="Image" name="image" rules={[{ required: true, message: 'Please enter the blog image' }]}>
                                     <Upload maxCount={1}>
                                           <Button>Upload Image</Button>
                                     </Upload>
@@ -197,7 +238,7 @@ const BlogsManagement: React.FC = () => {
                   </div>
 
                   {/* Blogs Table */}
-                  <Table dataSource={blogs.map((blog) => ({ ...blog, key: blog.id }))} columns={columns} bordered />
+                  <Table dataSource={blogData?.result} columns={columns} loading={isFetching} bordered />
 
                   {/* Custom Modal */}
                   <Modal

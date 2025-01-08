@@ -43,7 +43,9 @@ const ClubsManagement: React.FC = () => {
             if (selectedClub) {
                   try {
                         const formData = new FormData();
-                        formData.append('clubImage', values.image.fileList[0].originFileObj);
+                        if (values?.image?.fileList?.[0]) {
+                              formData.append('clubImage', values.image.fileList[0].originFileObj);
+                        }
                         delete values.image;
                         formData.append('data', JSON.stringify(values));
                         const updatedInfo = {
