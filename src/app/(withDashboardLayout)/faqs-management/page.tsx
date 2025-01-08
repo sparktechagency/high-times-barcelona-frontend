@@ -5,56 +5,77 @@ import { Table, Button, Form, Input, Space, Popconfirm, message, Tooltip, Row, C
 import Title from 'antd/es/typography/Title';
 import { FaRegEdit, FaTrashAlt } from 'react-icons/fa';
 import Modal from '@/components/shared/Modal';
-
-interface FAQ {
-      id: string;
-      question: string;
-      answer: string;
-}
+import { TFaq, useCreateFaqMutation, useDeleteFaqMutation, useGetFaqsQuery, useUpdateFaqMutation } from '@/redux/features/faq/faqApi';
+import { toast } from 'react-toastify';
 
 const FaqsManagement: React.FC = () => {
-      const [faqs, setFaqs] = useState<FAQ[]>([
-            {
-                  id: '1',
-                  question: 'What is Zod?',
-                  answer: 'Zod is a TypeScript-first schema validation library.',
-            },
-      ]);
-
       const [isModalOpen, setIsModalOpen] = useState(false);
-      const [selectedFaq, setSelectedFaq] = useState<FAQ | null>(null);
+      const [selectedFaq, setSelectedFaq] = useState<TFaq | null>(null);
       const [form] = Form.useForm();
 
       // Note: Redux Integration
+      const { data: faqData } = useGetFaqsQuery([]);
+      const [createBlog] = useCreateFaqMutation();
+      const [updateBlog] = useUpdateFaqMutation();
+      const [deleteBlog] = useDeleteFaqMutation();
 
       useEffect(() => {
+            if (!isModalOpen) {
+                  setSelectedFaq(null);
+            }
             if (selectedFaq) {
                   form.setFieldsValue(selectedFaq);
+            } else {
+                  form.resetFields();
             }
-      }, [selectedFaq, form]);
+      }, [selectedFaq, form, isModalOpen]);
 
-      const handleDelete = (id: string) => {
-            setFaqs((prev) => prev.filter((faq) => faq.id !== id));
-            message.success('FAQ deleted successfully.');
+      const handleDelete = async (id: string) => {
+            try {
+                  const res = await deleteBlog(id).unwrap();
+                  if (res.success) {
+                        toast.success(res.message);
+                  }
+            } catch (error: any) {
+                  console.log(error);
+                  toast.error(error?.data?.message);
+            }
       };
 
-      const handleSubmit = (values: any) => {
+      const handleSubmit = async (values: any) => {
+            console.log('Form values:', values.image);
             if (selectedFaq) {
-                  // Update existing FAQ
-                  setFaqs((prev) => prev.map((faq) => (faq.id === selectedFaq.id ? { ...faq, ...values } : faq)));
-                  message.success('FAQ updated successfully.');
+                  try {
+                        const updatedInfo = {
+                              id: selectedFaq._id,
+                              data: values,
+                        };
+
+                        const data = await updateBlog(updatedInfo).unwrap();
+                        if (data.success) {
+                              toast.success(data.message);
+                              setIsModalOpen(false);
+                              setSelectedFaq(null);
+                              form.resetFields();
+                        }
+                  } catch (error: any) {
+                        console.log(error);
+                        toast.error(error?.data?.message);
+                  }
             } else {
-                  // Add new FAQ
-                  const newFaq: FAQ = {
-                        id: Math.random().toString(36).substr(2, 9), // Generate random ID
-                        ...values,
-                  };
-                  setFaqs((prev) => [...prev, newFaq]);
-                  message.success('FAQ added successfully.');
+                  try {
+                        const res = await createBlog(values).unwrap();
+                        if (res.success) {
+                              toast.success(res.message);
+                              setIsModalOpen(false);
+                              setSelectedFaq(null);
+                              form.resetFields();
+                        }
+                  } catch (error: any) {
+                        console.log(error);
+                        toast.error(error?.data?.message);
+                  }
             }
-            setIsModalOpen(false);
-            setSelectedFaq(null);
-            form.resetFields();
       };
 
       const columns = [
@@ -72,7 +93,7 @@ const FaqsManagement: React.FC = () => {
             {
                   title: 'Actions',
                   key: 'actions',
-                  render: (_: any, record: FAQ) => (
+                  render: (_: any, record: TFaq) => (
                         <Space size="middle">
                               <Tooltip title="Edit FAQ" overlayInnerStyle={{ backgroundColor: '#fff', color: '#006830' }}>
                                     <Button
@@ -86,7 +107,10 @@ const FaqsManagement: React.FC = () => {
                                     </Button>
                               </Tooltip>
                               <Tooltip title="Delete FAQ" overlayInnerStyle={{ backgroundColor: '#fff', color: '#ff4d4f' }}>
-                                    <Popconfirm title="Are you sure you want to delete this FAQ?" onConfirm={() => handleDelete(record.id)}>
+                                    <Popconfirm
+                                          title="Are you sure you want to delete this FAQ?"
+                                          onConfirm={() => handleDelete(record._id)}
+                                    >
                                           <Button type="text" danger>
                                                 <FaTrashAlt size={20} />
                                           </Button>
@@ -145,7 +169,7 @@ const FaqsManagement: React.FC = () => {
                   </div>
 
                   {/* FAQs Table */}
-                  <Table dataSource={faqs.map((faq) => ({ ...faq, key: faq.id }))} columns={columns} bordered />
+                  <Table dataSource={faqData?.result} columns={columns} bordered />
 
                   {/* Custom Modal */}
                   <Modal
