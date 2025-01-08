@@ -1,5 +1,5 @@
 'use client';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Checkbox, Col, Form, Input, InputNumber, Row, TimePicker, Upload } from 'antd';
 import { FC } from 'react';
 import { MdOutlineCall, MdOutlineStore } from 'react-icons/md';
 import { FaLocationDot } from 'react-icons/fa6';
@@ -9,6 +9,8 @@ import { FaRegClock } from 'react-icons/fa6';
 import { BiDollar, BiEuro } from 'react-icons/bi';
 import { MdOutlineDescription } from 'react-icons/md';
 import { TbRating18Plus } from 'react-icons/tb';
+import Title from 'antd/es/typography/Title';
+import { MapPin } from 'lucide-react';
 
 const { TextArea } = Input;
 
@@ -29,6 +31,11 @@ const NewClub: FC = () => {
                   </div>
 
                   <Form form={form} layout="vertical" onFinish={onFinish} requiredMark={false}>
+                        <Form.Item name="image" rules={[{ required: true, message: 'Please upload an image' }]}>
+                              <Upload maxCount={1} beforeUpload={() => false} accept="image/*" listType="picture" multiple={false}>
+                                    <Button>Upload Image</Button>
+                              </Upload>
+                        </Form.Item>
                         <Form.Item
                               label={<span className="text-white">Name Of The Club</span>}
                               name="clubName"
@@ -52,32 +59,36 @@ const NewClub: FC = () => {
                                     placeholder="Club Address"
                               />
                         </Form.Item>
+                        <Form.Item
+                              label={<span className="text-white">Description</span>}
+                              name="description"
+                              rules={[{ required: true, message: 'Please enter club description' }]}
+                        >
+                              <TextArea style={{ minHeight: 120, resize: 'none' }} placeholder="Describe about your club" />
+                        </Form.Item>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                               <Form.Item
-                                    label={<span className="text-white">Email Address</span>}
-                                    name="email"
-                                    rules={[
-                                          { required: true, message: 'Please enter email' },
-                                          { type: 'email', message: 'Please enter a valid email' },
-                                    ]}
+                                    label={<span className="text-white">Latitude (Ex: 23.0)</span>}
+                                    name="latitude"
+                                    rules={[{ required: true, message: 'Please enter latitude' }]}
                               >
-                                    <Input
-                                          prefix={<MdOutlineEmail className="text-gray-400 text-xl" />}
-                                          style={{ height: 48 }}
-                                          placeholder="Email Address"
+                                    <InputNumber
+                                          prefix={<MapPin className="text-gray-400 text-xl" />}
+                                          style={{ height: 48, width: '100%' }}
+                                          placeholder="Enter latitude"
                                     />
                               </Form.Item>
 
                               <Form.Item
-                                    label={<span className="text-white">Phone Number</span>}
-                                    name="phone"
-                                    rules={[{ required: true, message: 'Please enter phone number' }]}
+                                    label={<span className="text-white">Longitude (Ex: 90.0)</span>}
+                                    name="longitude"
+                                    rules={[{ required: true, message: 'Please enter longitude' }]}
                               >
-                                    <Input
-                                          prefix={<MdOutlineCall className="text-gray-400 text-xl" />}
-                                          style={{ height: 48 }}
-                                          placeholder="Enter phone number"
+                                    <InputNumber
+                                          prefix={<MapPin className="text-gray-400 text-xl" />}
+                                          style={{ height: 48, width: '100%' }}
+                                          placeholder="Enter longitude"
                                     />
                               </Form.Item>
 
@@ -105,14 +116,23 @@ const NewClub: FC = () => {
                                     />
                               </Form.Item>
                         </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                              <Form.Item
+                                    label={<span className="text-white">Opening Hour</span>}
+                                    name="openingHour"
+                                    rules={[{ required: true, message: 'Please select the opening hour' }]}
+                              >
+                                    <TimePicker format="HH:mm" style={{ width: '100%' }} />
+                              </Form.Item>
 
-                        <Form.Item
-                              label={<span className="text-white">Description</span>}
-                              name="description"
-                              rules={[{ required: true, message: 'Please enter club description' }]}
-                        >
-                              <TextArea style={{ minHeight: 120, resize: 'none' }} placeholder="Describe about your club" />
-                        </Form.Item>
+                              <Form.Item
+                                    label={<span className="text-white">Closing Hour</span>}
+                                    name="closingHour"
+                                    rules={[{ required: true, message: 'Please select the closing hour' }]}
+                              >
+                                    <TimePicker format="HH:mm" style={{ width: '100%' }} />
+                              </Form.Item>
+                        </div>
 
                         <Form.Item
                               name="agreement"
