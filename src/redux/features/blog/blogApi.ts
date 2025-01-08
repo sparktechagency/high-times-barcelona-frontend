@@ -1,5 +1,5 @@
 import { baseApi } from '@/redux/base/baseApi';
-import { TApiResponse, TApiResponseWithMeta } from '@/types';
+import { TApiResponse, TApiResponseWithMeta, TQueryParams } from '@/types';
 
 export interface TBlog {
       _id: string;
@@ -22,10 +22,19 @@ const blogApi = baseApi.injectEndpoints({
             }),
 
             getBlogs: builder.query({
-                  query: () => ({
-                        url: '/blogs',
-                        method: 'GET',
-                  }),
+                  query: (args) => {
+                        const params = new URLSearchParams();
+                        if (args) {
+                              args.forEach((item: TQueryParams) => {
+                                    params.append(item.name, item.value);
+                              });
+                        }
+                        return {
+                              url: '/blogs',
+                              method: 'GET',
+                              params,
+                        };
+                  },
                   providesTags: ['Blog'],
                   transformResponse: (response: TApiResponseWithMeta<TBlog[]>) => response.data,
             }),

@@ -25,6 +25,8 @@ const FaqsManagement: React.FC = () => {
       const [selectedFaq, setSelectedFaq] = useState<FAQ | null>(null);
       const [form] = Form.useForm();
 
+      // Note: Redux Integration
+
       useEffect(() => {
             if (selectedFaq) {
                   form.setFieldsValue(selectedFaq);

@@ -16,12 +16,18 @@ import { getImageUrl } from '@/utils/getImageUrl';
 import { toast } from 'react-toastify';
 
 const BlogsManagement: React.FC = () => {
+      const [page, setPage] = useState(1);
+
       const [isModalOpen, setIsModalOpen] = useState(false);
       const [selectedBlog, setSelectedBlog] = useState<TBlog | null>(null);
       const [form] = Form.useForm();
 
       // Todo: Redux Integration
-      const { data: blogData, isFetching } = useGetBlogsQuery([]);
+      const { data: blogData, isFetching } = useGetBlogsQuery([
+            { name: 'page', value: page },
+            { name: 'limit', value: 2 },
+      ]);
+
       const [createBlog] = useCreateBlogMutation();
       const [updateBlog] = useUpdateBlogMutation();
       const [deleteBlog] = useDeleteBlogMutation();
@@ -238,7 +244,18 @@ const BlogsManagement: React.FC = () => {
                   </div>
 
                   {/* Blogs Table */}
-                  <Table dataSource={blogData?.result} columns={columns} loading={isFetching} bordered />
+                  <Table
+                        pagination={{
+                              onChange: (page) => setPage(page),
+                              current: page,
+                              total: blogData?.meta.total,
+                              pageSize: blogData?.meta.limit,
+                        }}
+                        dataSource={blogData?.result}
+                        columns={columns}
+                        loading={isFetching}
+                        bordered
+                  />
 
                   {/* Custom Modal */}
                   <Modal
