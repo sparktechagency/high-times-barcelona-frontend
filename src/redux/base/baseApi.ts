@@ -2,7 +2,7 @@ import { BaseQueryApi, BaseQueryFn, createApi, DefinitionType, FetchArgs, fetchB
 import { RootState } from '../store';
 import { logout, setUser } from '../features/auth/authSlice';
 
-const backendUrl = 'http://192.168.10.19:5001';
+export const backendUrl = 'http://192.168.10.19:5001';
 const baseQuery = fetchBaseQuery({
       baseUrl: `${backendUrl}/api/v1`,
       credentials: 'include',
@@ -17,7 +17,7 @@ const baseQuery = fetchBaseQuery({
       },
 });
 
-const baseQueryWithRefreshToken: BaseQueryFn<FetchArgs, BaseQueryApi, DefinitionType> = async (args, api, extraOptions): Promise<any> => {
+const baseQueryWithRefreshToken: BaseQueryFn<FetchArgs, any, DefinitionType> = async (args, api, extraOptions): Promise<any> => {
       let result = await baseQuery(args, api, extraOptions);
 
       if (result?.error?.status === 401) {
@@ -47,6 +47,6 @@ const baseQueryWithRefreshToken: BaseQueryFn<FetchArgs, BaseQueryApi, Definition
 export const baseApi = createApi({
       reducerPath: 'baseApi',
       baseQuery: baseQueryWithRefreshToken,
-      tagTypes: ['Auth'],
+      tagTypes: ['Auth', 'Club'],
       endpoints: () => ({}),
 });

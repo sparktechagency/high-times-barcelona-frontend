@@ -1,85 +1,132 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import {
-      Table,
-      Button,
-      Form,
-      Input,
-      InputNumber,
-      message,
-      Flex,
-      Image,
-      Space,
-      Popconfirm,
-      Switch,
-      Row,
-      Col,
-      Divider,
-      Select,
-      TimePicker,
-      Tooltip,
-      Upload,
-} from 'antd';
+import { Table, Button, Form, Input, InputNumber, Flex, Image, Space, Popconfirm, Switch, Row, Col, Divider, Tooltip, Upload } from 'antd';
 import Title from 'antd/es/typography/Title';
-import ImageIcon from '@/assets/images/club-image.png';
 import { FaRegEdit, FaTrashAlt } from 'react-icons/fa';
 
 import { AiOutlineCheck } from 'react-icons/ai';
 import Modal from '@/components/shared/Modal';
-interface Club {
-      id: string;
-      name: string;
-      address: string;
-      memberShipFee: number;
-      rating: number;
-      ageLimit: number;
-      isApproved: boolean;
-}
+import {
+      TClub,
+      useCreateClubMutation,
+      useDeleteClubMutation,
+      useGetClubsQuery,
+      useUpdateClubMutation,
+} from '@/redux/features/club/clubApi';
+import { toast } from 'react-toastify';
+import { getImageUrl } from '@/utils/getImageUrl';
 
 const ClubsManagement: React.FC = () => {
-      const [clubs, setClubs] = useState<Club[]>([
-            {
-                  id: '6773c0ad1ff083666a7b9566',
-                  name: 'Fitness Club',
-                  address: '123 Main St, New York, NY',
-                  memberShipFee: 50,
-                  rating: 4.4,
-                  ageLimit: 18,
-                  isApproved: false,
-            },
-      ]);
+      const [createClub] = useCreateClubMutation();
+      const [updateClub] = useUpdateClubMutation();
+      const [deleteClub] = useDeleteClubMutation();
+      const { data: allClubs, isFetching } = useGetClubsQuery([]);
 
       const [isModalOpen, setIsModalOpen] = useState(false);
-      const [selectedClub, setSelectedClub] = useState<Club | null>(null);
+      const [selectedClub, setSelectedClub] = useState<TClub | null>();
       const [form] = Form.useForm();
 
-      const handleAddClub = () => {};
-
-      const handleApprove = (id: string, status: boolean) => {
-            setClubs((prev) => prev.map((club) => (club.id === id ? { ...club, isApproved: status } : club)));
-            message.success(`Club ${status ? 'approved' : 'disapproved'} successfully.`);
-      };
-
-      const handleDelete = (id: string) => {
-            setClubs((prev) => prev.filter((club) => club.id !== id));
-            message.success('Club deleted successfully.');
-      };
-
       useEffect(() => {
+            if (!isModalOpen) {
+                  setSelectedClub(null);
+            }
+
             if (selectedClub) {
                   form.setFieldsValue(selectedClub);
+            } else {
+                  form.resetFields();
             }
-      }, [selectedClub, form]);
+      }, [selectedClub, isModalOpen, form]);
 
+      const handleSubmit = async (values: any) => {
+            if (selectedClub) {
+                  try {
+                        const formData = new FormData();
+                        formData.append('clubImage', values.image.fileList[0].originFileObj);
+                        delete values.image;
+                        formData.append('data', JSON.stringify(values));
+                        const updatedInfo = {
+                              id: selectedClub._id,
+                              data: formData,
+                        };
+
+                        const data = await updateClub(updatedInfo).unwrap();
+                        if (data.success) {
+                              toast.success(data.message);
+                              setIsModalOpen(false);
+                              setSelectedClub(null);
+                              form.resetFields();
+                        }
+                  } catch (error: any) {
+                        console.log(error);
+                        toast.error(error?.data?.message);
+                  }
+            } else {
+                  try {
+                        const formData = new FormData();
+                        formData.append('clubImage', values.image.fileList[0].originFileObj);
+                        delete values.image;
+                        formData.append('data', JSON.stringify(values));
+                        const res = await createClub(formData).unwrap();
+                        if (res.success) {
+                              toast.success(res.message);
+                              setIsModalOpen(false);
+                              setSelectedClub(null);
+                              form.resetFields();
+                        }
+                  } catch (error: any) {
+                        console.log(error);
+                        toast.error(error?.data?.message);
+                  }
+            }
+      };
+
+      const handleToggleClubStatus = async (id: string, status: boolean) => {
+            console.log(id, status);
+            try {
+                  const formData = new FormData();
+                  formData.append('data', JSON.stringify({ isApproved: status }));
+                  const updatedInfo = {
+                        id: id,
+                        data: formData,
+                  };
+
+                  const data = await updateClub(updatedInfo).unwrap();
+                  if (data.success) {
+                        toast.success(data.message);
+                  }
+            } catch (error: any) {
+                  console.log(error);
+                  toast.error(error?.data?.message);
+            }
+      };
+
+      const handleDelete = async (id: string) => {
+            try {
+                  const data = await deleteClub({ id }).unwrap();
+                  if (data.success) {
+                        toast.success(data.message);
+                  }
+            } catch (error: any) {
+                  console.log(error);
+                  toast.error(error?.data?.message);
+            }
+      };
       const columns = [
             {
                   title: 'Name',
                   dataIndex: 'name',
                   key: 'name',
-                  render: (name: string) => (
+                  render: (name: string, record: TClub) => (
                         <div className="flex items-center gap-2">
-                              <Image className="size-[50px] rounded-full" src={ImageIcon.src} alt="Ganja Leaf" width={50} height={50} />
+                              <Image
+                                    className="size-[50px] rounded-full"
+                                    src={getImageUrl(record.image)}
+                                    alt="Ganja Leaf"
+                                    width={50}
+                                    height={50}
+                              />
                               <p>{name}</p>
                         </div>
                   ),
@@ -110,7 +157,7 @@ const ClubsManagement: React.FC = () => {
             {
                   title: 'Actions',
                   key: 'action',
-                  render: (_: any, record: Club) => {
+                  render: (_: any, record: TClub) => {
                         return (
                               <Space size="small">
                                     <Tooltip
@@ -123,7 +170,7 @@ const ClubsManagement: React.FC = () => {
                                           <Switch
                                                 checkedChildren={<AiOutlineCheck size={20} color="#006830" />}
                                                 defaultChecked={record.isApproved}
-                                                onChange={(status) => handleApprove(record.id, status)}
+                                                onChange={(status) => handleToggleClubStatus(record._id, status)}
                                           />
                                     </Tooltip>
 
@@ -154,7 +201,7 @@ const ClubsManagement: React.FC = () => {
                                     >
                                           <Popconfirm
                                                 title="Are you sure you want to delete this club?"
-                                                onConfirm={() => handleDelete(record.id)}
+                                                onConfirm={() => handleDelete(record._id)}
                                           >
                                                 <Button type="text" danger>
                                                       <FaTrashAlt size={20} />
@@ -166,24 +213,9 @@ const ClubsManagement: React.FC = () => {
                   },
             },
       ];
-
-      const handleSubmit = (values: any) => {
-            const newClub: Club = {
-                  id: '6773c0ad1ff083666a7b9566',
-                  name: values.name,
-                  address: values.address,
-                  memberShipFee: values.memberShipFee,
-                  rating: 4.4,
-                  ageLimit: values.ageLimit,
-                  isApproved: false,
-            };
-            setClubs((prev) => [...prev, newClub]);
-            setIsModalOpen(false);
-            message.success('Club added successfully.');
-      };
-
       const body = (
             <Form
+                  requiredMark={false}
                   className="h-[60vh] overflow-y-auto overflow-x-hidden custom-scrollbar"
                   form={form}
                   layout="vertical"
@@ -247,20 +279,20 @@ const ClubsManagement: React.FC = () => {
                   <Row gutter={[16, 16]}>
                         <Col span={12}>
                               <Form.Item
-                                    label="Longitude"
-                                    name={['location', 'longitude']}
-                                    rules={[{ required: true, message: 'Please enter the longitude' }]}
-                              >
-                                    <InputNumber min={-180} max={180} style={{ width: '100%' }} />
-                              </Form.Item>
-                        </Col>
-                        <Col span={12}>
-                              <Form.Item
-                                    label="Latitude"
+                                    label="Latitude ( ex: 23.7935 )"
                                     name={['location', 'latitude']}
                                     rules={[{ required: true, message: 'Please enter the latitude' }]}
                               >
                                     <InputNumber min={-90} max={90} style={{ width: '100%' }} />
+                              </Form.Item>
+                        </Col>
+                        <Col span={12}>
+                              <Form.Item
+                                    label="Longitude ( ex: 90.437 )"
+                                    name={['location', 'longitude']}
+                                    rules={[{ required: true, message: 'Please enter the longitude' }]}
+                              >
+                                    <InputNumber min={-180} max={180} style={{ width: '100%' }} />
                               </Form.Item>
                         </Col>
                   </Row>
@@ -272,18 +304,18 @@ const ClubsManagement: React.FC = () => {
                               <Form.Item
                                     label="Opening Hour"
                                     name="openingHour"
-                                    rules={[{ required: true, message: 'Please select the opening hour' }]}
+                                    rules={[{ required: true, message: 'Please input the opening hour' }]}
                               >
-                                    <TimePicker format="HH:mm" style={{ width: '100%' }} />
+                                    <Input placeholder="08:00" />
                               </Form.Item>
                         </Col>
                         <Col span={12}>
                               <Form.Item
                                     label="Closing Hour"
                                     name="closingHour"
-                                    rules={[{ required: true, message: 'Please select the closing hour' }]}
+                                    rules={[{ required: true, message: 'Please input the closing hour' }]}
                               >
-                                    <TimePicker format="HH:mm" style={{ width: '100%' }} />
+                                    <Input placeholder="22:00" />
                               </Form.Item>
                         </Col>
                   </Row>
@@ -325,7 +357,7 @@ const ClubsManagement: React.FC = () => {
                               Add Club
                         </Button>
                   </Flex>
-                  <Table dataSource={clubs.map((club) => ({ ...club, key: club.id }))} columns={columns} bordered />
+                  <Table pagination={false} dataSource={allClubs} loading={isFetching} columns={columns} bordered />
                   <Modal
                         width={800}
                         title={selectedClub ? 'Update Club' : 'Add Club'}

@@ -122,7 +122,7 @@ const NewClub: FC = () => {
                                     name="openingHour"
                                     rules={[{ required: true, message: 'Please select the opening hour' }]}
                               >
-                                    <TimePicker format="HH:mm" style={{ width: '100%' }} />
+                                    <Input placeholder="10:00" />
                               </Form.Item>
 
                               <Form.Item
@@ -130,7 +130,7 @@ const NewClub: FC = () => {
                                     name="closingHour"
                                     rules={[{ required: true, message: 'Please select the closing hour' }]}
                               >
-                                    <TimePicker format="HH:mm" style={{ width: '100%' }} />
+                                    <Input placeholder="22:00" />
                               </Form.Item>
                         </div>
 
