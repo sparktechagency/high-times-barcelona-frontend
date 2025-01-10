@@ -1,10 +1,19 @@
 'use client';
 import { useGetFaqsQuery } from '@/redux/features/faq/faqApi';
-import { Collapse } from 'antd';
+import { Collapse, Pagination } from 'antd';
+import { useState } from 'react';
 import { CgChevronDown } from 'react-icons/cg';
 
 const Faq = () => {
-      const { data: faqsData, isLoading, error } = useGetFaqsQuery([]);
+      const [page, setPage] = useState(1);
+      const {
+            data: faqsData,
+            isLoading,
+            error,
+      } = useGetFaqsQuery([
+            { name: 'page', value: page },
+            { name: 'limit', value: 6 },
+      ]);
 
       if (isLoading) {
             return (
@@ -60,7 +69,7 @@ const Faq = () => {
             }));
 
       return (
-            <section className="py-20">
+            <section className="py-20 min-h-screen">
                   <div className="container">
                         <div className="flex flex-col items-center mb-16">
                               <h3 className="text-4xl md:text-5xl font-medium">
@@ -82,6 +91,15 @@ const Faq = () => {
                                           size="large"
                                     />
                               </div>
+                        </div>
+                        <div className="flex justify-center my-2">
+                              <Pagination
+                                    defaultCurrent={1}
+                                    total={faqsData?.meta.total}
+                                    pageSize={faqsData?.meta.limit}
+                                    onChange={(page) => setPage(page)}
+                                    showSizeChanger={false}
+                              />
                         </div>
                   </div>
             </section>
