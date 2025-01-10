@@ -25,7 +25,7 @@ const BlogsManagement: React.FC = () => {
       // Todo: Redux Integration
       const { data: blogData, isFetching } = useGetBlogsQuery([
             { name: 'page', value: page },
-            { name: 'limit', value: 2 },
+            { name: 'limit', value: 8 },
       ]);
 
       const [createBlog] = useCreateBlogMutation();
@@ -106,7 +106,7 @@ const BlogsManagement: React.FC = () => {
                   key: 'title',
                   render: (text: string, record: TBlog) => (
                         <div className="flex items-center gap-2">
-                              <div className="">
+                              <div className="w-[60px] min-w-[60px]">
                                     <Image
                                           className=""
                                           src={getImageUrl(record.image)}
@@ -118,7 +118,7 @@ const BlogsManagement: React.FC = () => {
                                           }}
                                     />
                               </div>
-                              <p>{text}</p>
+                              <p className="line-clamp-2">{text}</p>
                         </div>
                   ),
             },

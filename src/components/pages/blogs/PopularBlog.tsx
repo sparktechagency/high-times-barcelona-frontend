@@ -3,6 +3,7 @@ import BlogImage2 from '@/assets/images/blogs/blog2.png';
 import { ConfigProvider, Input } from 'antd';
 import { SearchXIcon } from 'lucide-react';
 import Image from 'next/image';
+import React from 'react';
 import { CiSearch } from 'react-icons/ci';
 const blogs = [
       {
@@ -55,12 +56,13 @@ const blogs = [
       },
 ];
 
-const PopularBlog = () => {
+const PopularBlog = ({ setSearchQuery }: { setSearchQuery: React.Dispatch<React.SetStateAction<string | null>> }) => {
       return (
             <div className="bg-white border-t-[5px] border-t-primary rounded-xl p-2">
                   <div className="search-bar pt-10 ">
                         <ConfigProvider theme={{ token: { colorPrimary: '#0E7A31' } }}>
                               <Input
+                                    onChange={(e) => setSearchQuery(e.target.value)}
                                     style={{
                                           height: 46,
                                           backgroundColor: '#f7fcf9',
