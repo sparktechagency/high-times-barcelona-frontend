@@ -33,6 +33,17 @@ const clubApi = baseApi.injectEndpoints({
                   providesTags: ['Club'],
                   transformResponse: (response: TApiResponse<TClub[]>) => response.data,
             }),
+
+            getApprovedClubs: builder.query({
+                  query: () => {
+                        return {
+                              url: '/clubs/approved',
+                              method: 'GET',
+                        };
+                  },
+                  providesTags: ['Club'],
+                  transformResponse: (response: TApiResponse<TClub[]>) => response.data,
+            }),
             createClub: builder.mutation({
                   query: (data) => {
                         return {
@@ -65,4 +76,4 @@ const clubApi = baseApi.injectEndpoints({
       }),
 });
 
-export const { useGetClubsQuery, useCreateClubMutation, useUpdateClubMutation, useDeleteClubMutation } = clubApi;
+export const { useGetClubsQuery, useCreateClubMutation, useUpdateClubMutation, useDeleteClubMutation, useGetApprovedClubsQuery } = clubApi;
