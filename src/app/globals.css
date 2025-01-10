@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @font-face {
       font-family: 'Clash_Display';
-      src: url('/ClashDisplay-Regular.ttf') format('truetype');
+      src: url('/ClashDisplay-Semibold.otf') format('truetype');
 }
 
 @tailwind base;

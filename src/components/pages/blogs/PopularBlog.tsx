@@ -1,5 +1,5 @@
 'use client';
-import { TBlog, useGetPopularBlogsQuery } from '@/redux/features/blog/blogApi';
+import { useGetPopularBlogsQuery } from '@/redux/features/blog/blogApi';
 import { getImageUrl } from '@/utils/getImageUrl';
 import { ConfigProvider, Input } from 'antd';
 import moment from 'moment';
