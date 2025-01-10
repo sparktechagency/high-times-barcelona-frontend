@@ -7,6 +7,8 @@ import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import Logo from '@/assets/images/footer-logo.svg';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useSubscribeMutation } from '@/redux/features/contact/contactApi';
+import { toast } from 'react-toastify';
 
 // Icons
 
@@ -44,11 +46,19 @@ const linkSections = [
 
 export const Footer = () => {
       const [form] = Form.useForm<SubscribeFormData>();
+      const [subscribe, { isLoading }] = useSubscribeMutation();
 
-      const onFinish = (values: SubscribeFormData) => {
-            console.log('Success:', values);
-            message.success('Successfully subscribed!');
-            form.resetFields();
+      const onFinish = async (values: SubscribeFormData) => {
+            try {
+                  const res = await subscribe(values).unwrap();
+                  if (res.success) {
+                        toast.success(res.message);
+                        form.resetFields();
+                  }
+            } catch (error: any) {
+                  console.log(error);
+                  toast.error(error?.data?.message);
+            }
       };
 
       return (
@@ -127,7 +137,7 @@ export const Footer = () => {
                                                             htmlType="submit"
                                                             className="w-full  bg-yellow-400 hover:bg-yellow-500 text-black font-medium border-none"
                                                       >
-                                                            Subscribe
+                                                            {isLoading ? 'Subscribing...' : 'Subscribe'}
                                                       </Button>
                                                 </Form.Item>
                                           </Form>
