@@ -22,9 +22,9 @@ const ClubMapSection = () => {
             <div id="weed-map" className="bg-gradient-to-b from-[#F8F8F899] to-[#F2FFF4]">
                   <div className="container py-20 ">
                         <div className="text-center mb-16 capitalize space-y-3">
-                              <h6 className="text-3xl  md:text-5xl font-extrabold text-black">Looking for a legit</h6>
-                              <h1 className="text-3xl md:text-5xl font-extrabold text-primary">
-                                    place to smoke weed in <span className="text-secondary font-extrabold">Barcelona?</span>
+                              <h6 className="text-3xl  md:text-5xl font-bold text-black">Looking for a legit</h6>
+                              <h1 className="text-3xl md:text-5xl font-bold text-primary">
+                                    place to smoke weed in <span className="text-secondary font-bold">Barcelona?</span>
                               </h1>
                               <p className="text-[#192B27]">
                                     Check out our cannabis club map and join one today—it’s quick and hassle-free!
