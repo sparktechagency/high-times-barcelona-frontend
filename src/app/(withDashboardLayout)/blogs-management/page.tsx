@@ -203,7 +203,14 @@ const BlogsManagement: React.FC = () => {
                   <Row gutter={[16, 16]}>
                         <Col span={12}>
                               <Form.Item label="Tags" name="tags" rules={[{ required: true, message: 'Please enter at least one tag' }]}>
-                                    <Select mode="tags" placeholder="Tags" />
+                                    <Select mode="tags" placeholder="Tags">
+                                          <Select.Option value="New">New</Select.Option>
+                                          <Select.Option value="Cannabis">Cannabis</Select.Option>
+                                          <Select.Option value="Spain">Spain</Select.Option>
+                                          <Select.Option value="Barcelona">Barcelona</Select.Option>
+                                          <Select.Option value="Weed">Weed</Select.Option>
+                                          <Select.Option value="Smoke">Smoke</Select.Option>
+                                    </Select>
                               </Form.Item>
                         </Col>
                         <Col span={12}>

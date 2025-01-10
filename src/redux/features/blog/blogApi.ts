@@ -40,6 +40,14 @@ const blogApi = baseApi.injectEndpoints({
                   providesTags: ['Blog'],
                   transformResponse: (response: TApiResponseWithMeta<TBlog[]>) => response.data,
             }),
+            getPopularBlogs: builder.query({
+                  query: () => ({
+                        url: '/blogs/popular',
+                        method: 'GET',
+                  }),
+                  providesTags: ['Blog'],
+                  transformResponse: (response: TApiResponse<TBlog[]>) => response.data,
+            }),
             getSingleBlog: builder.query({
                   query: (id) => ({
                         url: `/blogs/${id}`,
@@ -67,4 +75,11 @@ const blogApi = baseApi.injectEndpoints({
       }),
 });
 
-export const { useCreateBlogMutation, useGetBlogsQuery, useUpdateBlogMutation, useDeleteBlogMutation, useGetSingleBlogQuery } = blogApi;
+export const {
+      useCreateBlogMutation,
+      useGetBlogsQuery,
+      useUpdateBlogMutation,
+      useDeleteBlogMutation,
+      useGetSingleBlogQuery,
+      useGetPopularBlogsQuery,
+} = blogApi;
