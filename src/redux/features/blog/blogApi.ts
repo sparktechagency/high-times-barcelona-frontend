@@ -40,7 +40,14 @@ const blogApi = baseApi.injectEndpoints({
                   providesTags: ['Blog'],
                   transformResponse: (response: TApiResponseWithMeta<TBlog[]>) => response.data,
             }),
-
+            getSingleBlog: builder.query({
+                  query: (id) => ({
+                        url: `/blogs/${id}`,
+                        method: 'GET',
+                  }),
+                  providesTags: ['Blog'],
+                  transformResponse: (response: TApiResponse<TBlog>) => response.data,
+            }),
             updateBlog: builder.mutation({
                   query: (args) => ({
                         url: `/blogs/${args.id}`,
@@ -60,4 +67,4 @@ const blogApi = baseApi.injectEndpoints({
       }),
 });
 
-export const { useCreateBlogMutation, useGetBlogsQuery, useUpdateBlogMutation, useDeleteBlogMutation } = blogApi;
+export const { useCreateBlogMutation, useGetBlogsQuery, useUpdateBlogMutation, useDeleteBlogMutation, useGetSingleBlogQuery } = blogApi;
