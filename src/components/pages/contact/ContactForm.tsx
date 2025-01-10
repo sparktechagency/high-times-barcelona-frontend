@@ -4,14 +4,26 @@ import { FC } from 'react';
 import { FaUser } from 'react-icons/fa';
 import { MdOutlineEmail } from 'react-icons/md';
 import { FaPhoneAlt } from 'react-icons/fa';
+import { useSendContactMutation } from '@/redux/features/contact/contactApi';
+import { toast } from 'react-toastify';
 
 const { TextArea } = Input;
 
 const ContactUs: FC = () => {
       const [form] = Form.useForm();
+      const [sendContact, { isLoading }] = useSendContactMutation();
 
-      const onFinish = (values: any) => {
-            console.log('Form values:', values);
+      const onFinish = async (values: any) => {
+            try {
+                  const res = await sendContact(values).unwrap();
+                  if (res.success) {
+                        toast.success(res.message);
+                        form.resetFields();
+                  }
+            } catch (error: any) {
+                  console.log(error);
+                  toast.error(error?.data?.message);
+            }
       };
 
       return (
@@ -26,7 +38,7 @@ const ContactUs: FC = () => {
                   <Form form={form} layout="vertical" onFinish={onFinish} requiredMark={false}>
                         <Form.Item
                               label={<span className="text-white">Full Name</span>}
-                              name="fullName"
+                              name="name"
                               rules={[{ required: true, message: 'Please enter your full name' }]}
                         >
                               <Input prefix={<FaUser className="text-gray-400" />} style={{ height: 48 }} placeholder="Enter Your Name" />
@@ -87,7 +99,7 @@ const ContactUs: FC = () => {
                                           fontWeight: 600,
                                     }}
                               >
-                                    Send Message
+                                    {isLoading ? 'Sending...' : 'Send Message'}
                               </Button>
                         </Form.Item>
                   </Form>
