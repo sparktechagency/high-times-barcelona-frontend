@@ -1,10 +1,11 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Button } from 'antd';
 import Ganja from '@/assets/images/ganja2.svg';
-import Explorer from '@/assets/images/explorer.png';
 import { BsClock, BsGeoAlt, BsStarFill } from 'react-icons/bs';
+import { TClub, useGetApprovedClubsQuery } from '@/redux/features/club/clubApi';
+import { getImageUrl } from '@/utils/getImageUrl';
 
 // Add keyframes animation
 const fadeInAnimation = `
@@ -20,61 +21,9 @@ const fadeInAnimation = `
 }
 `;
 
-// Club data
-const clubs = [
-      {
-            id: 1,
-            rating: 4.9,
-            name: 'MANO VERDE SOCIAL CLUB',
-            hours: '10:00 - 00:00',
-            location: 'Tetuan /Monumental',
-            image: Explorer.src,
-      },
-      {
-            id: 2,
-            rating: 4.9,
-            name: 'MANO VERDE SOCIAL CLUB',
-            hours: '10:00 - 00:00',
-            location: 'Tetuan /Monumental',
-            image: Explorer.src,
-      },
-      {
-            id: 3,
-            rating: 4.9,
-            name: 'MANO VERDE SOCIAL CLUB',
-            hours: '10:00 - 00:00',
-            location: 'Tetuan /Monumental',
-            image: Explorer.src,
-      },
-      {
-            id: 4,
-            rating: 4.9,
-            name: 'MANO VERDE SOCIAL CLUB',
-            hours: '10:00 - 00:00',
-            location: 'Tetuan /Monumental',
-            image: Explorer.src,
-      },
-      {
-            id: 5,
-            rating: 4.9,
-            name: 'MANO VERDE SOCIAL CLUB',
-            hours: '10:00 - 00:00',
-            location: 'Tetuan /Monumental',
-            image: Explorer.src,
-      },
-      {
-            id: 6,
-            rating: 4.9,
-            name: 'MANO VERDE SOCIAL CLUB',
-            hours: '10:00 - 00:00',
-            location: 'Tetuan /Monumental',
-            image: Explorer.src,
-      },
-];
-
 const ExploreClubs = () => {
       const [showAll, setShowAll] = useState(false);
-      const displayedClubs = showAll ? clubs : clubs.slice(0, 4);
+      const { data: clubs } = useGetApprovedClubsQuery([]);
 
       // Inject animation styles
       React.useEffect(() => {
@@ -92,7 +41,7 @@ const ExploreClubs = () => {
             };
       }, []);
 
-      const ClubCard = ({ club, index }: { club: (typeof clubs)[0]; index: number }) => (
+      const ClubCard = ({ club, index }: { club: TClub; index: number }) => (
             <div
                   className="bg-[#fbfaf7] shadow-md rounded-lg p-4 flex gap-4 transition-all duration-500"
                   style={{
@@ -112,26 +61,26 @@ const ExploreClubs = () => {
                         </div>
 
                         {/* Club Details */}
-                        <h3 className="text-xl font-medium text-[#1A1A1A] mb-4">{club.name}</h3>
+                        <h3 className="text-xl font-medium text-[#1A1A1A] mb-4">{club?.name}</h3>
 
                         <div className="space-y-2 mb-4">
                               <div className="flex items-center gap-2">
                                     <span>
                                           <BsClock />
                                     </span>
-                                    <span>{club.hours}</span>
+                                    <span>{club?.openingHour}</span>
                               </div>
                               <div className="flex items-center gap-2">
                                     <span>
                                           <BsGeoAlt />
                                     </span>
-                                    <span>{club.location}</span>
+                                    <span>{club?.address}</span>
                               </div>
                         </div>
 
                         {/* CTA Button */}
                         <Button
-                              href={`/cannabis-club/${club.id}`}
+                              href={`/cannabis-club/${club._id}`}
                               type="primary"
                               style={{
                                     backgroundColor: '#00863D',
@@ -145,7 +94,7 @@ const ExploreClubs = () => {
                   </div>
                   {/* Club Image */}
                   <div className="relative w-[180px] h-[180px] rounded-lg overflow-hidden">
-                        <Image src={club.image} alt={club.name} fill className="object-cover" />
+                        <Image src={getImageUrl(club?.image)} alt={club?.name} fill className="object-cover" />
                   </div>
             </div>
       );
@@ -164,8 +113,8 @@ const ExploreClubs = () => {
 
                         {/* Club Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                              {displayedClubs.map((club, index) => (
-                                    <ClubCard key={club.id} club={club} index={index} />
+                              {clubs?.map((club, index) => (
+                                    <ClubCard key={club._id} club={club} index={index} />
                               ))}
                         </div>
 

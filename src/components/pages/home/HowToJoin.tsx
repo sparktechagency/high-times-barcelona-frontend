@@ -82,7 +82,7 @@ const HowToJoin = () => {
 
                         {/* CTA Button */}
                         <div className="flex justify-center mt-12">
-                              <Link href="/">
+                              <Link href="/#cannabis-clubs">
                                     <Button
                                           style={{
                                                 backgroundColor: '#00863D',

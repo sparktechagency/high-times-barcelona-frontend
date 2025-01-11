@@ -10,8 +10,9 @@ import { FcInvite } from 'react-icons/fc';
 import { TiBusinessCard } from 'react-icons/ti';
 import { TbRating18Plus } from 'react-icons/tb';
 import { HiOutlineCurrencyEuro } from 'react-icons/hi';
+import { TClub } from '@/redux/features/club/clubApi';
 
-const MembershipRequirements: FC = () => {
+const MembershipRequirements: FC<{ club: TClub }> = ({ club }) => {
       return (
             <div className="bg-white rounded-xl p-6 space-y-6">
                   {/* Top Requirements */}
@@ -27,14 +28,14 @@ const MembershipRequirements: FC = () => {
                                     <TbRating18Plus size={20} color="#009343" />{' '}
                               </span>
                               <span className="text-sm">Minimum Age</span>
-                              <span className="text-red-500 font-semibold">18+</span>
+                              <span className="text-red-500 font-semibold">{club?.ageLimit}+</span>
                         </div>
                         <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-full">
                               <span>
                                     <HiOutlineCurrencyEuro size={20} color="#009343" />{' '}
                               </span>
                               <span className="text-sm">Membership Fee</span>
-                              <span className="text-primary font-semibold">20€</span>
+                              <span className="text-primary font-semibold">{club?.memberShipFee}€</span>
                         </div>
                   </div>
 
@@ -58,18 +59,9 @@ const MembershipRequirements: FC = () => {
                   {/* Club Name and Description */}
                   <div className="space-y-4 text-[#1B2F2B]">
                         <h1 className="text-3xl font-bold">
-                              <span className="text-primary">MANO</span> <span className="text-[#FFB800]">VERDE</span>
+                              <span className="text-primary">{club?.name}</span>
                         </h1>
-                        <p className="">
-                              The Mano Verde Social Club is a cannabis social club that provides a distinctive and pleasant experience for
-                              its members. It is situated in the center of Barcelona, close to Placa de Tetuan. The club has a welcoming
-                              atmosphere that is ideal for learning, working on a laptop, or hanging out with friends.
-                        </p>
-                        <p className="">
-                              The club offered a wide range of cannabis products, including edibles, concentrates, and a number of strains.
-                              The goods were of the highest quality, and the costs were fair. You can find precisely what you're looking
-                              for, and the staff will be glad to make suggestions based on your preferences.
-                        </p>
+                        <p>{club?.description}</p>
                   </div>
 
                   {/* Membership Requirements */}
@@ -79,7 +71,7 @@ const MembershipRequirements: FC = () => {
                         </h2>
                         <ul className="space-y-3 list-decimal pl-5">
                               <li>You must be at least 18 years old</li>
-                              <li>Membership requires official identification(Passport, driver Licence, or any governement ID)</li>
+                              <li>Membership requires official identification(Passport, driver License, or any government ID)</li>
                               <li>A membership to the club is 20 euros per person, which must be paid At the reception.</li>
                               <li>The only way to be allowed to become a member is to Have an Invitation.</li>
                               <li>

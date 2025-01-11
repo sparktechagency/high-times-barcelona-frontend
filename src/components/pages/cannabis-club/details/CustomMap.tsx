@@ -1,12 +1,13 @@
 'use client';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactMapGL, { Marker, ViewState } from 'react-map-gl';
 import MarkerImage from '@/assets/images/ganja-leaf.png';
 
 import Image from 'next/image';
+import { TClub } from '@/redux/features/club/clubApi';
 
-const CustomMap: React.FC = () => {
+const CustomMap: React.FC<{ club: TClub }> = ({ club }) => {
       const [viewport, setViewport] = useState<ViewState>({
             latitude: 23.7935,
             longitude: 90.437,
@@ -15,6 +16,19 @@ const CustomMap: React.FC = () => {
             pitch: 0,
             padding: { top: 0, bottom: 0, left: 0, right: 0 },
       });
+
+      useEffect(() => {
+            if (club) {
+                  setViewport({
+                        latitude: club?.location?.latitude || 23.7935,
+                        longitude: club?.location?.longitude || 90.437,
+                        zoom: 5,
+                        bearing: 0,
+                        pitch: 0,
+                        padding: { top: 0, bottom: 0, left: 0, right: 0 },
+                  });
+            }
+      }, [club]);
 
       const handleViewportChange = (newViewport: ViewState) => {
             setViewport(newViewport);
@@ -28,7 +42,7 @@ const CustomMap: React.FC = () => {
                   mapboxAccessToken="pk.eyJ1Ijoib2huYWRpciIsImEiOiJjbGYzbXB2cG4wcjNsM3FuZGkyeXgzaGp3In0.UW7J5lIaWc-P3nXa2WmRxQ"
                   mapStyle="mapbox://styles/mapbox/streets-v9"
             >
-                  <Marker longitude={90.437} latitude={23.7935} anchor="bottom">
+                  <Marker longitude={club?.location?.longitude || 90.437} latitude={club?.location?.latitude || 23.7935} anchor="bottom">
                         <Image src={MarkerImage} alt="marker" width={50} height={50} />
                   </Marker>
             </ReactMapGL>

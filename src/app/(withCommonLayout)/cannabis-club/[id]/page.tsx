@@ -1,12 +1,16 @@
+'use client';
+
 import CannabisClubDetails from '@/components/pages/cannabis-club/details/CannabisClubDetails';
 import PageHeader from '@/components/shared/PageHeader';
+import { useGetSingleClubQuery } from '@/redux/features/club/clubApi';
 
 const CannabisClubDetailsPage = ({ params }: { params: { id: string } }) => {
-      const { id } = params;
+      const { data: club } = useGetSingleClubQuery(params.id);
+
       return (
             <div>
                   <PageHeader title="Mano Verde" />
-                  <CannabisClubDetails id={id} />
+                  <CannabisClubDetails club={club!} />
             </div>
       );
 };

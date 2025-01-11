@@ -69,6 +69,7 @@ const ClubsManagement: React.FC = () => {
                         const formData = new FormData();
                         formData.append('clubImage', values.image.fileList[0].originFileObj);
                         delete values.image;
+                        values.isApproved = true;
                         formData.append('data', JSON.stringify(values));
                         const res = await createClub(formData).unwrap();
                         if (res.success) {
@@ -106,7 +107,7 @@ const ClubsManagement: React.FC = () => {
 
       const handleDelete = async (id: string) => {
             try {
-                  const data = await deleteClub({ id }).unwrap();
+                  const data = await deleteClub(id).unwrap();
                   if (data.success) {
                         toast.success(data.message);
                   }

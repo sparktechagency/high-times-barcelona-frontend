@@ -1,12 +1,29 @@
 'use client';
+import { useCreateClubMemberMutation } from '@/redux/features/club/clubApi';
 import { Button, DatePicker, Form, Input, Radio } from 'antd';
 import { FC } from 'react';
+import { toast } from 'react-toastify';
 
-const MembershipForm: FC = () => {
+const MembershipForm: FC<{ clubId: string }> = ({ clubId }) => {
+      const [createMembership, { isLoading }] = useCreateClubMemberMutation();
       const [form] = Form.useForm();
 
-      const onFinish = (values: any) => {
-            console.log('Form values:', values);
+      const onFinish = async (values: any) => {
+            try {
+                  const res = await createMembership({
+                        ...values,
+                        numberOfVisitors: Number(values.numberOfVisitors),
+                        club: clubId,
+                  }).unwrap();
+
+                  if (res.success) {
+                        toast.success(res.message);
+                        form.resetFields();
+                  }
+            } catch (error: any) {
+                  console.log(error);
+                  toast.error(error?.data?.message);
+            }
       };
 
       return (
@@ -65,7 +82,7 @@ const MembershipForm: FC = () => {
 
                         <Form.Item
                               label={<span className="text-white">Number Of Visitor</span>}
-                              name="visitorCount"
+                              name="numberOfVisitors"
                               rules={[{ required: true, message: 'Please select number of visitors' }]}
                         >
                               <Radio.Group
@@ -90,7 +107,7 @@ const MembershipForm: FC = () => {
                                     <Radio.Button value="4" style={{ height: 44, fontSize: 16, paddingInline: 20 }}>
                                           4
                                     </Radio.Button>
-                                    <Radio.Button value="5+" style={{ height: 44, fontSize: 16, borderRadius: 2, paddingInline: 20 }}>
+                                    <Radio.Button value="5" style={{ height: 44, fontSize: 16, borderRadius: 2, paddingInline: 20 }}>
                                           5+
                                     </Radio.Button>
                               </Radio.Group>
@@ -98,7 +115,7 @@ const MembershipForm: FC = () => {
 
                         <Form.Item
                               label={<span className="text-white">Full Name</span>}
-                              name="fullName"
+                              name="name"
                               rules={[{ required: true, message: 'Please enter your full name' }]}
                         >
                               <Input style={{ height: 48 }} placeholder="Enter your full Name" />
@@ -110,7 +127,7 @@ const MembershipForm: FC = () => {
                                     htmlType="submit"
                                     style={{ width: '100%', height: 48, backgroundColor: '#00863D', color: '#FFF' }}
                               >
-                                    Apply For Membership
+                                    {isLoading ? 'Applying For Membership...' : 'Apply For Membership'}
                               </Button>
                         </Form.Item>
                   </Form>
