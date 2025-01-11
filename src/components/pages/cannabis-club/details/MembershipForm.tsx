@@ -1,5 +1,5 @@
 'use client';
-import { useCreateClubMemberMutation } from '@/redux/features/club/clubApi';
+import { useCreateClubMemberMutation } from '@/redux/features/member/memberApi';
 import { Button, DatePicker, Form, Input, Radio } from 'antd';
 import { FC } from 'react';
 import { toast } from 'react-toastify';

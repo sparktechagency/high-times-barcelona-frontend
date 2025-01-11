@@ -65,15 +65,7 @@ const clubApi = baseApi.injectEndpoints({
                   },
                   invalidatesTags: ['Club'],
             }),
-            createClubMember: builder.mutation({
-                  query: (data) => {
-                        return {
-                              url: '/members/create',
-                              method: 'POST',
-                              body: data,
-                        };
-                  },
-            }),
+
             updateClub: builder.mutation({
                   query: (args) => {
                         return {
@@ -103,5 +95,4 @@ export const {
       useDeleteClubMutation,
       useGetApprovedClubsQuery,
       useGetSingleClubQuery,
-      useCreateClubMemberMutation,
 } = clubApi;

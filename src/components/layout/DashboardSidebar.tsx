@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { ClubIcon, LogOutIcon } from 'lucide-react';
 import { GrTextWrap } from 'react-icons/gr';
 import { BsQuestionCircle } from 'react-icons/bs';
-import { MdOutlinePrivacyTip } from 'react-icons/md';
+import { MdOutlineCardMembership, MdOutlinePrivacyTip } from 'react-icons/md';
 import { PiBookOpenText } from 'react-icons/pi';
 import { usePathname } from 'next/navigation';
 import { removeAccessToken } from '@/utils/tokenManagement';
@@ -83,6 +83,11 @@ const DashboardSidebar = () => {
                                           key: 'dashboard',
                                           icon: <ClubIcon size={20} />,
                                           label: <Link href="/dashboard">Clubs</Link>,
+                                    },
+                                    {
+                                          key: 'members-management',
+                                          icon: <MdOutlineCardMembership size={20} />,
+                                          label: <Link href="/members-management">Members</Link>,
                                     },
                                     {
                                           key: 'blogs-management',
