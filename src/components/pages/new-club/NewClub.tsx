@@ -1,24 +1,37 @@
 'use client';
-import { Button, Checkbox, Col, Form, Input, InputNumber, Row, TimePicker, Upload } from 'antd';
+import { Button, Checkbox, Form, Input, InputNumber, Upload } from 'antd';
 import { FC } from 'react';
-import { MdOutlineCall, MdOutlineStore } from 'react-icons/md';
+import { MdOutlineStore } from 'react-icons/md';
 import { FaLocationDot } from 'react-icons/fa6';
-import { MdOutlineEmail } from 'react-icons/md';
-import { FaPhoneAlt } from 'react-icons/fa';
-import { FaRegClock } from 'react-icons/fa6';
-import { BiDollar, BiEuro } from 'react-icons/bi';
-import { MdOutlineDescription } from 'react-icons/md';
+import { BiEuro } from 'react-icons/bi';
 import { TbRating18Plus } from 'react-icons/tb';
-import Title from 'antd/es/typography/Title';
 import { MapPin } from 'lucide-react';
+import Link from 'next/link';
+import { useCreateClubMutation } from '@/redux/features/club/clubApi';
+import { toast } from 'react-toastify';
 
 const { TextArea } = Input;
 
 const NewClub: FC = () => {
       const [form] = Form.useForm();
+      const [createClub, { isLoading }] = useCreateClubMutation();
 
-      const onFinish = (values: any) => {
-            console.log('Form values:', values);
+      const onFinish = async (values: any) => {
+            try {
+                  const formData = new FormData();
+                  formData.append('clubImage', values.image.fileList[0].originFileObj);
+                  delete values.image;
+
+                  formData.append('data', JSON.stringify(values));
+                  const res = await createClub(formData).unwrap();
+                  if (res.success) {
+                        toast.success(res.message);
+
+                        form.resetFields();
+                  }
+            } catch (error: any) {
+                  toast.error(error?.data?.message);
+            }
       };
 
       return (
@@ -38,7 +51,7 @@ const NewClub: FC = () => {
                         </Form.Item>
                         <Form.Item
                               label={<span className="text-white">Name Of The Club</span>}
-                              name="clubName"
+                              name="name"
                               rules={[{ required: true, message: 'Please enter club name' }]}
                         >
                               <Input
@@ -70,7 +83,7 @@ const NewClub: FC = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                               <Form.Item
                                     label={<span className="text-white">Latitude (Ex: 23.0)</span>}
-                                    name="latitude"
+                                    name={['location', 'latitude']}
                                     rules={[{ required: true, message: 'Please enter latitude' }]}
                               >
                                     <InputNumber
@@ -82,7 +95,7 @@ const NewClub: FC = () => {
 
                               <Form.Item
                                     label={<span className="text-white">Longitude (Ex: 90.0)</span>}
-                                    name="longitude"
+                                    name={['location', 'longitude']}
                                     rules={[{ required: true, message: 'Please enter longitude' }]}
                               >
                                     <InputNumber
@@ -106,7 +119,7 @@ const NewClub: FC = () => {
 
                               <Form.Item
                                     label={<span className="text-white">Membership Fee</span>}
-                                    name="membershipFee"
+                                    name="memberShipFee"
                                     rules={[{ required: true, message: 'Please enter membership fee' }]}
                               >
                                     <Input
@@ -152,9 +165,9 @@ const NewClub: FC = () => {
                                     }}
                               >
                                     Please read our
-                                    <a href="#" className="underline text-wh mx-1">
+                                    <Link href="/privacy-policy" className="underline text-wh mx-1">
                                           privacy policy
-                                    </a>
+                                    </Link>
                                     and check the box to confirm your agreement before submitting your club details.
                               </Checkbox>
                         </Form.Item>
@@ -172,7 +185,7 @@ const NewClub: FC = () => {
                                           fontWeight: 600,
                                     }}
                               >
-                                    Submit Your Club Information
+                                    {isLoading ? 'Submitting...' : '  Submit Your Club Information'}
                               </Button>
                         </Form.Item>
                   </Form>
