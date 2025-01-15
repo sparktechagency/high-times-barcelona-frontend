@@ -24,41 +24,28 @@ const ClubVibe = () => {
 
                         <div className="grid grid-cols-12 gap-8 md:h-[534px]">
                               <div className="col-span-12 md:col-span-8 relative rounded-3xl overflow-hidden">
-                                    <Image
-                                          src={ClubVibeImage1}
-                                          alt="Cannabis Club Vibe"
-                                          width={1000}
-                                          height={1000}
-                                          className="w-full h-full object-cover"
-                                    />
-                                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                          <BsPlayCircleFill className="text-6xl text-white" />
-                                    </div>
+                                    <iframe
+                                          className="w-full h-full object-cover rounded-3xl"
+                                          src="https://www.youtube.com/embed/sE1LABmGhNA?si=UsFYLgv7VrDOk4yN"
+                                          title="YouTube video player"
+                                    ></iframe>
                               </div>
                               <div className="col-span-12 md:col-span-4 space-y-4">
                                     <div className="w-full h-[255px] rounded-xl relative">
-                                          <Image
-                                                src={ClubVibeImage1}
-                                                alt="Cannabis Club Vibe"
-                                                width={300}
-                                                height={300}
+                                          <iframe
                                                 className="w-full h-full object-cover rounded-xl"
-                                          />
-                                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                                <BsPlayCircleFill className="text-6xl text-white" />
-                                          </div>
+                                                src="https://www.youtube.com/embed/3-TVFsVlNe8?si=oJWn9bmEnhIe-Bgy"
+                                                title="YouTube video player"
+                                                allowFullScreen
+                                          ></iframe>
                                     </div>
                                     <div className="w-full h-[255px] rounded-xl relative">
-                                          <Image
-                                                src={ClubVibeImage1}
-                                                alt="Cannabis Club Vibe"
-                                                width={300}
-                                                height={300}
+                                          <iframe
                                                 className="w-full h-full object-cover rounded-xl"
-                                          />
-                                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                                <BsPlayCircleFill className="text-6xl text-white" />
-                                          </div>
+                                                src="https://www.youtube.com/embed/ASr9wTpe4t4?si=XPmayDimQdNg9ZJW"
+                                                title="YouTube video player"
+                                                allowFullScreen
+                                          ></iframe>
                                     </div>
                               </div>
                         </div>

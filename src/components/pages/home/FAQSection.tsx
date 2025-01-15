@@ -38,15 +38,15 @@ export default function FAQSection() {
                   description:
                         'To join a Cannabis Social Club in Barcelona, you must:\n• Be at least 18-21 years old.\n• Have a passport or valid ID.\n• Must be sponsored by a member or invited by the club.\n• No need to be a Spanish citizen.',
             },
-            {
-                  icon: Tower,
-                  title: {
-                        part1: 'Who Can Join',
-                        part2: 'Cannabis Club in Spain?',
-                  },
-                  description:
-                        'To join a Cannabis Social Club in Barcelona, you must:\n• Be at least 18-21 years old.\n• Have a passport or valid ID.\n• Must be sponsored by a member or invited by the club.\n• No need to be a Spanish citizen.',
-            },
+            // {
+            //       icon: Tower,
+            //       title: {
+            //             part1: 'Who Can Join',
+            //             part2: 'Cannabis Club in Spain?',
+            //       },
+            //       description:
+            //             'To join a Cannabis Social Club in Barcelona, you must:\n• Be at least 18-21 years old.\n• Have a passport or valid ID.\n• Must be sponsored by a member or invited by the club.\n• No need to be a Spanish citizen.',
+            // },
       ];
 
       return (

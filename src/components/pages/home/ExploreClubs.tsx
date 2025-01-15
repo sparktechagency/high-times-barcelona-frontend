@@ -43,7 +43,7 @@ const ExploreClubs = () => {
 
       const ClubCard = ({ club, index }: { club: TClub; index: number }) => (
             <div
-                  className="bg-[#fbfaf7] shadow-md rounded-lg p-4 flex gap-4 transition-all duration-500"
+                  className="bg-[#fbfaf7] shadow-md rounded-lg p-4 flex flex-col md:flex-row justify-center items-center gap-4 transition-all duration-500"
                   style={{
                         opacity: 0,
                         transform: 'translateY(20px)',
@@ -93,7 +93,7 @@ const ExploreClubs = () => {
                         </Button>
                   </div>
                   {/* Club Image */}
-                  <div className="relative w-[180px] h-[180px] rounded-lg overflow-hidden">
+                  <div className="relative md:w-[180px] w-full h-[180px] rounded-lg overflow-hidden">
                         <Image src={getImageUrl(club?.image)} alt={club?.name} fill className="object-cover" />
                   </div>
             </div>

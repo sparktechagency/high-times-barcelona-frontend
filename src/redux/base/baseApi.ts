@@ -2,7 +2,7 @@ import { BaseQueryApi, BaseQueryFn, createApi, DefinitionType, FetchArgs, fetchB
 import { RootState } from '../store';
 import { logout, setUser } from '../features/auth/authSlice';
 
-export const backendUrl = 'http://192.168.10.19:5001';
+export const backendUrl = 'http://10.0.70.122:5001';
 const baseQuery = fetchBaseQuery({
       baseUrl: `${backendUrl}/api/v1`,
       credentials: 'include',

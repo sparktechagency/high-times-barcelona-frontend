@@ -42,15 +42,15 @@ const guidelineData = [
             description:
                   "Cannabis clubs offer a relaxed and friendly vibe, different from places like Amsterdam's coffee shops or California's weed cafes. To keep this atmosphere, be respectful and maintain a calm environment—avoid loud talking or noise. Photography and filming are not allowed. Respect others' personal space and privacy. Inappropriate behavior, like harassment or aggression, can lead to your membership being canceled and expulsion from the club.",
       },
-      {
-            icon: Pc,
-            title: {
-                  part1: 'At',
-                  part2: 'Receptions',
-            },
-            description:
-                  "When you visit a cannabis club for the first time, you'll head to the reception desk to complete your registration. The club will verify your age with a valid ID to ensure only authorized members are on-site. Afterward, the staff will go over the club's rules, explain how everything works, and answer any questions you may have to ensure you have a great experience",
-      },
+      // {
+      //       icon: Pc,
+      //       title: {
+      //             part1: 'At',
+      //             part2: 'Receptions',
+      //       },
+      //       description:
+      //             "When you visit a cannabis club for the first time, you'll head to the reception desk to complete your registration. The club will verify your age with a valid ID to ensure only authorized members are on-site. Afterward, the staff will go over the club's rules, explain how everything works, and answer any questions you may have to ensure you have a great experience",
+      // },
 ];
 
 const ClubGuideLines = () => {

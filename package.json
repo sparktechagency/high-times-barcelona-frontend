@@ -3,12 +3,13 @@
       "version": "0.1.0",
       "private": true,
       "scripts": {
-            "dev": "next dev --turbo -H  192.168.10.19 -p 3001",
+            "dev": "next dev --turbo -H 10.0.70.122 -p 3001",
             "build": "next build",
             "start": "next start",
             "lint": "next lint"
       },
       "dependencies": {
+            "@ant-design/icons": "^5.5.2",
             "@ant-design/nextjs-registry": "^1.0.2",
             "@reduxjs/toolkit": "^2.5.0",
             "@types/mapbox-gl": "^3.4.1",

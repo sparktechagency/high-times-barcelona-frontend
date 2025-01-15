@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Slider from 'react-slick';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import SliderImage from '@/assets/images/image-slider.jpg';
+import SlideImage2 from '@/assets/images/slider2.jpg';
+import SlideImage3 from '@/assets/images/slider3.png';
 import 'slick-carousel/slick/slick.css';
 import SectionBackground from '@/components/ui/SectionBackgound';
 // Gallery data
@@ -15,12 +17,12 @@ const galleryImages = [
       },
       {
             id: 2,
-            src: SliderImage.src,
+            src: SlideImage2.src,
             alt: 'Club Lounge Area',
       },
       {
             id: 3,
-            src: SliderImage.src,
+            src: SlideImage3.src,
             alt: 'Club Atmosphere',
       },
       {
@@ -30,7 +32,7 @@ const galleryImages = [
       },
       {
             id: 5,
-            src: SliderImage.src,
+            src: SlideImage2.src,
             alt: 'Club Atmosphere',
       },
 ];
