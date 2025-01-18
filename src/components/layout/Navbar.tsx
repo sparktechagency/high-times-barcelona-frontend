@@ -9,7 +9,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { useState } from 'react';
 
 import { usePathname, useRouter } from 'next/navigation';
-import { Button, Dropdown, Modal, Select, Space } from 'antd';
+import { Avatar, Button, Dropdown, Modal, Select, Space } from 'antd';
 
 import NavItems from './NavItems';
 import MobileDrawer from './MobileDrawer';
@@ -124,8 +124,9 @@ const Navbar = () => {
                                           optionRender={customLabel}
                                     />
 
-                                    {user ? (
+                                    {user && (
                                           <Dropdown
+                                                className="hidden md:block"
                                                 trigger={['click']}
                                                 menu={{
                                                       items: [
@@ -149,16 +150,12 @@ const Navbar = () => {
                                                 <Button type="text" className="text-primaryText">
                                                       <Space>
                                                             <div className="bg-[#FFFAE2] p-2 rounded-full">
-                                                                  <Image src={Ganja} alt="Ganja" width={20} height={20} />
+                                                                  <Avatar src={'https://randomuser.me/api/portraits/lego/2.jpg'} />
                                                             </div>
                                                             <TbChevronDown />
                                                       </Space>
                                                 </Button>
                                           </Dropdown>
-                                    ) : (
-                                          <Button href="/login" iconPosition="end" icon={<Image src={Ganja} alt="Ganja" />} type="primary">
-                                                Login
-                                          </Button>
                                     )}
                               </div>
                               <div className="md:hidden">
