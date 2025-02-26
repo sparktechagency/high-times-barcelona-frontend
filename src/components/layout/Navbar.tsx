@@ -42,11 +42,10 @@ const Navbar = () => {
                     ];
       const languageOptions = [
             { value: 'en', label: 'English', shortLabel: 'EN' },
-            { value: 'it', label: 'Italian', shortLabel: 'IT' },
-            { value: 'fr', label: 'French', shortLabel: 'FR' },
             { value: 'es', label: 'Spanish', shortLabel: 'ES' },
+            { value: 'fr', label: 'French', shortLabel: 'FR' },
+            { value: 'it', label: 'Italian', shortLabel: 'IT' },
             { value: 'de', label: 'German', shortLabel: 'DE' },
-            { value: 'nl', label: 'Dutch', shortLabel: 'NL' },
       ];
 
       const customLabel = (option: any) => (
@@ -83,6 +82,18 @@ const Navbar = () => {
             });
       };
 
+      const handleLanguageChange = (data: any) => {
+            const supportedLocales = ['en', 'es', 'fr', 'it', 'de'];
+            const parts = pathname.split('/').filter(Boolean);
+            if (supportedLocales.includes(parts[0])) {
+                  parts[0] = data.value;
+            } else {
+                  parts.unshift(data.value);
+            }
+            const newPath = `/${parts.join('/')}`;
+            router.push(newPath);
+      };
+
       return (
             <header className={`bg-[#F9FDF9] shadow-lg`}>
                   <nav className="container  h-[90px]  relative z-[99]">
@@ -108,7 +119,7 @@ const Navbar = () => {
                                     </div>
 
                                     <Select
-                                          defaultValue="en"
+                                          defaultValue={pathname.split('/')[1]}
                                           options={languageOptions}
                                           variant={'borderless'}
                                           prefix={<TbWorld size={20} />}
@@ -120,7 +131,7 @@ const Navbar = () => {
                                           labelInValue
                                           optionLabelProp="shortLabel"
                                           menuItemSelectedIcon={null}
-                                          onChange={(value) => console.log(value)}
+                                          onChange={(value) => handleLanguageChange(value)}
                                           optionRender={customLabel}
                                     />
 
@@ -148,12 +159,10 @@ const Navbar = () => {
                                                 }}
                                           >
                                                 <Button type="text" className="text-primaryText">
-                                                      <Space>
-                                                            <div className="bg-[#FFFAE2] p-2 rounded-full">
-                                                                  <Avatar src={'https://randomuser.me/api/portraits/lego/2.jpg'} />
-                                                            </div>
-                                                            <TbChevronDown />
-                                                      </Space>
+                                                      <div className="bg-[#FFFAE2] p-2 rounded-full">
+                                                            <Avatar src={'https://randomuser.me/api/portraits/lego/2.jpg'} />
+                                                      </div>
+                                                      <TbChevronDown />
                                                 </Button>
                                           </Dropdown>
                                     )}
