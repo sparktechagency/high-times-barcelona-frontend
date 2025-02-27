@@ -4,6 +4,10 @@
       font-family: 'Clash_Display';
       src: url('/ClashDisplay-Semibold.otf') format('truetype');
 }
+@font-face {
+      font-family: 'Comic_Loud';
+      src: url('/Comix-Loud.ttf') format('truetype');
+}
 
 @tailwind base;
 @tailwind components;
@@ -14,19 +18,23 @@
       font-weight: 400;
       font-style: normal;
 }
+.title-font {
+      font-family: 'Comic_Loud', sans-serif !important;
+      font-weight: 400;
+      font-style: normal;
+}
+
 p {
       font-family: 'Rubik', sans-serif;
 }
-h1,
-h2,
-h3 {
-      font-family: 'Clash_Display';
+/* h1 {
+      font-family: 'Comic_Loud';
       font-weight: 400;
       font-style: normal;
 }
 h1 > span {
       font-family: 'Clash_Display';
-}
+} */
 
 .footer-bg {
       background-image: url('/images/footer-bg.png');

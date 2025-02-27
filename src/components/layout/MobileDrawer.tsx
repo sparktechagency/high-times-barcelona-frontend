@@ -1,10 +1,7 @@
 'use client';
 import { Dispatch, SetStateAction } from 'react';
 import NavItems from './NavItems';
-import { Avatar, Button, Drawer, Dropdown, Space } from 'antd';
-import { TbChevronDown } from 'react-icons/tb';
-import Image from 'next/image';
-import Ganja from '@/assets/images/ganja.svg';
+import { Avatar, Drawer, Dropdown } from 'antd';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { useRouter } from 'next/navigation';
 import { removeAccessToken } from '@/utils/tokenManagement';
@@ -52,19 +49,14 @@ const MobileDrawer = ({ open, setOpen, items }: { open: boolean; setOpen: Dispat
                                                 },
                                           ],
                                     }}
-                                    placement="bottomRight"
+                                    placement="bottom"
                                     arrow={{
                                           pointAtCenter: true,
                                     }}
                               >
-                                    <Button type="text" className="text-primaryText">
-                                          <Space>
-                                                <div className="bg-[#FFFAE2] p-2 rounded-full">
-                                                      <Avatar src={'https://randomuser.me/api/portraits/lego/2.jpg'} />
-                                                </div>
-                                                <TbChevronDown />
-                                          </Space>
-                                    </Button>
+                                    <div className="bg-[#FFFAE2] p-2 rounded-full">
+                                          <Avatar src={'https://randomuser.me/api/portraits/lego/2.jpg'} />
+                                    </div>
                               </Dropdown>
                         )}
                   </div>

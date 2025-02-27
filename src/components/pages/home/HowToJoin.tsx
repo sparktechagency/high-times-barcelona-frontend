@@ -45,10 +45,10 @@ const HowToJoin = () => {
                   <div className="container relative z-10">
                         {/* Heading */}
                         <div className="text-center mb-8 md:mb-16 px-4">
-                              <h2 className="text-white text-3xl md:text-5xl font-bold mb-2 md:mb-4">How To Join A</h2>
-                              <div className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2">
-                                    <h1 className="text-secondary text-3xl md:text-5xl font-bold">Cannabis Social Club</h1>
-                                    <h1 className="text-white text-3xl md:text-5xl font-bold">In Barcelona ?</h1>
+                              <h2 className="text-white title-font text-3xl md:text-5xl font-bold mb-2 md:mb-6">How To Join A</h2>
+                              <div className="flex  flex-col md:flex-row items-center justify-center gap-1 md:gap-2">
+                                    <h1 className="text-secondary title-font text-3xl md:text-5xl font-bold">Cannabis Social Club</h1>
+                                    <h1 className="text-white text-3xl title-font md:text-5xl font-bold">In Barcelona ?</h1>
                               </div>
                         </div>
 

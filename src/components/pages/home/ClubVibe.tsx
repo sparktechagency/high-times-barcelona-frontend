@@ -13,10 +13,10 @@ const ClubVibe = () => {
                   <div className="container relative">
                         {/* Header */}
                         <div className="text-center mb-16">
-                              <h2 className="text-3xl md:text-5xl font-bold text-white mb-2">Explore</h2>
-                              <div className="text-3xl md:text-5xl font-bold">
-                                    <span className="text-white">Cannabis Social </span>
-                                    <span className="text-secondary">Club Vibe</span>
+                              <h2 className="text-3xl md:text-5xl title-font font-bold text-white mb-6">Explore</h2>
+                              <div className="text-3xl md:text-5xl title-font font-bold">
+                                    <span className="text-white title-font">Cannabis Social </span>
+                                    <span className="text-secondary title-font">Club Vibe</span>
                               </div>
                         </div>
 

@@ -55,9 +55,9 @@ export default function FAQSection() {
                         <div className="text-center mb-16">
                               <div className="flex items-center justify-center gap-2 mb-4">
                                     <Image width={100} height={100} src={Ganja} alt="Cannabis" className="size-12" />
-                                    <h1 className="text-3xl md:text-5xl font-fold text-[#1A1A1A]">Frequently</h1>
+                                    <h1 className="text-3xl md:text-5xl title-font font-fold text-[#1A1A1A]">Frequently</h1>
                               </div>
-                              <h1 className="text-3xl md:text-5xl font-fold text-primary">Asked Questions</h1>
+                              <h1 className="text-3xl md:text-5xl font-fold title-font text-primary">Asked Questions</h1>
                         </div>
                         <Swiper
                               slidesPerView={3}

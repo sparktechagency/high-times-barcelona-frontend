@@ -106,9 +106,9 @@ const ExploreClubs = () => {
                         <div className="text-center mb-16">
                               <div className="flex items-center justify-center gap-2 mb-4">
                                     <Image src={Ganja} alt="Cannabis" className="size-12" />
-                                    <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A]">Explore Cannabis</h2>
+                                    <h2 className="text-3xl title-font md:text-5xl font-bold text-[#1A1A1A]">Explore Cannabis</h2>
                               </div>
-                              <h3 className="text-3xl md:text-5xl font-bold text-primary">Social Club In Barcelona</h3>
+                              <h3 className="text-3xl md:text-5xl title-font font-bold text-primary">Social Club In Barcelona</h3>
                         </div>
 
                         {/* Club Grid */}

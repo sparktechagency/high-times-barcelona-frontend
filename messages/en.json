@@ -1,6 +1,13 @@
 {
-      "HomePage": {
-            "title": "Hello world!",
-            "about": "Go to the about page"
+      "meta": {
+            "title": "Weed in Barcelona – Map of Cannabis Clubs, Coffee shops & Weed Cafés",
+            "description": "Looking for a legal place to smoke marijuana in Barcelona? Explore our curated map of top cannabis clubs, weed cafes, and coffee shops. Follow our step-by-step guide to join a cannabis club today!"
+      },
+
+      "map-section": {
+            "title": {
+                  "part1": "Barcelona Cannabis Clubs Map",
+                  "part2": "Find the Best Weed Clubs Near You"
+            }
       }
 }

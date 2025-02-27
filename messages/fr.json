@@ -1,6 +1,13 @@
 {
-      "HomePage": {
-            "title": "Bonjour le monde!",
-            "about": "Aller à la page d'information"
+      "meta": {
+            "title": "Cannabis à Barcelone – Carte des Clubs de Cannabis, Coffee shops et Cafés",
+            "description": "À la recherche d'un endroit légal pour consommer du cannabis à Barcelone ? Explorez notre carte des meilleurs clubs de cannabis, cafés et coffee shops. Suivez notre guide étape par étape pour rejoindre un club de cannabis aujourd'hui !"
+      },
+
+      "map-section": {
+            "title": {
+                  "part1": "Carte des Clubs de Cannabis à Barcelone",
+                  "part2": "Trouvez les Meilleurs Clubs près de chez vous"
+            }
       }
 }

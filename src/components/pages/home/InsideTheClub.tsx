@@ -16,8 +16,8 @@ const InsideTheClub = () => {
                   <SectionBackground />
                   <div className="container z-10 relative">
                         {/* Header */}
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-16 text-center">
-                              Inside The <span className="text-secondary ">Club</span>
+                        <h2 className="text-4xl title-font md:text-5xl font-bold text-white mb-16 text-center">
+                              Inside The <span className="text-secondary  title-font">Club</span>
                         </h2>
 
                         {/* Content Grid */}

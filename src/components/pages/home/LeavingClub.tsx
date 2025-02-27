@@ -44,8 +44,8 @@ const LeavingClub = () => {
                         {/* Header */}
                         <div className="text-center mb-16">
                               <div className="mb-4">
-                                    <h3 className="text-3xl md:text-5xl font-bold text-black">Leaving</h3>
-                                    <h1 className="text-3xl md:text-5xl font-bold text-primary mt-2">Cannabis Club</h1>
+                                    <h3 className="text-3xl md:text-5xl font-bold title-font text-black">Leaving</h3>
+                                    <h1 className="text-3xl md:text-5xl font-bold title-font text-primary mt-2">Cannabis Club</h1>
                               </div>
                         </div>
 

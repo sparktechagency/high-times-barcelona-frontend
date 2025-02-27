@@ -6,7 +6,7 @@ import MarkerImage from '@/assets/images/maps/marker.svg';
 import Image from 'next/image';
 import { Clock } from 'lucide-react';
 import { LuMapPin } from 'react-icons/lu';
-import { AutoComplete, Input } from 'antd';
+import { AutoComplete, Button, Input } from 'antd';
 import React, { useState, useEffect } from 'react';
 import ResetView from './ResetView';
 import { BsStarFill } from 'react-icons/bs';
@@ -133,6 +133,19 @@ const ClubMap = ({ approvedClubs, selectedClub, setSelectedClub }: TProps) => {
                                                             <LuMapPin className="flex-shrink-0" color="#FFC313" size={18} />
                                                             <span className="text-sm break-words">{club.address}</span>
                                                       </div>
+                                                </div>
+                                                <div className="my-2">
+                                                      <Button
+                                                            href={`/cannabis-club/${club._id}`}
+                                                            style={{
+                                                                  height: 32,
+                                                                  width: '100%',
+                                                                  color: '#000000',
+                                                            }}
+                                                            type="primary"
+                                                      >
+                                                            Join Now
+                                                      </Button>
                                                 </div>
                                           </div>
                                     </Popup>

@@ -117,8 +117,8 @@ const GallerySlider = () => {
                   <div className="container relative">
                         {/* Header */}
                         <div className="text-center mb-24">
-                              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Explore</h2>
-                              <h3 className="text-3xl md:text-5xl font-bold text-[#FFD700]">Cannabis Social Club Gallery</h3>
+                              <h2 className="text-3xl md:text-5xl title-font font-bold text-white mb-4">Explore</h2>
+                              <h3 className="text-3xl md:text-5xl font-bold title-font text-[#FFD700]">Cannabis Social Club Gallery</h3>
                         </div>
 
                         {/* Slider */}

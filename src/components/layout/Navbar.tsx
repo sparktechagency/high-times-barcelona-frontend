@@ -119,6 +119,7 @@ const Navbar = () => {
                                     </div>
 
                                     <Select
+                                          style={{ width: 100 }}
                                           defaultValue={pathname.split('/')[1]}
                                           options={languageOptions}
                                           variant={'borderless'}
@@ -158,12 +159,9 @@ const Navbar = () => {
                                                       pointAtCenter: true,
                                                 }}
                                           >
-                                                <Button type="text" className="text-primaryText">
-                                                      <div className="bg-[#FFFAE2] p-2 rounded-full">
-                                                            <Avatar src={'https://randomuser.me/api/portraits/lego/2.jpg'} />
-                                                      </div>
-                                                      <TbChevronDown />
-                                                </Button>
+                                                <div className="bg-[#FFFAE2] cursor-pointer flex items-center justify-center p-2 rounded-full">
+                                                      <Avatar src={'https://randomuser.me/api/portraits/lego/2.jpg'} />
+                                                </div>
                                           </Dropdown>
                                     )}
                               </div>
