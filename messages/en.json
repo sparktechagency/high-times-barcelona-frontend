@@ -76,5 +76,16 @@
                   "card3Title": "Club Etiquette",
                   "card3Description": "Cannabis clubs offer a relaxed and friendly vibe, different from places like Amsterdam’s coffee shops or California’s weed cafes. To keep this atmosphere, be respectful and maintain a calm environment—avoid loud talking or noise. Photography and filming are not allowed. Respect others’ personal space and privacy. Inappropriate behavior, like harassment or aggression, can lead to your membership being canceled and expulsion from the club."
             }
+      },
+      "leaving-club-section": {
+            "title": "Leaving a Cannabis Club",
+            "card": {
+                  "card1Title": "Leave cannabis for Storage",
+                  "card1Description": "Any unused cannabis can be securely stored under your name at the club’s dispensary, ready for you to collect on your next visit.",
+                  "card2Title": "Leaving  the Club",
+                  "card2Description": "Within the club, you can freely and legally enjoy cannabis without restrictions on consumption. Afterward, you are permitted to leave and be in public, even if you’re still under the influence of weed",
+                  "card3Title": "Take any Unused Cannabis with You",
+                  "card3Description": "Cannabis use is only allowed inside the club. Public consumption is illegal and can result in fines of 500€ to 1,000€. If carrying cannabis, be discreet and keep it well-hidden."
+            }
       }
 }

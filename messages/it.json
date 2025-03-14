@@ -74,5 +74,16 @@
                   "card3Title": "Etichetta del club",
                   "card3Description": "Las asociaciones cannábicas ofrecen un ambiente relajado y amigable, diferente a lugares como los coffeeshops de Ámsterdam o los weed cafés de California. Para mantener esta atmósfera, sé respetuoso y fomenta un entorno tranquilo: evita hablar en voz alta o generar ruido excesivo. No se permite la fotografía ni la filmación. Respeta el espacio personal y la privacidad de los demás. Un comportamiento inapropiado, como el acoso o la agresión, puede resultar en la cancelación de tu membresía y en tu expulsión de la asociación.I cannabis club offrono un’atmosfera rilassata e amichevole, diversa dai coffee shop di Amsterdam o dai weed café della California. Per preservare questo ambiente, sii rispettoso e mantieni un clima tranquillo: evita rumori e conversazioni a voce troppo alta. Fotografie e riprese video non sono ammesse. Rispetta lo spazio personale e la privacy degli altri soci. Comportamenti inappropriati, come molestie o aggressività, possono comportare la cancellazione della tua iscrizione ed espulsione dal club."
             }
+      },
+      "leaving-club-section": {
+            "title": "Uscire dal Cannabis Club",
+            "card": {
+                  "card1Title": "Deposita la cannabis",
+                  "card1Description": "Qualsiasi quantità di cannabis non utilizzata può essere conservata in modo sicuro a tuo nome presso il dispensario del club, pronta per essere ritirata alla tua prossima visita.",
+                  "card2Title": "Uscire dal Club",
+                  "card2Description": "All’interno del club, puoi consumare cannabis liberamente e legalmente senza restrizioni sul consumo. Successivamente, ti è consentito uscire ed essere in pubblico, anche se sei ancora sotto l’effetto della marijuana.",
+                  "card3Title": "Porta con te la cannabis non utilizzata",
+                  "card3Description": "Il consumo di cannabis è rigorosamente limitato all’interno del club, poiché l’uso in pubblico è illegale e potrebbe comportare multe da 500 € a 1.000 €. Se scegli di portare con te della cannabis, mantienila sempre ben conservata e lontana da sguardi indiscreti per evitare problemi legali."
+            }
       }
 }

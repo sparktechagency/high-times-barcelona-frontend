@@ -74,5 +74,16 @@
                   "card3Title": "Etiqueta del Club",
                   "card3Description": "Las asociaciones cannábicas ofrecen un ambiente relajado y amigable, diferente a lugares como los coffeeshops de Ámsterdam o los weed cafés de California. Para mantener esta atmósfera, sé respetuoso y fomenta un entorno tranquilo: evita hablar en voz alta o generar ruido excesivo. No se permite la fotografía ni la filmación. Respeta el espacio personal y la privacidad de los demás. Un comportamiento inapropiado, como el acoso o la agresión, puede resultar en la cancelación de tu membresía y en tu expulsión de la asociación."
             }
+      },
+      "leaving-club-section": {
+            "title": "Salir de la Asociación Cannábica",
+            "card": {
+                  "card1Title": "Deja tu cannabis en almacenamiento",
+                  "card1Description": "Todo el cannabis sin utilizar se puede guardar de manera segura a tu nombre en el dispensario del club, listo para que lo recojas en tu próxima visita.",
+                  "card2Title": "Salir del Club",
+                  "card2Description": "Dentro del club, puedes disfrutar del cannabis de forma libre y legal, sin restricciones en el consumo. Una vez finalizada tu experiencia, puedes salir y estar en público, incluso si sigues bajo los efectos de la marihuana.",
+                  "card3Title": "Lleva contigo cualquier cannabis sin usar",
+                  "card3Description": "El consumo de cannabis está estrictamente limitado al interior del club, ya que usarlo en público es ilegal y puede acarrear multas de entre 500 y 1.000 €. Si decides llevar cannabis, asegúrate de mantenerlo discreto y guardarlo de forma segura para evitar problemas legales."
+            }
       }
 }

@@ -74,5 +74,16 @@
                   "card3Title": "Club-Etikette",
                   "card3Description": "Cannabis-Clubs bieten eine entspannte Atmosphäre, die sich von den Coffeeshops in Amsterdam unterscheidet. Halte dich an die Regeln: Sei respektvoll, sprich nicht zu laut und vermeide störendes Verhalten. Fotografieren und Filmen sind verboten. Bei Fehlverhalten wie Belästigung oder Aggression kann deine Mitgliedschaft entzogen werden."
             }
+      },
+      "leaving-club-section": {
+            "title": "Den Cannabis-Club verlassen",
+            "card": {
+                  "card1Title": "Cannabis zur Aufbewahrung hinterlegen",
+                  "card1Description": "Unverbrauchtes Cannabis kann im Club für dich sicher aufbewahrt werden, bis du es beim nächsten Besuch abholst.",
+                  "card2Title": "Den Club verlassen",
+                  "card2Description": "Innerhalb des Clubs kannst du Cannabis frei genießen. Sobald du den Club verlässt, bist du im öffentlichen Raum, auch wenn du noch unter dem Einfluss von Cannabis stehst.",
+                  "card3Title": "Unverbrauchtes Cannabis mitnehmen",
+                  "card3Description": "Cannabis-Konsum ist außerhalb des Clubs illegal. Wenn du Cannabis mitnimmst, halte es sicher und diskret verstaut, um hohe Bußgelder (500–1.000 €) zu vermeiden."
+            }
       }
 }

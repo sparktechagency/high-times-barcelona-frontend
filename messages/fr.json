@@ -75,5 +75,16 @@
                   "card3Title": "Étiquette du Club",
                   "card3Description": "Les clubs de cannabis à Barcelone proposent une ambiance détendue et chaleureuse, différente de celle des coffee shops d’Amsterdam ou des cafés de cannabis en Californie. Pour préserver cette atmosphère, soyez respectueux et veillez à maintenir un environnement calme : évitez de parler trop fort ou de faire du bruit. La photographie et le tournage de vidéos sont interdits. Respectez l’espace personnel et la vie privée des autres. Tout comportement inapproprié, comme le harcèlement ou l’agressivité, peut entraîner l’annulation de votre adhésion et votre expulsion du club."
             }
+      },
+      "leaving-club-section": {
+            "title": "Quitter le Cannabis Club",
+            "card": {
+                  "card1Title": "Stocker vos restes de Cannabis",
+                  "card1Description": "Tout cannabis non consommé peut être conservé en toute sécurité à votre nom dans la dispensaire du club, prêt à être récupéré lors de votre prochaine visite.",
+                  "card2Title": "Quitter le Club",
+                  "card2Description": "À l’intérieur du club, vous pouvez consommer du cannabis librement et légalement, sans restrictions. Une fois que vous partez, vous êtes autorisé à être en public, même si vous êtes encore sous l’influence du cannabis.",
+                  "card3Title": "Emporter votre cannabis non consommé",
+                  "card3Description": "La consommation de cannabis est strictement limitée à l’intérieur du club, car l’utiliser dans des lieux publics est illégal et peut entraîner des amendes allant de 500 € à 1 000 €. Si vous choisissez de transporter du cannabis, assurez-vous de le garder discret et stocké en toute sécurité pour éviter tout problème légal."
+            }
       }
 }
