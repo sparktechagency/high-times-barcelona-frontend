@@ -1,13 +1,26 @@
 {
       "meta": {
-            "title": "Weed in Barcelona – Map of Cannabis Clubs, Coffee shops & Weed Cafés",
+            "title": "Weed in Barcelona – Map of Cannabis Clubs, Coffeeshops & Weed Cafés",
             "description": "Looking for a legal place to smoke marijuana in Barcelona? Explore our curated map of top cannabis clubs, weed cafes, and coffee shops. Follow our step-by-step guide to join a cannabis club today!"
       },
 
       "map-section": {
-            "title": {
-                  "part1": "Barcelona Cannabis Clubs Map",
-                  "part2": "Find the Best Weed Clubs Near You"
-            }
+            "title": "Looking for a legal spot to smoke weed in Barcelona?",
+            "subTitle": "Discover our cannabis club map and follow our step-by-step guide to join a club near you today!",
+            "mapTitle": "Barcelona Cannabis Clubs Map"
+      },
+      "join-club-section": {
+            "title": "How to join a Cannabis Club ?",
+            "card": {
+                  "card1Title": "SELECT A CLUB",
+                  "card1Description": "Choose a club from the Map and Click “Join Now“",
+                  "card2Title": "GET AN INVITATION",
+                  "card2Description": "Complete the form and wait for your invitation email.",
+                  "card3Title": "VISIT THE CLUB",
+                  "card3Description": "Visit the club, show your invitation and a Valid ID for registration.",
+                  "card4Title": "COMPLETE MEMBERSHIP",
+                  "card4Description": ":Check the rules, annual membership fee, and grab your club Card."
+            },
+            "button": "Become a Member"
       }
 }

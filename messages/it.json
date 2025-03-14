@@ -1,13 +1,26 @@
 {
       "meta": {
-            "title": "Weed in Barcelona – Map of Cannabis Clubs, Coffee shops & Weed Cafés",
-            "description": "Looking for a legal place to smoke marijuana in Barcelona? Explore our curated map of top cannabis clubs, weed cafes, and coffee shops. Follow our step-by-step guide to join a cannabis club today!"
+            "title": "Coffee Shop Barcellona – Trova Cannabis Social Club Vicino a Me",
+            "description": "Looking for a legal place to smoke marijuana in Barcelona? Explore our curated map of top cannabis clubs, weed cafes, and coffee shops. Follow our step-by-step guide to join a cannabis club today!Scopri un nuovo modo di vivere il cannabis club di Barcellona, dove un'atmosfera accogliente e autentica si distingue nettamente dai tipici weed coffee shop di Amsterdam"
       },
 
       "map-section": {
-            "title": {
-                  "part1": "Barcelona Cannabis Clubs Map",
-                  "part2": "Find the Best Weed Clubs Near You"
-            }
+            "title": "Cerchi un luogo autorizzato per fumare erba a Barcellona?",
+            "subTitle": "Esplora la nostra mappa dei cannabis club e segui la guida passo dopo passo per unirti a un club vicino a te oggi stesso!",
+            "mapTitle": "Mappa dei Cannabis Club di Barcellona"
+      },
+      "join-club-section": {
+            "title": "Come iscriversi a un Cannabis Club?",
+            "card": {
+                  "card1Title": "SELEZIONA UN CLUB",
+                  "card1Description": "Scegli un club dalla mappa e clicca su “Diventare membro”",
+                  "card2Title": "OTTieni UNA INVITATION",
+                  "card2Description": "Compila il modulo e attendi l'email di invito.",
+                  "card3Title": "VISITA IL CLUB",
+                  "card3Description": "Visita il club, mostra la tua invito e un documento d'identità valido per la registrazione.",
+                  "card4Title": "COMPLETA L'ISCRIZIONE",
+                  "card4Description": "Verifica le regole, la quota annuale di iscrizione e prendi la tua tessera del club."
+            },
+            "button": "Diventare membro"
       }
 }

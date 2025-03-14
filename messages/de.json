@@ -1,6 +1,26 @@
 {
-      "HomePage": {
-            "title": "Hallo Welt!",
-            "about": "Zur Informationsseite"
+      "meta": {
+            "title": "Karte der Cannabis-Clubs & Coffeeshops in Barcelona",
+            "description": "Looking for a legal place to smoke marijuana in Barcelona? Explore our curated map of top cannabis clubs, weed cafes, and coffee shops. Follow our step-by-step guide to join a cannabis club today!Suchst du einen legalen Ort, um in Barcelona Marihuana zu konsumieren? Entdecke unsere Karte der besten Cannabis-Clubs und Coffeeshops und werde noch heute Mitglied."
+      },
+
+      "map-section": {
+            "title": "Suchst du nach einem legalen Ort, um in Barcelona Weed zu konsumieren?",
+            "subTitle": "Entdecke unsere Karte der Cannabis-Clubs und folge unserer Schritt-für-Schritt-Anleitung, um noch heute einem Club in deiner Nähe beizutreten!",
+            "mapTitle": "Barcelona Cannabis Clubs Karte"
+      },
+      "join-club-section": {
+            "title": "Wie werde ich Mitglied in einem Cannabis Club?",
+            "card": {
+                  "card1Title": "EINEN CLUB AUSWÄHLEN",
+                  "card1Description": "Wähle einen Club auf der Karte aus und klicke auf „Mitglied werden“.",
+                  "card2Title": ":EINE EINLADUNG ERHALTEN",
+                  "card2Description": "Fülle das Formular aus und warte auf deine Einladung per E-Mail.",
+                  "card3Title": "DEN CLUB BESUCHEN",
+                  "card3Description": "Besuche den Club, zeige deine Einladung und einen gültigen Ausweis zur Registrierung.",
+                  "card4Title": "MITGLIEDSCHAFT ABSCHLIESSEN",
+                  "card4Description": "Überprüfe die Regeln, die jährliche Mitgliedsgebühr und erhalte deine Clubkarte."
+            },
+            "button": "Mitglied werden"
       }
 }

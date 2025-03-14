@@ -1,13 +1,26 @@
 {
       "meta": {
-            "title": "Weed in Barcelona – Map of Cannabis Clubs, Coffee shops & Weed Cafés",
-            "description": "Looking for a legal place to smoke marijuana in Barcelona? Explore our curated map of top cannabis clubs, weed cafes, and coffee shops. Follow our step-by-step guide to join a cannabis club today!"
+            "title": ":Mapa de Asociaciones Cannábicas en Barcelona",
+            "description": "Looking for a legal place to smoke marijuana in Barcelona? Explore our curated map of top cannabis clubs, weed cafes, and coffee shops. Follow our step-by-step guide to join a cannabis club today!Descubre lugares legales para fumar marihuana en Barcelona. Consulta nuestro mapa con asociaciones cannábicas para encontrar la más cercana."
       },
 
       "map-section": {
-            "title": {
-                  "part1": "Barcelona Cannabis Clubs Map",
-                  "part2": "Find the Best Weed Clubs Near You"
-            }
+            "title": "¿Buscas un lugar legal para fumar marihuana en Barcelona?",
+            "subTitle": "Descubre nuestro mapa de asociaciones cannábicas y sigue nuestra guía paso a paso para unirte a una cerca de ti hoy mismo!",
+            "mapTitle": "Mapa de asociaciones de cannabis en Barcelona"
+      },
+      "join-club-section": {
+            "title": "¿Cómo unirse a una asociación cannábica?",
+            "card": {
+                  "card1Title": "SELECCIONA UN CLUB",
+                  "card1Description": ":Elige un club del mapa y haz clic en “Solicitar membresía“",
+                  "card2Title": "OBTÉN UNA INVITACIÓN",
+                  "card2Description": ":Completa el formulario y espera a recibir tu correo electrónico de invitación.",
+                  "card3Title": "VISITA EL CLUB",
+                  "card3Description": "Visita el club, muestra tu invitación y un documento de identidad válido para registrarte.",
+                  "card4Title": "COMPLETA TU MEMBRESÍA",
+                  "card4Description": "Revisa las normas, la cuota anual de membresía y recoge tu tarjeta de club."
+            },
+            "button": "Solicitar membresía"
       }
 }

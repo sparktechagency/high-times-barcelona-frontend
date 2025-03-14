@@ -1,13 +1,26 @@
 {
       "meta": {
-            "title": "Cannabis à Barcelone – Carte des Clubs de Cannabis, Coffee shops et Cafés",
-            "description": "À la recherche d'un endroit légal pour consommer du cannabis à Barcelone ? Explorez notre carte des meilleurs clubs de cannabis, cafés et coffee shops. Suivez notre guide étape par étape pour rejoindre un club de cannabis aujourd'hui !"
+            "title": "Carte des Cannabis Clubs et Coffeeshops à Barcelone",
+            "description": "À la recherche d'un endroit légal pour consommer du cannabis à Barcelone ? Explorez notre carte des meilleurs clubs de cannabis, cafés et coffee shops. Suivez notre guide étape par étape pour rejoindre un club de cannabis aujourd'hui !Vous cherchez un spot légal pour fumer du cannabis à Barcelone ? Découvrez notre carte des meilleurs clubs de cannabis et coffee shops, et suivez notre guide étape par étape pour en visiter un dès aujourd’hui !"
       },
 
       "map-section": {
-            "title": {
-                  "part1": "Carte des Clubs de Cannabis à Barcelone",
-                  "part2": "Trouvez les Meilleurs Clubs près de chez vous"
-            }
+            "title": "Vous cherchez un endroit légal pour fumer du cannabis à Barcelone ?",
+            "subTitle": "Explorez notre carte des clubs de cannabis et suivez notre guide pour adhérer à un club dès aujourd’hui !",
+            "mapTitle": "Carte des Clubs de Cannabis à Barcelone"
+      },
+      "join-club-section": {
+            "title": "Comment adhérer à un Club de Cannabis ?",
+            "card": {
+                  "card1Title": "CHOISISSEZ UN CLUB",
+                  "card1Description": "Sélectionnez un club sur la carte et cliquez sur “Devenir Membre“",
+                  "card2Title": "OBTENEZ UNE INVITATION",
+                  "card2Description": "Remplissez le formulaire et attendez votre email d’invitation.",
+                  "card3Title": "VISITEZ LE CLUB",
+                  "card3Description": "Présentez votre invitation et une pièce d’identité valide pour finaliser votre inscription.",
+                  "card4Title": "COMPLÉTEZ VOTRE ADHÉSION",
+                  "card4Description": "Prenez connaissance des règles, payez la cotisation annuelle et récupérez votre badge de club."
+            },
+            "button": "Devenir Membre"
       }
 }
