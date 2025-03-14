@@ -40,5 +40,17 @@
                   "card3Title": "Contanti",
                   "card3Description": ":I cannabis club non accettano carte bancarie, quindi assicurati di portare abbastanza contanti per coprire le tue necessità."
             }
+      },
+      "inside-club-section": {
+            "title": "All’interno del club",
+            "card": {
+                  "card1Title": "Un Dispensario",
+                  "card1Description": "Esplora una vasta selezione di prodotti premium a base di cannabis, inclusi i migliori ceppi di weed, pre-rolls, edibles, vapes e concentrati potenti come wax, resina e shatter. Migliora la tua esperienza con accessori per fumatori di alta qualità, come grinder, rolling papers, bong, pipe e molto altro—tutto ciò di cui hai bisogno in un unico posto!",
+                  "card2Title": "Zona Lounge",
+                  "card2Description": "Questi spazi dispongono di comodi divani, tavolini e angoli perfetti per rilassarsi. Molti includono aree dedicate al gaming, palchi per musica dal vivo e spazi per socializzare in gruppo. Per garantire la privacy, i club spesso offrono tavoli separati o stanze private, assicurando un'esperienza personale e confortevole.",
+                  "card3Title": "Area di Coworking",
+                  "card3Description": "Goditi un ambiente di lavoro confortevole in cannabis club selezionati, con tavoli dotati di Wi-Fi e prese elettriche. Che tu stia lavorando da remoto o semplicemente navigando, resta connesso in un contesto rilassato.",
+                  "note": "N.B. I membri hanno un limite di consumo mensile di 100 grammi per persona, per promuovere un uso responsabile ed equilibrato."
+            }
       }
 }

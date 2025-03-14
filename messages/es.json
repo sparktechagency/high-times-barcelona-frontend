@@ -40,5 +40,17 @@
                   "card3Title": "Efectivo",
                   "card3Description": "Las asociaciones cannábicas no aceptan tarjetas bancarias, así que asegúrate de llevar suficiente efectivo para cubrir todas tus necesidades."
             }
+      },
+      "inside-club-section": {
+            "title": "Dentro del Club",
+            "card": {
+                  "card1Title": "Un dispensario",
+                  "card1Description": "Explora una amplia selección de productos premium de cannabis, que incluye las mejores cepas de marihuana, pre-rollos, comestibles, vapes y concentrados potentes como wax, resina y shatter. Mejora tu experiencia con accesorios de fumado de alta calidad, como grinders, papeles para liar, bongs, pipas y mucho más—¡todo lo que necesitas en un solo lugar!",
+                  "card2Title": "Zona Lounge",
+                  "card2Description": "Estos espacios cuentan con cómodos sofás, mesas de centro y zonas para relajarse. Muchos incluyen áreas de juegos, escenarios para música en vivo y espacios para socializar en grupo. Para garantizar la privacidad, los clubs suelen ofrecer mesas separadas o salas privadas, asegurando una experiencia personal y cómoda.",
+                  "card3Title": "Zona Coworking",
+                  "card3Description": "Disfruta de un espacio de trabajo cómodo en algunas asociaciones cannábicas, con mesas, Wi-Fi y enchufes disponibles. Ya sea que estés trabajando de manera remota o simplemente navegando, mantente conectado en un ambiente relajado.",
+                  "note": "N.B. Los miembros tienen un límite de consumo mensual de 100 gramos por persona, promoviendo un uso responsable y equilibrado."
+            }
       }
 }

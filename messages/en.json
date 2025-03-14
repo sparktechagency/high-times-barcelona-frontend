@@ -41,5 +41,18 @@
                   "card3Title": "Cash",
                   "card3Description": "Cannabis clubs do not accept bank cards, so make sure to bring enough cash to cover your expenses."
             }
+      },
+
+      "inside-club-section": {
+            "title": "Inside the Cannabis Club",
+            "card": {
+                  "card1Title": "Dispensary",
+                  "card1Description": "Here, you'll find a wide variety of cannabis products, including different weed strains, pre-rolls, edibles, vapes, and concentrates like wax, resin, and shatter. The dispensary also offers smoking accessories such as grinders, rolling papers, bongs, pipes, and more to enhance your experience.",
+                  "card2Title": "Lounge Zone",
+                  "card2Description": "These spaces have comfy sofas, coffee tables, and spots to relax. Many include gaming areas, live music stages, and group spaces for socializing. For privacy, clubs often offer separate tables or private rooms, ensuring a personal and comfortable experience.",
+                  "card3Title": "Coworking Area",
+                  "card3Description": "Some clubs offer tables with Wi-Fi and power outlets, letting you stay connected while you work or relax. The setup is ideal for remote work or casual browsing. These spaces provide a perfect mix of productivity and comfort, creating a relaxed yet functional environment.",
+                  "note": "NB: Members are restricted to a monthly consumption limit of 100 grams per person, promoting responsible and balanced usage."
+            }
       }
 }
