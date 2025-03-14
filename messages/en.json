@@ -22,5 +22,11 @@
                   "card4Description": ":Check the rules, annual membership fee, and grab your club Card."
             },
             "button": "Become a Member"
+      },
+      "explore-section": {
+            "title": "Explore Weed Clubs in Barcelona"
+      },
+      "gallery-section": {
+            "title": "Discover the Unique Vibe of Cannabis Social Clubs"
       }
 }

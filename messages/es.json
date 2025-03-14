@@ -22,5 +22,11 @@
                   "card4Description": "Revisa las normas, la cuota anual de membresía y recoge tu tarjeta de club."
             },
             "button": "Solicitar membresía"
+      },
+      "explore-section": {
+            "title": "Explora asociaciones cannábicas en Barcelona"
+      },
+      "gallery-section": {
+            "title": "Cannabis club Vibes"
       }
 }

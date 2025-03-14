@@ -22,5 +22,11 @@
                   "card4Description": "Prenez connaissance des règles, payez la cotisation annuelle et récupérez votre badge de club."
             },
             "button": "Devenir Membre"
+      },
+      "explore-section": {
+            "title": "Explorez les Cannabis Clubs à Barcelone"
+      },
+      "gallery-section": {
+            "title": "Vivez l’expérience unique du Cannabis club"
       }
 }

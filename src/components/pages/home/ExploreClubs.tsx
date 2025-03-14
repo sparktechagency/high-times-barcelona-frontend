@@ -6,6 +6,7 @@ import Ganja from '@/assets/images/ganja2.svg';
 import { BsClock, BsGeoAlt, BsStarFill } from 'react-icons/bs';
 import { TClub, useGetApprovedClubsQuery } from '@/redux/features/club/clubApi';
 import { getImageUrl } from '@/utils/getImageUrl';
+import { MapIcon } from 'lucide-react';
 
 // Add keyframes animation
 const fadeInAnimation = `
@@ -119,7 +120,7 @@ const ExploreClubs = () => {
                         </div>
 
                         {/* View All Button */}
-                        <div className="flex justify-center mt-12">
+                        <div className="flex justify-center gap-3 mt-12">
                               <Button
                                     type="default"
                                     onClick={() => setShowAll(!showAll)}
@@ -133,6 +134,19 @@ const ExploreClubs = () => {
                                     iconPosition="end"
                               >
                                     {showAll ? 'Show Less' : 'View All'}
+                              </Button>
+                              <Button
+                                    href="#weed-map"
+                                    type="primary"
+                                    style={{
+                                          backgroundColor: '#00863D',
+                                          color: '#fff',
+                                          padding: '1.5rem 3rem',
+                                    }}
+                                    icon={<MapIcon />}
+                                    iconPosition="end"
+                              >
+                                    Weed Map
                               </Button>
                         </div>
                   </div>

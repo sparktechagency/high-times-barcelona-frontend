@@ -22,5 +22,11 @@
                   "card4Description": "Verifica le regole, la quota annuale di iscrizione e prendi la tua tessera del club."
             },
             "button": "Diventare membro"
+      },
+      "explore-section": {
+            "title": "Esplora i Cannabis Club di Barcellona"
+      },
+      "gallery-section": {
+            "title": "Scopri l'atmosfera unica dei Cannabis Social Clubs"
       }
 }
