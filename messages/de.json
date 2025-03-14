@@ -52,5 +52,16 @@
                   "card3Description": "Genieße einen komfortablen Arbeitsplatz in ausgewählten Cannabis-Clubs mit WLAN und Steckdosen. Ob für Remote-Arbeit oder einfaches Surfen – hier kannst du entspannt verbunden bleiben.",
                   "note": "Hinweis: Mitglieder unterliegen einem monatlichen Konsumlimit von 100 Gramm pro Person, um einen verantwortungsvollen Konsum zu fördern."
             }
+      },
+      "faq-section": {
+            "title": "Häufig gestellte Fragen",
+            "card": {
+                  "card1Title": "Was ist ein Cannabis-Club / Coffeeshop?",
+                  "card1Description": "Spanische Cannabis Social Clubs sind private, gemeinnützige Organisationen und unterscheiden sich stark von den Coffeeshops in Amsterdam. Diese Clubs bauen Marihuana ausschließlich für ihre registrierten Mitglieder an und verkaufen es nicht öffentlich. Im Gegensatz dazu sind Amsterdamer Coffeeshops kommerzielle Betriebe, in denen jeder Cannabis zusammen mit Speisen und Getränken kaufen kann. In spanischen Clubs erfolgt der Konsum über freiwillige Beiträge, nicht über direkte Käufe. Statt „kaufen“ oder „verkaufen“ spricht man von „erwerben“ oder „erhalten“, um die gesetzlichen Vorgaben einzuhalten.",
+                  "card2Title": "Warum sind Cannabis-Clubs nur für Mitglieder zugänglich?",
+                  "card2Description": "In Spanien ist Cannabis-Konsum auf private Räume beschränkt, einschließlich privater Cannabis Social Clubs. Diese Clubs erfordern eine Mitgliedschaft, um innerhalb legaler Grenzen zu operieren und eine sichere Umgebung zu gewährleisten. Um beizutreten, brauchst du eine Einladung von einem bestehenden Mitglied oder vom Club selbst. Nach der Genehmigung erhältst du eine Mitgliedskarte.",
+                  "card3Title": "Wer kann einem Cannabis Club in Spanien beitreten?",
+                  "card3Description": "Um einem Cannabis Social Club in Barcelona beizutreten, musst du: Mindestens 18–21 Jahre alt sein, einen gültigen Personalausweis oder Reisepass besitzen, von einem Mitglied gesponsert oder vom Club eingeladen werden, und kein spanischer Staatsbürger sein."
+            }
       }
 }

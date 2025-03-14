@@ -52,5 +52,16 @@
                   "card3Description": "Certains clubs de cannabis offrent des espaces de travail avec Wi-Fi et prises électriques. Profitez d’un cadre détendu pour travailler ou naviguer sur Internet.",
                   "note": "Limite mensuelle : Chaque membre est restreint à une consommation maximale de 100 g par mois pour garantir une utilisation responsable."
             }
+      },
+      "faq-section": {
+            "title": "FAQ",
+            "card": {
+                  "card1Title": "Qu’est-ce qu’un Cannabis Club / Coffee Shop ?",
+                  "card1Description": "Les cannabis social clubs  en Espagne fonctionnent selon un modèle privé et à but non lucratif, ce qui les différencie des coffee shops d’Amsterdam. Ils cultivent de la marijuana exclusivement pour leurs membres inscrits, plutôt que de la vendre librement au public. À l’inverse, les coffee shops d’Amsterdam sont des établissements commerciaux où chacun peut acheter du cannabis en même temps que de la nourriture et des boissons. Pour accéder à un club espagnol, les membres versent une contribution volontaire plutôt qu’un achat direct. Les transactions utilisent une approche particulière, employant des termes comme « acquérir » ou « recevoir » au lieu de « acheter » ou « vendre ». Ce système basé sur les dons permet de respecter la législation tout en offrant aux membres une expérience du cannabis à la fois sûre et encadrée",
+                  "card2Title": "Pourquoi les clubs de cannabis de Barcelone sont-ils réservés aux membres ?",
+                  "card2Description": "En Espagne, la consommation de cannabis est limitée à des espaces privés, comme les domiciles ou les associations privées appelées « Cannabis Social Clubs ». Pour y accéder, une adhésion est requise, ces clubs opérant dans un cadre légal afin de garantir un environnement sûr. Pour les rejoindre, vous devez obtenir une invitation d’un membre existant ou directement du club, et vous recevrez une carte de membre une fois votre demande validée.",
+                  "card3Title": "Qui peut adhérer à un Club de Cannabis en Espagne ?",
+                  "card3Description": "Pour adhérer à un Cannabis Social Club à Barcelone, vous devez être au moins 18-21 ans, avoir une pièce d’identité valide, être sponsorisé par un membre ou être invité par le club, et ne pas être un citoyen espagnol."
+            }
       }
 }

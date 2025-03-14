@@ -52,5 +52,16 @@
                   "card3Description": "Disfruta de un espacio de trabajo cómodo en algunas asociaciones cannábicas, con mesas, Wi-Fi y enchufes disponibles. Ya sea que estés trabajando de manera remota o simplemente navegando, mantente conectado en un ambiente relajado.",
                   "note": "N.B. Los miembros tienen un límite de consumo mensual de 100 gramos por persona, promoviendo un uso responsable y equilibrado."
             }
+      },
+      "faq-section": {
+            "title": "Preguntas Frecuentes",
+            "card": {
+                  "card1Title": "¿Qué es un Club de Cannabis / Coffee Shop?",
+                  "card1Description": "Los clubs de cannabis  en España funcionan según un modelo privado y de fines no lucrativos, lo que los diferencia de los coffee shops de Amsterdam. Cultivan marihuana exclusivamente para sus miembros inscritos, en lugar de vender libremente al público. Por el contrario, los coffee shops de Amsterdam son establecimientos comerciales donde cada uno puede comprar cannabis al mismo tiempo que comida y bebidas. Para acceder a un club español, los miembros pagan una contribución voluntaria en lugar de un compra directa. Las transacciones utilizan una enfoque particular, empleando términos como 'acquirir' o 'recibir' en lugar de 'comprar' o 'vender'. Este sistema basado en donaciones permite respetar la legislación mientras ofrece a los miembros una experiencia del cannabis a la vez segura y controladaLas asociaciones cannábicas españolas operan bajo un modelo privado y sin ánimo de lucro, lo que las diferencia de los coffeeshops de marihuana de Ámsterdam. Estas asociaciones cultivan cannabis exclusivamente para sus miembros registrados, en lugar de venderlo abiertamente al público. En contraste, los coffeeshops de Ámsterdam funcionan como establecimientos comerciales donde cualquier persona puede comprar cannabis junto con comida y bebida. Para acceder al cannabis en una asociación cannábica española, los miembros realizan una contribución voluntaria en lugar de efectuar una compra directa. Las transacciones se llevan a cabo mediante un enfoque único, utilizando términos como 'adquirir' o 'retirar' en lugar de 'comprar' o 'vender'. Este sistema basado en donaciones garantiza el cumplimiento de la normativa legal, ofreciendo a los miembros una experiencia de cannabis segura y controlada.",
+                  "card2Title": "¿Por qué los clubs de cannabis de Barcelone son reservados para los miembros?",
+                  "card2Description": "En España, el uso de cannabis está restringido a espacios privados, como hogares o asociaciones privadas llamadas Clubes Sociales de Cannabis. Para acceder a estos clubes, es necesario ser miembro, operando dentro de los límites legales para garantizar un entorno seguro. Para unirte, necesitas una invitación de un miembro actual o del club, y recibirás una tarjeta de membresía una vez aprobado.",
+                  "card3Title": "¿Quién Puede unirse a una Asociación Cannábica en España?",
+                  "card3Description": "Para unirte a un club social de cannabis en Barcelona, debes ser al menos 18-21 años, tener un documento de identidad válido, ser sponsorizado por un miembro o ser invitado por el club, y no ser un ciudadano español."
+            }
       }
 }
