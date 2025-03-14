@@ -87,5 +87,29 @@
                   "card3Title": "Take any Unused Cannabis with You",
                   "card3Description": "Cannabis use is only allowed inside the club. Public consumption is illegal and can result in fines of 500€ to 1,000€. If carrying cannabis, be discreet and keep it well-hidden."
             }
+      },
+      "club-rule-section": {
+            "title": "Essential Cannabis Social Club Rules",
+
+            "card": [
+                  {
+                        "title": "Members only"
+                  },
+                  {
+                        "title": "Age limit"
+                  },
+                  {
+                        "title": "No Photos"
+                  },
+                  {
+                        "title": "Cash only"
+                  },
+                  {
+                        "title": "No suitcases"
+                  },
+                  {
+                        "title": "Responsible Consumption"
+                  }
+            ]
       }
 }

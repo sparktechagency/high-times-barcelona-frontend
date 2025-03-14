@@ -85,5 +85,28 @@
                   "card3Title": "Unverbrauchtes Cannabis mitnehmen",
                   "card3Description": "Cannabis-Konsum ist außerhalb des Clubs illegal. Wenn du Cannabis mitnimmst, halte es sicher und diskret verstaut, um hohe Bußgelder (500–1.000 €) zu vermeiden."
             }
+      },
+      "club-rule-section": {
+            "title": "Wichtige Clubregeln",
+            "card": [
+                  {
+                        "title": " Nur für Mitglieder"
+                  },
+                  {
+                        "title": "Altersbeschränkung"
+                  },
+                  {
+                        "title": "Kein Fotos"
+                  },
+                  {
+                        "title": "Nur Bargeld"
+                  },
+                  {
+                        "title": "Keine Koffer"
+                  },
+                  {
+                        "title": " Verantwortungsbewusster Konsum"
+                  }
+            ]
       }
 }

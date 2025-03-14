@@ -85,5 +85,28 @@
                   "card3Title": "Porta con te la cannabis non utilizzata",
                   "card3Description": "Il consumo di cannabis è rigorosamente limitato all’interno del club, poiché l’uso in pubblico è illegale e potrebbe comportare multe da 500 € a 1.000 €. Se scegli di portare con te della cannabis, mantienila sempre ben conservata e lontana da sguardi indiscreti per evitare problemi legali."
             }
+      },
+      "club-rule-section": {
+            "title": "Regole Essenziali dei Cannabis Social Club",
+            "card": [
+                  {
+                        "title": " Riservato ai Soci"
+                  },
+                  {
+                        "title": " Limite d’Età"
+                  },
+                  {
+                        "title": "Niente Foto"
+                  },
+                  {
+                        "title": "Solo Contanti"
+                  },
+                  {
+                        "title": "Niente Valigie"
+                  },
+                  {
+                        "title": "Consumo Responsabile"
+                  }
+            ]
       }
 }

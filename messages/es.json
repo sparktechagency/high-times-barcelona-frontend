@@ -85,5 +85,29 @@
                   "card3Title": "Lleva contigo cualquier cannabis sin usar",
                   "card3Description": "El consumo de cannabis está estrictamente limitado al interior del club, ya que usarlo en público es ilegal y puede acarrear multas de entre 500 y 1.000 €. Si decides llevar cannabis, asegúrate de mantenerlo discreto y guardarlo de forma segura para evitar problemas legales."
             }
+      },
+
+      "club-rule-section": {
+            "title": "Reglas esenciales de la asociación cannábica",
+            "card": [
+                  {
+                        "title": "Solo para miembros"
+                  },
+                  {
+                        "title": "Límite de edad"
+                  },
+                  {
+                        "title": "No fotos"
+                  },
+                  {
+                        "title": "Solo efectivo"
+                  },
+                  {
+                        "title": "No maletas"
+                  },
+                  {
+                        "title": "Consumo responsable"
+                  }
+            ]
       }
 }

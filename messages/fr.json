@@ -86,5 +86,30 @@
                   "card3Title": "Emporter votre cannabis non consommé",
                   "card3Description": "La consommation de cannabis est strictement limitée à l’intérieur du club, car l’utiliser dans des lieux publics est illégal et peut entraîner des amendes allant de 500 € à 1 000 €. Si vous choisissez de transporter du cannabis, assurez-vous de le garder discret et stocké en toute sécurité pour éviter tout problème légal."
             }
+      },
+
+      "club-rule-section": {
+            "title": "Principes fondamentaux Des Cannabis Clubs",
+
+            "card": [
+                  {
+                        "title": "Réservé aux membres"
+                  },
+                  {
+                        "title": "Restrictions d’âge"
+                  },
+                  {
+                        "title": "interdiction de Prendre photo"
+                  },
+                  {
+                        "title": "Paiement en espèces uniquement"
+                  },
+                  {
+                        "title": "interdiction de valises"
+                  },
+                  {
+                        "title": "Consommation responsable"
+                  }
+            ]
       }
 }
