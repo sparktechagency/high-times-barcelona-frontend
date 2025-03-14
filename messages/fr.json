@@ -63,5 +63,17 @@
                   "card3Title": "Qui peut adhérer à un Club de Cannabis en Espagne ?",
                   "card3Description": "Pour adhérer à un Cannabis Social Club à Barcelone, vous devez être au moins 18-21 ans, avoir une pièce d’identité valide, être sponsorisé par un membre ou être invité par le club, et ne pas être un citoyen espagnol."
             }
+      },
+
+      "guideline-section": {
+            "title": "Règlement Des Cannabis Social Clubs",
+            "card": {
+                  "card1Title": "Entrée au Club",
+                  "card1Description": "Les clubs de cannabis de Barcelone ne font pas de publicité et n’affichent pas d’enseignes. L’accès se fait via une entrée discrète, où il faut sonner à la porte avant d’être accueilli et enregistré.",
+                  "card2Title": "À la Réception",
+                  "card2Description": "Lors de votre première visite dans un club de cannabis à Barcelone, vous commencerez à la réception pour finaliser votre inscription. Le personnel vérifiera votre pièce d’identité valide afin de confirmer votre âge et votre admissibilité en tant que membre. Une fois votre identité confirmée, ils vous expliqueront les règles du club, son fonctionnement et répondront à toutes vos questions",
+                  "card3Title": "Étiquette du Club",
+                  "card3Description": "Les clubs de cannabis à Barcelone proposent une ambiance détendue et chaleureuse, différente de celle des coffee shops d’Amsterdam ou des cafés de cannabis en Californie. Pour préserver cette atmosphère, soyez respectueux et veillez à maintenir un environnement calme : évitez de parler trop fort ou de faire du bruit. La photographie et le tournage de vidéos sont interdits. Respectez l’espace personnel et la vie privée des autres. Tout comportement inapproprié, comme le harcèlement ou l’agressivité, peut entraîner l’annulation de votre adhésion et votre expulsion du club."
+            }
       }
 }

@@ -63,5 +63,16 @@
                   "card3Title": "Chi può aderire al Cannabis Club?",
                   "card3Description": "Per unirti a un Cannabis Club a Barcellona, devi essere almeno 18-21 anni, avere un documento di identità valido, essere sponsorizzato da un membro o essere invitato dal club, e non essere cittadino spagnolo."
             }
+      },
+      "guideline-section": {
+            "title": "Linee guida dei Cannabis Social Club",
+            "card": {
+                  "card1Title": "Ingresso a un Club",
+                  "card1Description": "I cannabis club di Barcellona operano secondo un modello legale che limita sia la disponibilità che la promozione della marijuana. A differenza delle attività tradizionali, questi club non espongono insegne esterne né pubblicità. Per entrare, i visitatori devono individuare l'ingresso discreto e suonare il campanello. Un membro dello staff concederà l'accesso e accompagnerà i nuovi arrivati all'area di accoglienza per la verifica e la registrazione.",
+                  "card2Title": "Alla Reception",
+                  "card2Description": "Durante tu primera visita a una asociación cannábica, comenzarás en el mostrador de recepción para completar el proceso de inscripción. El personal verificará tu identificación válida para confirmar tu edad y elegibilidad como miembro. Una vez verificado, te explicarán las pautas del club, cómo funciona todo, y responderán cualquier pregunta que puedas tener, asegurando una experiencia fluida y agradableDurante la tua prima visita a un cannabis club, inizierai alla reception per completare il processo di registrazione. Il personale controllerà il tuo documento d’identità valido per confermare età e idoneità all’iscrizione. Una volta verificato, ti illustreranno le linee guida del club, spiegheranno il funzionamento di tutto e risponderanno a eventuali domande, assicurandoti un’esperienza fluida e piacevole.",
+                  "card3Title": "Etichetta del club",
+                  "card3Description": "Las asociaciones cannábicas ofrecen un ambiente relajado y amigable, diferente a lugares como los coffeeshops de Ámsterdam o los weed cafés de California. Para mantener esta atmósfera, sé respetuoso y fomenta un entorno tranquilo: evita hablar en voz alta o generar ruido excesivo. No se permite la fotografía ni la filmación. Respeta el espacio personal y la privacidad de los demás. Un comportamiento inapropiado, como el acoso o la agresión, puede resultar en la cancelación de tu membresía y en tu expulsión de la asociación.I cannabis club offrono un’atmosfera rilassata e amichevole, diversa dai coffee shop di Amsterdam o dai weed café della California. Per preservare questo ambiente, sii rispettoso e mantieni un clima tranquillo: evita rumori e conversazioni a voce troppo alta. Fotografie e riprese video non sono ammesse. Rispetta lo spazio personale e la privacy degli altri soci. Comportamenti inappropriati, come molestie o aggressività, possono comportare la cancellazione della tua iscrizione ed espulsione dal club."
+            }
       }
 }

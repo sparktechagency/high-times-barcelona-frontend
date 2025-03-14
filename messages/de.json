@@ -63,5 +63,16 @@
                   "card3Title": "Wer kann einem Cannabis Club in Spanien beitreten?",
                   "card3Description": "Um einem Cannabis Social Club in Barcelona beizutreten, musst du: Mindestens 18–21 Jahre alt sein, einen gültigen Personalausweis oder Reisepass besitzen, von einem Mitglied gesponsert oder vom Club eingeladen werden, und kein spanischer Staatsbürger sein."
             }
+      },
+      "guideline-section": {
+            "title": "Linee guida dei Cannabis Social Club",
+            "card": {
+                  "card1Title": "Eintritt in den Club",
+                  "card1Description": "Cannabis-Clubs in Barcelona folgen einem legalen Modell, das Werbung und öffentliche Verkaufsstellen untersagt. Diese Clubs haben keine Außenwerbung oder Schilder. Der Eingang ist diskret – du musst klingeln, um eingelassen zu werden.",
+                  "card2Title": "Anmeldung am Empfang",
+                  "card2Description": "Bei deinem ersten Besuch wirst du am Empfang registriert. Dein Ausweis wird geprüft, um dein Alter und deine Mitgliedsberechtigung zu bestätigen. Anschließend erhältst du eine Einführung in die Clubregeln und kannst Fragen stellen.",
+                  "card3Title": "Club-Etikette",
+                  "card3Description": "Cannabis-Clubs bieten eine entspannte Atmosphäre, die sich von den Coffeeshops in Amsterdam unterscheidet. Halte dich an die Regeln: Sei respektvoll, sprich nicht zu laut und vermeide störendes Verhalten. Fotografieren und Filmen sind verboten. Bei Fehlverhalten wie Belästigung oder Aggression kann deine Mitgliedschaft entzogen werden."
+            }
       }
 }

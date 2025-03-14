@@ -63,5 +63,16 @@
                   "card3Title": "¿Quién Puede unirse a una Asociación Cannábica en España?",
                   "card3Description": "Para unirte a un club social de cannabis en Barcelona, debes ser al menos 18-21 años, tener un documento de identidad válido, ser sponsorizado por un miembro o ser invitado por el club, y no ser un ciudadano español."
             }
+      },
+      "guideline-section": {
+            "title": "Guía de la asociación cannabica",
+            "card": {
+                  "card1Title": "Entrada a un Club",
+                  "card1Description": "Las asociaciones cannábicas de Barcelona operan bajo un modelo legal que limita tanto la disponibilidad como la promoción de la marihuana. A diferencia de los negocios tradicionales, estas asociaciones no cuentan con señalización exterior ni publicidad. Para ingresar, los visitantes deben localizar la entrada discreta y tocar el timbre. Un miembro del personal les concederá el acceso y los guiará a la zona de recepción para la verificación y el registro.",
+                  "card2Title": "En la  recepción",
+                  "card2Description": "Durante tu primera visita a una asociación cannábica, comenzarás en el mostrador de recepción para completar el proceso de inscripción. El personal verificará tu identificación válida para confirmar tu edad y elegibilidad como miembro. Una vez verificado, te explicarán las pautas del club, cómo funciona todo, y responderán cualquier pregunta que puedas tener, asegurando una experiencia fluida y agradable",
+                  "card3Title": "Etiqueta del Club",
+                  "card3Description": "Las asociaciones cannábicas ofrecen un ambiente relajado y amigable, diferente a lugares como los coffeeshops de Ámsterdam o los weed cafés de California. Para mantener esta atmósfera, sé respetuoso y fomenta un entorno tranquilo: evita hablar en voz alta o generar ruido excesivo. No se permite la fotografía ni la filmación. Respeta el espacio personal y la privacidad de los demás. Un comportamiento inapropiado, como el acoso o la agresión, puede resultar en la cancelación de tu membresía y en tu expulsión de la asociación."
+            }
       }
 }
