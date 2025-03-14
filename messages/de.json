@@ -28,5 +28,16 @@
       },
       "gallery-section": {
             "title": "Entdecke die einzigartige Atmosphäre der Cannabis Social Clubs"
+      },
+      "essential-items-section": {
+            "title": "Anleitung zum Beitritt in einen Cannabis Club",
+            "card": {
+                  "card1Title": "Personalausweis",
+                  "card1Description": "Dein Personalausweis oder eine gültige Identifikation ist erforderlich. Cannabis-Clubs folgen der KYC-Richtlinie („Know Your Customer“) und müssen deine Identität vor dem Zutritt verifizieren.",
+                  "card2Title": "Einladungsschreiben",
+                  "card2Description": "Um Mitglied zu werden, musst du von einem bestehenden Mitglied eingeladen werden oder eine Einladung direkt vom Club erhalten. Bringe dein Einladungsschreiben mit, um deine Mitgliedschaft zu bestätigen.",
+                  "card3Title": "Bargeld",
+                  "card3Description": "Cannabis-Clubs akzeptieren keine Bankkarten, also bring ausreichend Bargeld mit, um deine Bedürfnisse zu decken."
+            }
       }
 }

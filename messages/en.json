@@ -28,5 +28,17 @@
       },
       "gallery-section": {
             "title": "Discover the Unique Vibe of Cannabis Social Clubs"
+      },
+
+      "essential-items-section": {
+            "title": "Guide to Joining a Cannabis Club",
+            "card": {
+                  "card1Title": "Identity card",
+                  "card1Description": "Your ID or a valid identification is required.Cannabis Clubs follow the KYC (Know Your Customer) policy and must verify your identity before letting you in.",
+                  "card2Title": "Invitation letter",
+                  "card2Description": "To become a member, you must be invited by a valid member of the club or have an invitation from the club itself. Bring your letter to confirm your invitation.",
+                  "card3Title": "Cash",
+                  "card3Description": "Cannabis clubs do not accept bank cards, so make sure to bring enough cash to cover your expenses."
+            }
       }
 }

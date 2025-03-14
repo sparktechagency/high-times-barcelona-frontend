@@ -28,5 +28,16 @@
       },
       "gallery-section": {
             "title": "Scopri l'atmosfera unica dei Cannabis Social Clubs"
+      },
+      "essential-items-section": {
+            "title": "Guida di cannabis club",
+            "card": {
+                  "card1Title": "Carta d'identità",
+                  "card1Description": "richiesta una carta d'identità o un documento di identificazione valido. I Cannabis Club seguono la politica KYC (Know Your Customer) e devono verificare la tua identità prima di consentirti l'accesso",
+                  "card2Title": "Lettera d'invito",
+                  "card2Description": "Per diventare membro, devi essere invitato da un membro valido del club oppure ricevere un invito ufficiale dal club stesso. Porta con te la tua lettera per confermare l'invito.",
+                  "card3Title": "Contanti",
+                  "card3Description": ":I cannabis club non accettano carte bancarie, quindi assicurati di portare abbastanza contanti per coprire le tue necessità."
+            }
       }
 }

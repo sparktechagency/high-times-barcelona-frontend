@@ -28,5 +28,16 @@
       },
       "gallery-section": {
             "title": "Vivez l’expérience unique du Cannabis club"
+      },
+      "essential-items-section": {
+            "title": "Guide pour Adhérer à un Club de Cannabis",
+            "card": {
+                  "card1Title": "Pièce d’identité",
+                  "card1Description": "Une pièce d’identité valide est obligatoire. Les clubs de cannabis suivent la politique KYC (Know Your Customer) et doivent vérifier votre identité avant d’accorder l’accès.",
+                  "card2Title": "Lettre d’invitation",
+                  "card2Description": "L’adhésion nécessite une invitation d’un membre existant ou du club lui-même. Présentez votre lettre pour confirmer votre invitation.",
+                  "card3Title": "Espèces",
+                  "card3Description": "Les clubs de cannabis n’acceptent pas les cartes bancaires. Prévoyez suffisamment d’argent liquide pour vos besoins"
+            }
       }
 }

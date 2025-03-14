@@ -28,5 +28,16 @@
       },
       "gallery-section": {
             "title": "Cannabis club Vibes"
+      },
+      "essential-items-section": {
+            "title": "Guía para unirse a una asociación cannábica",
+            "card": {
+                  "card1Title": "Documento de identidad",
+                  "card1Description": "Se requiere un documento de identidad válido. Los clubes de cannabis siguen la política KYC (Conozca a su Cliente) y deben verificar tu identidad antes de permitirte el acceso.",
+                  "card2Title": "Invitación",
+                  "card2Description": "Para convertirte en miembro, debes ser invitado por un miembro válido del club o tener una invitación del propio club. Trae tu carta para confirmar tu invitación.",
+                  "card3Title": "Efectivo",
+                  "card3Description": "Las asociaciones cannábicas no aceptan tarjetas bancarias, así que asegúrate de llevar suficiente efectivo para cubrir todas tus necesidades."
+            }
       }
 }
