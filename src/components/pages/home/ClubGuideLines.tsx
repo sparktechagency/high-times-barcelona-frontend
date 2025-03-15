@@ -51,7 +51,7 @@ const ClubGuideLines = () => {
                         {/* Header */}
                         <div className="text-center mb-16">
                               <div className="mb-4">
-                                    <h3 className="text-3xl title-font md:text-5xl font-bold text-white">{t('title')}</h3>
+                                    <h3 className="text-3xl max-w-3xl mx-auto title-font md:text-5xl font-bold text-white">{t('title')}</h3>
                                     {/* <h2 className="text-3xl md:text-5xl title-font font-bold text-secondary mt-2">
                                           Social Club Guidelines
                                     </h2> */}

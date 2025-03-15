@@ -48,7 +48,7 @@ const HowToJoin = () => {
                   <SectionBackground />
                   <div className="container relative z-10">
                         {/* Heading */}
-                        <div className="text-center mb-8 md:mb-16 px-4">
+                        <div className="text-center mb-8 md:mb-16 px-4 max-w-3xl mx-auto">
                               <h2 className="text-secondary title-font text-3xl md:text-5xl font-bold mb-2 md:mb-6">{t('title')}</h2>
                         </div>
 
