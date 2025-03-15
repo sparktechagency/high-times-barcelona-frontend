@@ -40,6 +40,7 @@ const linkSections = [
                   { label: 'Terms & Conditions', href: '/terms-and-condition' },
                   { label: 'Weed Map', href: '/#weed-map' },
                   { label: 'Add Your Club', href: '/new-club' },
+                  { label: 'Login', href: '/login' },
             ],
       },
 ];
