@@ -9,15 +9,18 @@ import clubImage from '@/assets/images/inside2.svg';
 import medicalPlant from '@/assets/images/inside2.png';
 import InsideImage from '@/assets/images/inside.png';
 import SectionBackground from '@/components/ui/SectionBackgound';
+import { useTranslations } from 'next-intl';
 
 const InsideTheClub = () => {
+      const t = useTranslations('inside-club-section');
       return (
             <section className="py-20 bg-[#033f1b] relative">
                   <SectionBackground />
                   <div className="container z-10 relative">
                         {/* Header */}
                         <h2 className="text-4xl title-font md:text-5xl font-bold text-white mb-16 text-center">
-                              Inside The <span className="text-secondary  title-font">Club</span>
+                              {/* Inside The <span className="text-secondary  title-font">Club</span> */}
+                              {t('title')}
                         </h2>
 
                         {/* Content Grid */}
@@ -36,15 +39,10 @@ const InsideTheClub = () => {
                                           </div>
                                           <div className="flex items-start gap-4 mt-10">
                                                 <h3 className="text-2xl ">
-                                                      A <span className="text-primary">Dispensary</span>
+                                                      <span className="text-primary">{t('card.card1Title')}</span>
                                                 </h3>
                                           </div>
-                                          <p className="mt-6 text-gray-600 ">
-                                                Here, you'll find a wide variety of cannabis products, including different weed strains,
-                                                pre-rolls, edibles, vapes, and concentrates like wax, resin, and shatter. The dispensary
-                                                also offers smoking accessories such as grinders, rolling papers, bongs, pipes, and more to
-                                                enhance your experience.
-                                          </p>
+                                          <p className="mt-6 text-gray-600 ">{t('card.card1Description')}</p>
                                     </div>
                                     <div className="mt-6 flex flex-col md:flex-row gap-6 items-center ">
                                           <div className="bg-[#F9FDF9] flex justify-center items-center w-[159px] h-[143px] p-5 rounded-xl ">
@@ -52,14 +50,11 @@ const InsideTheClub = () => {
                                                       src={cannabisLeaf}
                                                       alt="Leaf Icon"
                                                       className="w-[129px] h-[118px
-                                                ] "
+                                                ]"
                                                 />
                                           </div>
                                           <div className="bg-[#F9FDF9] flex  justify-center items-center w-[100%] h-[143px] p-5 rounded-xl ">
-                                                <p className="">
-                                                      <span className="font-bold">N.B.</span> Members are restricted to a monthly
-                                                      consumption limit of 100 grams per person, promoting responsible and balanced usage.
-                                                </p>
+                                                <p className="">{t('card.note')}</p>
                                           </div>
                                     </div>
                               </div>
@@ -71,16 +66,9 @@ const InsideTheClub = () => {
                                           <div className="flex justify-between flex-col md:flex-row items-start gap-6">
                                                 <div>
                                                       <h3 className="text-2xl  mb-4">
-                                                            Lounge <span className="text-primary">Zone</span>
+                                                            <span className="text-primary">{t('card.card2Title')}</span>
                                                       </h3>
-                                                      <p className="text-gray-600 mb-4">
-                                                            These spaces have comfy sofas, coffee tables, and spots to relax. Many include
-                                                            gaming areas, live music stages, and group spaces for socializing.
-                                                      </p>
-                                                      <p className="text-gray-600">
-                                                            For privacy, clubs often offer separate tables or private rooms, ensuring a
-                                                            personal and comfortable experience.
-                                                      </p>
+                                                      <p className="text-gray-600 mb-4">{t('card.card2Description')}</p>
                                                 </div>
                                                 <div className="w-full md:min-w-[263px] h-[315px]">
                                                       <Image
@@ -97,16 +85,9 @@ const InsideTheClub = () => {
                                           <div className="flex flex-col md:flex-row justify-between items-start gap-6">
                                                 <div>
                                                       <h3 className="text-2xl  mb-4">
-                                                            Coworking <span className="text-primary">Area</span>
+                                                            <span className="text-primary">{t('card.card3Title')}</span>
                                                       </h3>
-                                                      <p className="text-gray-600 mb-4">
-                                                            Some clubs offer tables with Wi-Fi and power outlets, letting you stay connected
-                                                            while you work or relax. The setup is ideal for remote work or casual browsing.
-                                                      </p>
-                                                      <p className="text-gray-600">
-                                                            These spaces provide a perfect mix of productivity and comfort, creating a
-                                                            relaxed yet functional environment.
-                                                      </p>
+                                                      <p className="text-gray-600 mb-4">{t('card.card3Description')}</p>
                                                 </div>
                                                 <div className="w-full md:min-w-[263px] h-[315px]">
                                                       <Image

@@ -29,7 +29,7 @@ const ClubMapSection = () => {
                               <p className="text-white">{t('subTitle')}</p>
                         </div>
                         <h1 className="text-xl title-font flex items-center justify-start gap-2 font-medium mb-3 text-white">
-                              <BsGlobe2 /> Barcelona cannabis clubs map
+                              <BsGlobe2 /> {t('mapTitle')}
                         </h1>
                         <div className="grid grid-cols-12 gap-5 ">
                               <div className="col-span-12 md:col-span-8 h-[710px]">

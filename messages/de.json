@@ -1,169 +1,162 @@
 {
       "meta": {
-            "title": "Karte der Cannabis-Clubs & Coffeeshops in Barcelona",
-            "description": "Looking for a legal place to smoke marijuana in Barcelona? Explore our curated map of top cannabis clubs, weed cafes, and coffee shops. Follow our step-by-step guide to join a cannabis club today!Suchst du einen legalen Ort, um in Barcelona Marihuana zu konsumieren? Entdecke unsere Karte der besten Cannabis-Clubs und Coffeeshops und werde noch heute Mitglied."
+            "title": "Cannabis in Barcelona – Karte der Cannabis Clubs und Coffeeshops",
+            "description": "Suchst du einen legalen Ort zum Cannabis-Konsum in Barcelona? Entdecke unsere Karte der besten Cannabis-Clubs und folge unserer Anleitung, um noch heute Mitglied zu werden!"
       },
-
       "map-section": {
-            "title": "Suchst du nach einem legalen Ort, um in Barcelona Weed zu konsumieren?",
-            "subTitle": "Entdecke unsere Karte der Cannabis-Clubs und folge unserer Schritt-für-Schritt-Anleitung, um noch heute einem Club in deiner Nähe beizutreten!",
-            "mapTitle": "Barcelona Cannabis Clubs Karte"
+            "title": "Suchst du einen legalen Ort zum Cannabis-Konsum in Barcelona?",
+            "subTitle": "Entdecke unsere Cannabis-Club-Karte und folge unserer Anleitung zum Beitritt!",
+            "mapTitle": "Karte der Cannabis-Clubs in Barcelona"
       },
       "join-club-section": {
-            "title": "Wie werde ich Mitglied in einem Cannabis Club?",
-            "card": [
-                  {
-                        "title": "EINEN CLUB AUSWÄHLEN",
-                        "description": "Wähle einen Club auf der Karte aus und klicke auf „Mitglied werden“."
+            "title": "Wie werde ich Mitglied in einem Cannabis-Club?",
+            "card": {
+                  "step1": {
+                        "title": "CLUB AUSWÄHLEN",
+                        "description": "Wähle einen Club auf der Karte und klicke auf 'Jetzt Beitreten'"
                   },
-                  {
-                        "title": "EINE EINLADUNG ERHALTEN",
-                        "description": "Fülle das Formular aus und warte auf deine Einladung per E-Mail."
+                  "step2": {
+                        "title": "EINLADUNG ERHALTEN",
+                        "description": "Fülle das Formular aus und warte auf deine Einladungs-E-Mail"
                   },
-                  {
-                        "title": "DEN CLUB BESUCHEN",
-                        "description": "Besuche den Club, zeige deine Einladung und einen gültigen Ausweis zur Registrierung."
+                  "step3": {
+                        "title": "CLUB BESUCHEN",
+                        "description": "Besuche den Club, zeige deine Einladung und einen gültigen Ausweis zur Registrierung"
                   },
-                  {
+                  "step4": {
                         "title": "MITGLIEDSCHAFT ABSCHLIESSEN",
-                        "description": "Überprüfe die Regeln, die jährliche Mitgliedsgebühr und erhalte deine Clubkarte."
+                        "description": "Prüfe die Regeln, zahle den Jahresbeitrag und erhalte deine Club-Karte"
                   }
-            ],
+            },
             "button": "Mitglied werden"
       },
       "explore-section": {
-            "title": "Cannabis Clubs in Barcelona erkunden"
+            "title": "Entdecke Cannabis-Clubs in Barcelona"
       },
       "gallery-section": {
-            "title": "Entdecke die einzigartige Atmosphäre der Cannabis Social Clubs"
+            "title": "Erlebe die einzigartige Atmosphäre der Cannabis Social Clubs"
       },
       "essential-items-section": {
-            "title": "Anleitung zum Beitritt in einen Cannabis Club",
-            "subTitle": "Notwendige Dinge, die du mitbringen musst",
-            "card": [
-                  {
-                        "title": "Personalausweis",
-                        "description": "Dein Personalausweis oder eine gültige Identifikation ist erforderlich. Cannabis-Clubs folgen der KYC-Richtlinie („Know Your Customer“) und müssen deine Identität vor dem Zutritt verifizieren."
-                  },
-                  {
-                        "title": "Einladungsschreiben",
-                        "description": "Um Mitglied zu werden, musst du von einem bestehenden Mitglied eingeladen werden oder eine Einladung direkt vom Club erhalten. Bringe dein Einladungsschreiben mit, um deine Mitgliedschaft zu bestätigen."
-                  },
-                  {
-                        "title": "Bargeld",
-                        "description": "Cannabis-Clubs akzeptieren keine Bankkarten, also bring ausreichend Bargeld mit, um deine Bedürfnisse zu decken."
-                  }
-            ]
+            "title": "Leitfaden zum Beitritt in einen Cannabis-Club",
+            "subTitle": "Unverzichtbare Dinge zum Mitnehmen",
+            "card": {
+                  "card1Title": "Personalausweis",
+                  "card1Description": "Ein gültiger Ausweis ist erforderlich. Cannabis-Clubs folgen der KYC-Politik und müssen deine Identität vor dem Einlass überprüfen.",
+                  "card2Title": "Einladungsschreiben",
+                  "card2Description": "Um Mitglied zu werden, musst du von einem bestehenden Mitglied oder vom Club selbst eingeladen werden. Bringe dein Einladungsschreiben mit.",
+                  "card3Title": "Bargeld",
+                  "card3Description": "Cannabis-Clubs akzeptieren keine Bankkarten. Stelle sicher, dass du genügend Bargeld für deine Ausgaben dabei hast."
+            }
       },
       "inside-club-section": {
-            "title": "Im Inneren des Clubs",
+            "title": "Im Cannabis-Club",
             "card": {
                   "card1Title": "Dispensary",
-                  "card1Description": "Entdecke eine große Auswahl an hochwertigen Cannabis-Produkten, darunter erstklassige Weed-Sorten, Pre-Rolls, Edibles, Vapes und starke Konzentrate wie Wax, Harz und Shatter. Ergänze dein Erlebnis mit hochwertigen Rauchutensilien wie Grindern, Blättchen, Bongs, Pfeifen und mehr – alles an einem Ort!",
+                  "card1Description": "Hier findest du eine große Auswahl an Cannabis-Produkten: verschiedene Sorten, Pre-Rolls, Edibles, Vapes und Konzentrate. Die Dispensary bietet auch Zubehör wie Grinder, Papers, Bongs und Pfeifen.",
                   "card2Title": "Lounge-Bereich",
-                  "card2Description": "Diese Bereiche verfügen über bequeme Sofas, Couchtische und Entspannungsmöglichkeiten. Viele Clubs bieten Gaming-Zonen, Bühnen für Live-Musik und gesellige Gruppenräume. Für mehr Privatsphäre gibt es oft separate Tische oder private Räume.",
+                  "card2Description": "Diese Bereiche verfügen über gemütliche Sofas und Couchtische. Viele bieten Spielbereiche, Live-Musik-Bühnen und Gemeinschaftsräume. Für mehr Privatsphäre gibt es oft separate Tische oder private Räume.",
                   "card3Title": "Coworking-Bereich",
-                  "card3Description": "Genieße einen komfortablen Arbeitsplatz in ausgewählten Cannabis-Clubs mit WLAN und Steckdosen. Ob für Remote-Arbeit oder einfaches Surfen – hier kannst du entspannt verbunden bleiben.",
-                  "note": "Hinweis: Mitglieder unterliegen einem monatlichen Konsumlimit von 100 Gramm pro Person, um einen verantwortungsvollen Konsum zu fördern."
+                  "card3Description": "Einige Clubs bieten Tische mit WLAN und Steckdosen. Der Bereich ist ideal für Remote-Arbeit oder entspanntes Surfen.",
+                  "note": "NB: Mitglieder sind auf einen monatlichen Konsum von 100 Gramm pro Person beschränkt, um verantwortungsvollen Konsum zu fördern."
             }
       },
       "faq-section": {
             "title": "Häufig gestellte Fragen",
-            "card": [
-                  {
+            "card": {
+                  "faq1": {
                         "title": "Was ist ein Cannabis-Club / Coffeeshop?",
-                        "description": "Spanische Cannabis Social Clubs sind private, gemeinnützige Organisationen und unterscheiden sich stark von den Coffeeshops in Amsterdam. Diese Clubs bauen Marihuana ausschließlich für ihre registrierten Mitglieder an und verkaufen es nicht öffentlich. Im Gegensatz dazu sind Amsterdamer Coffeeshops kommerzielle Betriebe, in denen jeder Cannabis zusammen mit Speisen und Getränken kaufen kann. In spanischen Clubs erfolgt der Konsum über freiwillige Beiträge, nicht über direkte Käufe. Statt „kaufen“ oder „verkaufen“ spricht man von „erwerben“ oder „erhalten“, um die gesetzlichen Vorgaben einzuhalten."
+                        "description": "Spanische Cannabis Social Clubs arbeiten als private, gemeinnützige Einrichtungen, anders als Amsterdams Coffeeshops. Diese Clubs kultivieren Cannabis ausschließlich für ihre registrierten Mitglieder."
                   },
-                  {
-                        "title": "Warum sind Cannabis-Clubs nur für Mitglieder zugänglich?",
-                        "description": "In Spanien ist Cannabis-Konsum auf private Räume beschränkt, einschließlich privater Cannabis Social Clubs. Diese Clubs erfordern eine Mitgliedschaft, um innerhalb legaler Grenzen zu operieren und eine sichere Umgebung zu gewährleisten. Um beizutreten, brauchst du eine Einladung von einem bestehenden Mitglied oder vom Club selbst. Nach der Genehmigung erhältst du eine Mitgliedskarte."
+                  "faq2": {
+                        "title": "Warum sind Cannabis-Clubs nur für Mitglieder?",
+                        "description": "In Spanien ist der Cannabis-Konsum auf private Räume wie Wohnungen oder private Vereine beschränkt. Diese Clubs erfordern eine Mitgliedschaft und operieren innerhalb rechtlicher Grenzen."
                   },
-                  {
-                        "title": "Wer kann einem Cannabis Club in Spanien beitreten?",
-                        "description": "Um einem Cannabis Social Club in Barcelona beizutreten, musst du: Mindestens 18–21 Jahre alt sein, einen gültigen Personalausweis oder Reisepass besitzen, von einem Mitglied gesponsert oder vom Club eingeladen werden, und kein spanischer Staatsbürger sein."
+                  "faq3": {
+                        "title": "Wer kann einem Cannabis-Club in Spanien beitreten?",
+                        "description": "Um einem Cannabis Social Club in Barcelona beizutreten, musst du 18-21 Jahre alt sein, einen gültigen Ausweis oder Pass besitzen, von einem Mitglied empfohlen oder vom Club eingeladen werden und darfst kein spanischer Staatsbürger sein."
                   }
-            ]
+            }
       },
       "guideline-section": {
-            "title": "Linee guida dei Cannabis Social Club",
-            "card": [
-                  {
-                        "title": "Eintritt in den Club",
-                        "description": "Cannabis-Clubs in Barcelona folgen einem legalen Modell, das Werbung und öffentliche Verkaufsstellen untersagt. Diese Clubs haben keine Außenwerbung oder Schilder. Der Eingang ist diskret – du musst klingeln, um eingelassen zu werden."
+            "title": "Cannabis Social Club Richtlinien",
+            "card": {
+                  "guideline1": {
+                        "title": "Clubeingang",
+                        "description": "Barcelonas Cannabis-Clubs operieren unter einem legalen Modell mit eingeschränkter Verfügbarkeit und Werbung. Ohne äußere Kennzeichen müssen Besucher den diskreten Eingang finden und klingeln."
                   },
-                  {
-                        "title": "Anmeldung am Empfang",
-                        "description": "Bei deinem ersten Besuch wirst du am Empfang registriert. Dein Ausweis wird geprüft, um dein Alter und deine Mitgliedsberechtigung zu bestätigen. Anschließend erhältst du eine Einführung in die Clubregeln und kannst Fragen stellen."
+                  "guideline2": {
+                        "title": "An der Rezeption",
+                        "description": "Bei deinem ersten Besuch musst du dich an der Rezeption registrieren. Der Club überprüft dein Alter anhand eines gültigen Ausweises. Das Personal erklärt dir die Regeln und Abläufe."
                   },
-                  {
+                  "guideline3": {
                         "title": "Club-Etikette",
-                        "description": "Cannabis-Clubs bieten eine entspannte Atmosphäre, die sich von den Coffeeshops in Amsterdam unterscheidet. Halte dich an die Regeln: Sei respektvoll, sprich nicht zu laut und vermeide störendes Verhalten. Fotografieren und Filmen sind verboten. Bei Fehlverhalten wie Belästigung oder Aggression kann deine Mitgliedschaft entzogen werden."
+                        "description": "Cannabis-Clubs bieten eine entspannte Atmosphäre. Halte die Umgebung ruhig, vermeide Lärm. Fotos und Videos sind verboten. Respektiere den persönlichen Raum und die Privatsphäre anderer."
                   }
-            ]
+            }
       },
       "leaving-club-section": {
             "title": "Den Cannabis-Club verlassen",
-            "card": [
-                  {
-                        "title": "Cannabis zur Aufbewahrung hinterlegen",
-                        "description": "Unverbrauchtes Cannabis kann im Club für dich sicher aufbewahrt werden, bis du es beim nächsten Besuch abholst."
+            "card": {
+                  "leaving1": {
+                        "title": "Cannabis zur Aufbewahrung",
+                        "description": "Ungenutztes Cannabis kann unter deinem Namen sicher in der Club-Dispensary aufbewahrt werden, bereit für deinen nächsten Besuch."
                   },
-                  {
+                  "leaving2": {
                         "title": "Den Club verlassen",
-                        "description": "Innerhalb des Clubs kannst du Cannabis frei genießen. Sobald du den Club verlässt, bist du im öffentlichen Raum, auch wenn du noch unter dem Einfluss von Cannabis stehst."
+                        "description": "Im Club kannst du Cannabis legal und ohne Einschränkungen genießen. Danach darfst du dich in der Öffentlichkeit aufhalten, auch unter Cannabis-Einfluss."
                   },
-                  {
-                        "title": "Unverbrauchtes Cannabis mitnehmen",
-                        "description": "Cannabis-Konsum ist außerhalb des Clubs illegal. Wenn du Cannabis mitnimmst, halte es sicher und diskret verstaut, um hohe Bußgelder (500–1.000 €) zu vermeiden."
+                  "leaving3": {
+                        "title": "Ungenutztes Cannabis",
+                        "description": "Cannabis-Konsum ist nur im Club erlaubt. Öffentlicher Konsum ist illegal und kann zu Strafen von 500€ bis 1.000€ führen. Sei diskret beim Transport."
                   }
-            ]
+            }
       },
       "club-rule-section": {
-            "title": "Wichtige Clubregeln",
-            "card": [
-                  {
-                        "title": " Nur für Mitglieder"
+            "title": "Wichtige Cannabis Social Club Regeln",
+            "card": {
+                  "rule1": {
+                        "title": "Nur Mitglieder"
                   },
-                  {
-                        "title": "Altersbeschränkung"
+                  "rule2": {
+                        "title": "Altersgrenze"
                   },
-                  {
-                        "title": "Kein Fotos"
+                  "rule3": {
+                        "title": "Keine Fotos"
                   },
-                  {
+                  "rule4": {
                         "title": "Nur Bargeld"
                   },
-                  {
+                  "rule5": {
                         "title": "Keine Koffer"
                   },
-                  {
-                        "title": " Verantwortungsbewusster Konsum"
+                  "rule6": {
+                        "title": "Verantwortungsvoller Konsum"
                   }
-            ]
+            }
       },
       "vocabulary-section": {
-            "title": "Grundlegendes Cannabis-Vokabular",
-            "card": [
-                  {
-                        "title": "Coffee Shop",
-                        "description": "Coffeeshops sind die bekannten Einrichtungen in Amsterdam, in denen du ab 18 Jahren legal Marihuana kaufen und konsumieren kannst. Beachte, dass der tägliche Kauf auf 5 Gramm begrenzt ist, um einen kontrollierten Konsum zu gewährleisten. Zusätzlich kannst du dein Cannabis mit einer Auswahl an köstlichen Café-Snacks kombinieren – genieße Essen, Getränke und eine entspannte Atmosphäre an einem Ort."
+            "title": "Cannabis Grundvokabular",
+            "card": {
+                  "vocab1": {
+                        "title": "Coffeeshop",
+                        "description": "Coffeeshops sind Amsterdamer Einrichtungen, in denen du ab 18 Jahren legal Cannabis kaufen und genießen kannst. Der Kauf ist auf 5 Gramm täglich begrenzt."
                   },
-                  {
-                        "title": "Cannabis Club",
-                        "description": "Cannabis Social Clubs, Weed-Clubs und Cannabis-Vereinigungen sind exklusive, mitgliedschaftsbasierte Gemeinschaften, die nicht für die breite Öffentlichkeit zugänglich sind. Diese gemeinnützigen Organisationen finanzieren den Anbau von Cannabis durch Mitgliedsbeiträge, sodass nur registrierte Mitglieder Zugang zu ihrem sorgfältig kultivierten Marihuana haben."
+                  "vocab2": {
+                        "title": "Cannabis-Club",
+                        "description": "Cannabis Social Clubs sind private Gemeinschaften nur für Mitglieder. Diese gemeinnützigen Organisationen nutzen Mitgliedsbeiträge für den Cannabis-Anbau ausschließlich für ihre Mitglieder."
                   },
-                  {
-                        "title": "Weed Cafe",
-                        "description": "Ein Cannabis-Café ist eine lizenzierte Einrichtung in den USA, in der du Cannabis in verschiedenen Formen genießen kannst, etwa durch Rauchen oder Vapen. Neben Cannabis bieten diese Cafés in der Regel auch Speisen und Getränke an, um eine entspannte und umfassende Erfahrung zu ermöglichen."
+                  "vocab3": {
+                        "title": "Cannabis-Café",
+                        "description": "Ein Cannabis-Café ist eine lizenzierte Einrichtung in den USA, wo du Cannabis in verschiedenen Formen genießen kannst. Diese Cafés bieten auch Speisen und Getränke an."
                   },
-                  {
-                        "title": "Cannabis Shop",
-                        "description": "In Spanien sind Weed-Shops – auch bekannt als Cannabis- oder Hanfgeschäfte – die besten Anlaufstellen für alle Cannabis-Zubehörartikel. Hier findest du eine große Auswahl an Produkten wie Bongs, Pfeifen und Vapes sowie verschiedene CBD-Produkte. Diese Shops stehen jedem offen, sodass du problemlos das perfekte Equipment für dein Cannabis-Erlebnis entdecken kannst."
+                  "vocab4": {
+                        "title": "Cannabis-Shop",
+                        "description": "In Spanien bieten diese Läden alle Cannabis-bezogenen Accessoires: Bongs, Pfeifen, Vaporizer und CBD-Produkte. Sie sind für alle zugänglich."
                   },
-                  {
+                  "vocab5": {
                         "title": "Growshop",
-                        "description": "Wenn du dein eigenes Cannabis anbauen möchtest, ist ein Growshop die beste Adresse. Diese Geschäfte bieten alles, was du brauchst – von hochwertigen Samen und Düngemitteln bis hin zu essenzieller Ausrüstung für einen erfolgreichen Anbau."
+                        "description": "Für den eigenen Cannabis-Anbau ist der Growshop die ideale Anlaufstelle. Diese Shops bieten alles Notwendige: Samen, Dünger und Anbauausrüstung."
                   }
-            ]
+            }
       }
 }

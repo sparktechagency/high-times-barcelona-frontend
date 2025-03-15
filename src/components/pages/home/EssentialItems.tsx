@@ -8,28 +8,27 @@ import ClubImage from '@/assets/images/club-image.png';
 import IdCard from '@/assets/images/id-card.png';
 import Invitation from '@/assets/images/invitation.png';
 import Cash from '@/assets/images/mony.png';
-
-const essentialItems = [
-      {
-            icon: IdCard,
-            title: 'Identity card',
-            description:
-                  'Your ID or a valid identification is required. Clubs follow the KYC (Know Your Customer) policy and must verify your identity before letting you in.',
-      },
-      {
-            icon: Invitation,
-            title: 'Invitation letter',
-            description:
-                  'To become a member, you must be invited by a valid member of the club or have an invitation from the club itself. Bring your letter to confirm your invitation.',
-      },
-      {
-            icon: Cash,
-            title: 'Cash',
-            description: 'Cannabis clubs do not accept bank cards, so make sure to bring enough cash to cover your expenses.',
-      },
-];
+import { useTranslations } from 'next-intl';
 
 const EssentialItems = () => {
+      const t = useTranslations('essential-items-section');
+      const essentialItems = [
+            {
+                  icon: IdCard,
+                  title: t('card.card1Title'),
+                  description: t('card.card1Description'),
+            },
+            {
+                  icon: Invitation,
+                  title: t('card.card2Title'),
+                  description: t('card.card2Description'),
+            },
+            {
+                  icon: Cash,
+                  title: t('card.card3Title'),
+                  description: t('card.card3Description'),
+            },
+      ];
       return (
             <section className="py-20 bg-gradient-to-b from-[#F8F8F899] to-[#F2FFF4]">
                   <div className="container">
@@ -37,9 +36,9 @@ const EssentialItems = () => {
                         <div className="text-center mb-16">
                               <div className="flex items-center justify-center gap-2 mb-4">
                                     <Image src={Ganja} alt="Cannabis" className="size-12" />
-                                    <h1 className="text-3xl md:text-5xl font-bold title-font text-[#1A1A1A]">Essential</h1>
+                                    <h1 className="text-3xl md:text-5xl font-bold title-font text-[#1A1A1A]">{t('title')}</h1>
                               </div>
-                              <h1 className="text-3xl md:text-5xl font-bold title-font text-primary">To Bring With You</h1>
+                              {/* <h1 className="text-3xl md:text-5xl font-bold title-font text-primary">To Bring With You</h1> */}
                         </div>
 
                         {/* Content Grid */}

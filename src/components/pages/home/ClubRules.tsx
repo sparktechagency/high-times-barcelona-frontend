@@ -2,14 +2,16 @@
 import { Collapse } from 'antd';
 import Image from 'next/image';
 import { CgChevronDown } from 'react-icons/cg';
-import MembersIcon from '@/assets/images/faq-images/Frame 1.png';
-import AgeIcon from '@/assets/images/faq-images/Frame 1 (1).png';
-import NoPhotosIcon from '@/assets/images/faq-images/Frame 1707481610.png';
-import CashIcon from '@/assets/images/faq-images/Frame 1707481610 (1).png';
-import NoSuitcaseIcon from '@/assets/images/faq-images/Frame 1707481610 (2).png';
-import ConsumptionIcon from '@/assets/images/faq-images/Frame 1707481610 (3).png';
+
 import FaqImage from '@/assets/images/faq-images/faq-image.png';
 import Ganja from '@/assets/images/ganja2.svg';
+import { useTranslations } from 'next-intl';
+import { MdCardMembership } from 'react-icons/md';
+import { TbNumber18Small } from 'react-icons/tb';
+import { LuCameraOff } from 'react-icons/lu';
+import { BsCashCoin } from 'react-icons/bs';
+import { PiSuitcaseSimpleDuotone } from 'react-icons/pi';
+import { GiWineGlass } from 'react-icons/gi';
 interface Rule {
       icon: any;
       title: string;
@@ -17,36 +19,37 @@ interface Rule {
 }
 
 const ClubRules = () => {
+      const t = useTranslations('club-rule-section');
       const rules: Rule[] = [
             {
-                  icon: MembersIcon,
-                  title: 'Members only',
-                  description: 'Only members can enter the club. To join, you need an invitation or apply through the club.',
+                  icon: <MdCardMembership className="text-primary" size={28} />,
+                  title: t('card.rule1.title'),
+                  description: t('card.rule1.description'),
             },
             {
-                  icon: AgeIcon,
-                  title: 'Age limit',
-                  description: 'Must be of legal age to enter and consume.',
+                  icon: <TbNumber18Small className="text-primary" size={28} />,
+                  title: t('card.rule2.title'),
+                  description: t('card.rule2.description'),
             },
             {
-                  icon: NoPhotosIcon,
-                  title: 'No Photos',
-                  description: 'Photography is strictly prohibited inside the club.',
+                  icon: <LuCameraOff className="text-primary" size={28} />,
+                  title: t('card.rule3.title'),
+                  description: t('card.rule3.description'),
             },
             {
-                  icon: CashIcon,
-                  title: 'Cash only',
-                  description: 'We only accept cash payments for all transactions.',
+                  icon: <BsCashCoin className="text-primary" size={28} />,
+                  title: t('card.rule4.title'),
+                  description: t('card.rule4.description'),
             },
             {
-                  icon: NoSuitcaseIcon,
-                  title: 'No suitcases',
-                  description: 'Large bags and suitcases are not permitted.',
+                  icon: <PiSuitcaseSimpleDuotone className="text-primary" size={28} />,
+                  title: t('card.rule5.title'),
+                  description: t('card.rule5.description'),
             },
             {
-                  icon: ConsumptionIcon,
-                  title: 'Responsible Consumption',
-                  description: 'Please consume responsibly and follow club guidelines.',
+                  icon: <GiWineGlass className="text-primary" size={28} />,
+                  title: t('card.rule6.title'),
+                  description: t('card.rule6.description'),
             },
       ];
 
@@ -64,7 +67,7 @@ const ClubRules = () => {
                   key: String(index + 1),
                   label: (
                         <p className="text-xl text-black flex items-center gap-2">
-                              <Image className="size-[48px]" src={rule.icon} alt={rule.title} width={1000} height={1000} /> {rule.title}
+                              {rule.icon} {rule.title}
                         </p>
                   ),
                   children: <p className="text-sm text-[#414141]">{rule.description}</p>,
@@ -83,18 +86,21 @@ const ClubRules = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-start">
                               <div>
                                     <Collapse
+                                          className="cursor-default-class"
+                                          collapsible="icon"
                                           style={{
                                                 backgroundColor: 'transparent',
                                           }}
-                                          defaultActiveKey={['1', '2']}
                                           bordered={false}
                                           items={getItems()}
                                           expandIconPosition="end"
-                                          expandIcon={() => <CgChevronDown size={24} color="#00863D" />}
+                                          expandIcon={() => (
+                                                <CgChevronDown style={{ display: 'none' }} className="hidden" size={24} color="#00863D" />
+                                          )}
                                           size="large"
                                     />
                               </div>
-                              <div className="md:w-[589px] mx-auto md:h-[714px]">
+                              <div className="md:w-[589px] mx-auto md:h-[604px]">
                                     <Image src={FaqImage} alt="Cannabis" width={500} height={500} className="w-full h-full" />
                               </div>
                         </div>

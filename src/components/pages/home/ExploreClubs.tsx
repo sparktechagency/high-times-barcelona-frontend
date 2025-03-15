@@ -7,6 +7,7 @@ import { BsClock, BsGeoAlt, BsStarFill } from 'react-icons/bs';
 import { TClub, useGetApprovedClubsQuery } from '@/redux/features/club/clubApi';
 import { getImageUrl } from '@/utils/getImageUrl';
 import { MapIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 // Add keyframes animation
 const fadeInAnimation = `
@@ -25,6 +26,7 @@ const fadeInAnimation = `
 const ExploreClubs = () => {
       const [showAll, setShowAll] = useState(false);
       const { data: clubs } = useGetApprovedClubsQuery([]);
+      const t = useTranslations('explore-section');
 
       // Inject animation styles
       React.useEffect(() => {
@@ -107,9 +109,8 @@ const ExploreClubs = () => {
                         <div className="text-center mb-16">
                               <div className="flex items-center justify-center gap-2 mb-4">
                                     <Image src={Ganja} alt="Cannabis" className="size-12" />
-                                    <h2 className="text-3xl title-font md:text-5xl font-bold text-[#1A1A1A]">Explore Cannabis</h2>
+                                    <h2 className="text-3xl  title-font md:text-5xl font-bold text-primary">{t('title')}</h2>
                               </div>
-                              <h3 className="text-3xl md:text-5xl title-font font-bold text-primary">Social Club In Barcelona</h3>
                         </div>
 
                         {/* Club Grid */}

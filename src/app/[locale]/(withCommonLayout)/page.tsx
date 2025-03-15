@@ -9,7 +9,8 @@ import LeavingClub from '@/components/pages/home/LeavingClub';
 import ClubVibe from '@/components/pages/home/ClubVibe';
 import ClubRules from '@/components/pages/home/ClubRules';
 import BasicVocabulary from '@/components/pages/home/BasicVocabulary';
-import ClubMapSection from '@/components/pages/home/ClubMapSection';
+import dynamic from 'next/dynamic';
+const ClubMapSection = dynamic(() => import('@/components/pages/home/ClubMapSection'), { ssr: false });
 
 type Props = {};
 

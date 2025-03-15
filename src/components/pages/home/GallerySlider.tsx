@@ -8,6 +8,7 @@ import SlideImage2 from '@/assets/images/slider2.jpg';
 import SlideImage3 from '@/assets/images/slider3.png';
 import 'slick-carousel/slick/slick.css';
 import SectionBackground from '@/components/ui/SectionBackgound';
+import { useTranslations } from 'next-intl';
 // Gallery data
 const galleryImages = [
       {
@@ -39,6 +40,7 @@ const galleryImages = [
 
 const GallerySlider = () => {
       const sliderRef = useRef<Slider>(null);
+      const t = useTranslations('gallery-section');
 
       // Custom arrow components
       const PrevArrow = () => (
@@ -117,8 +119,8 @@ const GallerySlider = () => {
                   <div className="container relative">
                         {/* Header */}
                         <div className="text-center mb-24">
-                              <h2 className="text-3xl md:text-5xl title-font font-bold text-white mb-4">Explore</h2>
-                              <h3 className="text-3xl md:text-5xl font-bold title-font text-[#FFD700]">Cannabis Social Club Gallery</h3>
+                              <h2 className="text-3xl md:text-5xl title-font font-bold text-white mb-4">{t('title')}</h2>
+                              {/* <h3 className="text-3xl md:text-5xl font-bold title-font text-[#FFD700]">Cannabis Social Club Gallery</h3> */}
                         </div>
 
                         {/* Slider */}

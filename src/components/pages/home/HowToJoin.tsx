@@ -1,6 +1,7 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
-
+import { useTranslations } from 'next-intl';
 // Icons
 import ClubIcon from '@/assets/images/club.png';
 import InvitationIcon from '@/assets/images/invite.png';
@@ -10,34 +11,37 @@ import Ganja from '@/assets/images/ganja2.svg';
 import Link from 'next/link';
 import { Button } from 'antd';
 import SectionBackground from '@/components/ui/SectionBackgound';
-const steps = [
-      {
-            id: '01',
-            icon: ClubIcon,
-            title: 'Select a Club',
-            description: 'Choose a club from the Weed Map and click "Join Now."',
-      },
-      {
-            id: '02',
-            icon: InvitationIcon,
-            title: 'Get an invitation',
-            description: 'Complete the form and wait for your invitation email.',
-      },
-      {
-            id: '03',
-            icon: HandshakeIcon,
-            title: 'Visit the Club',
-            description: 'Visit the club, show your invitation and a valid ID for registration.',
-      },
-      {
-            id: '04',
-            icon: EditIcon,
-            title: 'Complete Membership',
-            description: 'Check the rules, annual membership fee, and grab your club card!',
-      },
-];
 
 const HowToJoin = () => {
+      const t = useTranslations('join-club-section');
+
+      const steps = [
+            {
+                  id: '01',
+                  icon: ClubIcon,
+                  title: t('card.step1.title'),
+                  description: t('card.step1.description'),
+            },
+            {
+                  id: '02',
+                  icon: InvitationIcon,
+                  title: t('card.step2.title'),
+                  description: t('card.step2.description'),
+            },
+            {
+                  id: '03',
+                  icon: HandshakeIcon,
+                  title: t('card.step3.title'),
+                  description: t('card.step3.description'),
+            },
+            {
+                  id: '04',
+                  icon: EditIcon,
+                  title: t('card.step4.title'),
+                  description: t('card.step4.description'),
+            },
+      ];
+
       return (
             <section className="relative bg-how-to-join bg-[#033f1b] py-20">
                   {/* Background Pattern */}
@@ -45,11 +49,7 @@ const HowToJoin = () => {
                   <div className="container relative z-10">
                         {/* Heading */}
                         <div className="text-center mb-8 md:mb-16 px-4">
-                              <h2 className="text-white title-font text-3xl md:text-5xl font-bold mb-2 md:mb-6">How To Join A</h2>
-                              <div className="flex  flex-col md:flex-row items-center justify-center gap-1 md:gap-2">
-                                    <h1 className="text-secondary title-font text-3xl md:text-5xl font-bold">Cannabis Social Club</h1>
-                                    <h1 className="text-white text-3xl title-font md:text-5xl font-bold">In Barcelona ?</h1>
-                              </div>
+                              <h2 className="text-secondary title-font text-3xl md:text-5xl font-bold mb-2 md:mb-6">{t('title')}</h2>
                         </div>
 
                         {/* Steps Grid */}
@@ -93,7 +93,7 @@ const HowToJoin = () => {
                                           icon={<Image src={Ganja} alt="Ganja" />}
                                           type="primary"
                                     >
-                                          Become a member
+                                          {t('button')}
                                     </Button>
                               </Link>
                         </div>

@@ -9,6 +9,7 @@ import ShopIcon from '@/assets/images/basic-vocabulary/Frame 1 (3).png';
 import GrowshopIcon from '@/assets/images/basic-vocabulary/Frame 1 (4).png';
 import BasicVocabularyImage from '@/assets/images/basic-vocabulary/basic-vocabulary.png';
 import Ganja from '@/assets/images/ganja2.svg';
+import { useTranslations } from 'next-intl';
 
 interface Rule {
       icon: any;
@@ -17,36 +18,32 @@ interface Rule {
 }
 
 const BasicVocabulary = () => {
+      const t = useTranslations('vocabulary-section');
       const rules: Rule[] = [
             {
                   icon: CoffeeShopIcon,
-                  title: 'Coffee Shop',
-                  description:
-                        'Coffee shops are establishments in Amsterdam where you can buy and use marijuana. Access to coffeeshops is open to everyone over the age of 18, but the amount that one visitor can purchase is limited to 5 grams per day. In such places, cannabis is sold alongside typical coffee shop fare, including food and drink.',
+                  title: t('card.vocab1.title'),
+                  description: t('card.vocab1.description'),
             },
             {
                   icon: CannabisClubIcon,
-                  title: 'Cannabis Club',
-                  description:
-                        'A private members-only establishment where cannabis can be consumed in a social setting. These clubs often offer a variety of strains and consumption methods in a controlled, safe environment.',
+                  title: t('card.vocab2.title'),
+                  description: t('card.vocab2.description'),
             },
             {
                   icon: CafeIcon,
-                  title: 'Cannabis Cafe',
-                  description:
-                        'Similar to coffee shops but with a stronger focus on food service. These establishments often offer cannabis-infused foods and beverages alongside regular menu items.',
+                  title: t('card.vocab3.title'),
+                  description: t('card.vocab3.description'),
             },
             {
                   icon: ShopIcon,
-                  title: 'Cannabis Shop',
-                  description:
-                        'Retail establishments specializing in cannabis products, including flowers, edibles, and accessories. These shops typically offer expert advice and product information.',
+                  title: t('card.vocab4.title'),
+                  description: t('card.vocab4.description'),
             },
             {
                   icon: GrowshopIcon,
-                  title: 'Growshop',
-                  description:
-                        'Specialized stores that sell equipment and supplies for growing cannabis, including seeds, nutrients, lighting, and other cultivation necessities.',
+                  title: t('card.vocab5.title'),
+                  description: t('card.vocab5.description'),
             },
       ];
 
