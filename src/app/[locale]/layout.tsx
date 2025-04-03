@@ -21,24 +21,24 @@ export async function generateMetadata({ params }: { params: { locale: string } 
                         'Looking for a legal place to smoke marijuana in Barcelona? Explore our curated map of top cannabis clubs, weed cafes, and coffee shops. Follow our step-by-step guide to join a cannabis club today!',
             },
             de: {
-                  title: 'WCannabis in Barcelona – Karte der Cannabis Clubs und Coffeeshops',
+                  title: 'Karte der Cannabis-Clubs & Coffeeshops',
                   description:
-                        'Suchst du einen legalen Ort zum Cannabis-Konsum in Barcelona? Entdecke unsere Karte der besten Cannabis-Clubs und folge unserer Anleitung, um noch heute Mitglied zu werden!',
+                        'Suchst du einen legalen Ort, um in Barcelona Marihuana zu konsumieren? Entdecke unsere Karte der besten Cannabis-Clubs und Coffeeshops und werde noch heute Mitglied.',
             },
             es: {
-                  title: 'Cannabis en Barcelona – Mapa de Clubs de Cannabis y Coffeeshops',
+                  title: 'Mapa de Asociaciones Cannábicas en Barcelona',
                   description:
-                        '¿Buscas un lugar legal para fumar cannabis en Barcelona? Explora nuestro mapa de los mejores clubs de cannabis y sigue nuestra guía para hacerte socio hoy mismo.',
+                        'Descubre lugares legales para fumar marihuana en Barcelona. Consulta nuestro mapa con asociaciones cannábicas para encontrar la más cercana.',
             },
             fr: {
-                  title: 'Cannabis à Barcelone – Carte des Clubs de Cannabis et Coffeeshops',
+                  title: 'Carte des Cannabis Clubs et Coffeeshops à Barcelone',
                   description:
-                        "Vous cherchez un endroit légal pour fumer du cannabis à Barcelone ? Découvrez notre carte des meilleurs clubs de cannabis et suivez notre guide pour devenir membre aujourd'hui !",
+                        'Vous cherchez un spot légal pour fumer du cannabis à Barcelone ? Découvrez notre carte des meilleurs clubs de cannabis et coffee shops, et suivez notre guide étape par étape pour en visiter un dès aujourd’hui !',
             },
             it: {
-                  title: 'Cannabis a Barcellona – Mappa dei Cannabis Club e Coffeeshop',
+                  title: 'Coffee Shop Barcellona – Trova Cannabis Social Club Vicino a Me',
                   description:
-                        'Cerchi un posto legale per fumare cannabis a Barcellona? Esplora la nostra mappa dei migliori cannabis club e segui la nostra guida per diventare membro oggi stesso!',
+                        'Scopri un nuovo modo di vivere il cannabis club di Barcellona, dove un"atmosfera accogliente e autentica si distingue nettamente dai tipici weed coffee shop di Amsterdam".',
             },
       };
 
