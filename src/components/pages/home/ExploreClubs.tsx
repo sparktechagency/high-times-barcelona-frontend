@@ -121,7 +121,7 @@ const ExploreClubs = () => {
                         </div>
 
                         {/* View All Button */}
-                        <div className="flex justify-center gap-3 mt-12">
+                        <div className="flex justify-center flex-wrap gap-3 mt-12">
                               <Button
                                     type="default"
                                     onClick={() => setShowAll(!showAll)}

@@ -4,7 +4,7 @@ import React from 'react';
 import { Form, Input, Button, message } from 'antd';
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
-import Logo from '@/assets/images/footer-logo.svg';
+import Logo from '@/assets/images/logo.png';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSubscribeMutation } from '@/redux/features/contact/contactApi';
