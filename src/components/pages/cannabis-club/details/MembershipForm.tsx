@@ -3,6 +3,7 @@ import { useCreateClubMemberMutation } from '@/redux/features/member/memberApi';
 import { Button, DatePicker, Form, Input, Radio } from 'antd';
 import { FC } from 'react';
 import { toast } from 'react-toastify';
+import moment from 'moment';
 
 const MembershipForm: FC<{ clubId: string }> = ({ clubId }) => {
       const [createMembership, { isLoading }] = useCreateClubMemberMutation();
@@ -48,6 +49,7 @@ const MembershipForm: FC<{ clubId: string }> = ({ clubId }) => {
                                     className="w-full"
                                     placeholder="Select a date"
                                     format="YYYY-MM-DD"
+                                     disabledDate={(current) => current && current < moment().startOf('day')}
                               />
                         </Form.Item>
 
