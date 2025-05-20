@@ -11,8 +11,7 @@ const MembershipForm: FC<{ clubId: string }> = ({ clubId }) => {
       const [form] = Form.useForm();
 
       const onFinish = async (values: any) => {
-            console.log(values)
-            /* try {
+            try {
                   const res = await createMembership({
                         ...values,
                         numberOfVisitors: Number(values.numberOfVisitors),
@@ -26,7 +25,7 @@ const MembershipForm: FC<{ clubId: string }> = ({ clubId }) => {
             } catch (error: any) {
                   console.log(error);
                   toast.error(error?.data?.message);
-            } */
+            }
       };
 
       return (
