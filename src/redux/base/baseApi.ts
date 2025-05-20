@@ -3,7 +3,7 @@ import { RootState } from '../store';
 import { logout, setUser } from '../features/auth/authSlice';
 
 // export const backendUrl = 'https://apuserver.binarybards.online';
-export const backendUrl = 'http://api.weedinbarcelona.com';
+export const backendUrl = 'https://api.weedinbarcelona.com';
 const baseQuery = fetchBaseQuery({
       baseUrl: `${backendUrl}/api/v1`,
       credentials: 'include',
