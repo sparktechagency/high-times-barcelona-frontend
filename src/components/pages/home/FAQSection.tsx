@@ -13,11 +13,11 @@ import { useTranslations } from 'next-intl';
 export default function FAQSection() {
       const t = useTranslations('faq-section');
       const faqData = [
-            {
+            /* {
                   icon: GanjaLeaf2,
                   title: t('card.faq1.title'),
                   description: t('card.faq1.description'),
-            },
+            }, */
             {
                   icon: Tower,
                   title: t('card.faq2.title'),
@@ -39,6 +39,12 @@ export default function FAQSection() {
             // },
       ];
 
+      const largeFAQ = {
+            icon: GanjaLeaf2,
+            title: t('card.faq1.title'),
+            description: t('card.faq1.description'),
+      };
+
       return (
             <section className="py-20 bg-gradient-to-b from-[#F8F8F899] to-[#F2FFF4]">
                   <div className="container">
@@ -49,50 +55,63 @@ export default function FAQSection() {
                               </div>
                               {/* <h1 className="text-3xl md:text-5xl font-fold title-font ">Asked Questions</h1> */}
                         </div>
-                        <Swiper
-                              slidesPerView={3}
-                              spaceBetween={30}
-                              freeMode={true}
-                              pagination={{
-                                    clickable: true,
-                              }}
-                              breakpoints={{
-                                    320: {
-                                          slidesPerView: 1,
-                                          spaceBetween: 20,
-                                    },
-                                    768: {
-                                          slidesPerView: 2,
-                                          spaceBetween: 30,
-                                    },
-                                    1024: {
-                                          slidesPerView: 3,
-                                          spaceBetween: 30,
-                                    },
-                              }}
-                              modules={[FreeMode, Pagination]}
-                              className="mySwiper"
-                        >
-                              {faqData.map((faq, index) => (
-                                    <SwiperSlide key={index}>
-                                          <div className="bg-white rounded-2xl p-8 shadow-sm h-full flex flex-col border-t-[5px] border-t-primary">
-                                                <div className="mb-6">
-                                                      <Image
-                                                            src={faq.icon}
-                                                            alt={faq.title}
-                                                            width={48}
-                                                            height={48}
-                                                            className="size-[70px] object-contain"
-                                                      />
+                        
+                        <div className="bg-white rounded-2xl p-8 shadow-sm w-[100%] md:max-w-[80%] mx-0 md:mx-auto h-full flex flex-col border-t-[5px] border-t-primary">
+                              <div className="mb-6">
+                                    <Image src={largeFAQ.icon} alt={largeFAQ.title} width={48} height={48} className="size-[70px] object-contain" />
+                              </div>
+                              <h3 className="text-2xl  font-medium mb-4">
+                                    {largeFAQ.title} <span className=""></span>
+                              </h3>
+                              <p className="text-gray-600 whitespace-pre-line flex-grow">{largeFAQ.description}</p>
+                        </div>
+
+                        <div className='w-[100%] md:max-w-[80%] h-full mx-auto mt-[30px]'>
+                              <Swiper
+                                    slidesPerView={2}
+                                    spaceBetween={30}
+                                    freeMode={true}
+                                    pagination={{
+                                          clickable: true,
+                                    }}
+                                    breakpoints={{
+                                          320: {
+                                                slidesPerView: 1,
+                                                spaceBetween: 20,
+                                          },
+                                          768: {
+                                                slidesPerView: 2,
+                                                spaceBetween: 30,
+                                          },
+                                          1024: {
+                                                slidesPerView: 2,
+                                                spaceBetween: 30,
+                                          },
+                                    }}
+                                    modules={[FreeMode, Pagination]}
+                                    className="mySwiper"
+                              >
+                                    {faqData.map((faq, index) => (
+                                          <SwiperSlide key={index}>
+                                                <div className="bg-white rounded-2xl p-8 shadow-sm h-full mx-auto flex flex-col border-t-[5px] border-t-primary">
+                                                      <div className="mb-6">
+                                                            <Image
+                                                                  src={faq.icon}
+                                                                  alt={faq.title}
+                                                                  width={48}
+                                                                  height={48}
+                                                                  className="size-[70px] object-contain"
+                                                            />
+                                                      </div>
+                                                      <h3 className="text-2xl  font-medium mb-4">
+                                                            {faq.title} <span className=""></span>
+                                                      </h3>
+                                                      <p className="text-gray-600 whitespace-pre-line flex-grow">{faq.description}</p>
                                                 </div>
-                                                <h3 className="text-2xl  font-medium mb-4">
-                                                      {faq.title} <span className=""></span>
-                                                </h3>
-                                                <p className="text-gray-600 whitespace-pre-line flex-grow">{faq.description}</p>
-                                          </div>
-                                    </SwiperSlide>
-                              ))}
-                        </Swiper>
+                                          </SwiperSlide>
+                                    ))}
+                              </Swiper>
+                        </div>
                   </div>
             </section>
       );

@@ -1,12 +1,13 @@
 'use client';
 import { useCreateClubMemberMutation } from '@/redux/features/member/memberApi';
 import { Button, DatePicker, Form, Input, Radio } from 'antd';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { toast } from 'react-toastify';
 import moment from 'moment';
 
 const MembershipForm: FC<{ clubId: string }> = ({ clubId }) => {
       const [createMembership, { isLoading }] = useCreateClubMemberMutation();
+      const [visitorCount, setVisitorCount] = useState(1);
       const [form] = Form.useForm();
 
       const onFinish = async (values: any) => {
@@ -49,7 +50,7 @@ const MembershipForm: FC<{ clubId: string }> = ({ clubId }) => {
                                     className="w-full"
                                     placeholder="Select a date"
                                     format="YYYY-MM-DD"
-                                     disabledDate={(current) => current && current < moment().startOf('day')}
+                                    disabledDate={(current) => current && current < moment().startOf('day')}
                               />
                         </Form.Item>
 
@@ -96,6 +97,10 @@ const MembershipForm: FC<{ clubId: string }> = ({ clubId }) => {
                                           justifyContent: 'center',
                                           borderRadius: 2,
                                     }}
+                                    onChange={(e) => {
+                                          const value = e.target.value === '5' ? 5 : Number(e.target.value);
+                                          setVisitorCount(value);
+                                    }}
                               >
                                     <Radio.Button value="1" style={{ height: 44, fontSize: 16, borderRadius: 2, paddingInline: 20 }}>
                                           1
@@ -115,13 +120,16 @@ const MembershipForm: FC<{ clubId: string }> = ({ clubId }) => {
                               </Radio.Group>
                         </Form.Item>
 
-                        <Form.Item
-                              label={<span className="text-white">Full Name</span>}
-                              name="name"
-                              rules={[{ required: true, message: 'Please enter your full name' }]}
-                        >
-                              <Input style={{ height: 48 }} placeholder="Enter your full Name" />
-                        </Form.Item>
+                        {Array.from({ length: visitorCount }).map((_, index) => (
+                              <Form.Item
+                                    key={index}
+                                    label={<span className="text-white">Member Name {index + 1}</span>}
+                                    name={['memberNames', index]}
+                                    rules={[{ required: true, message: `Please enter Member Name ${index + 1}` }]}
+                              >
+                                    <Input style={{ height: 48 }} placeholder={`Enter Member Name`} />
+                              </Form.Item>
+                        ))}
 
                         <Form.Item>
                               <Button
