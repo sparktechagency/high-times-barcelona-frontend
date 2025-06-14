@@ -5,6 +5,7 @@ import { BsClock, BsGeoAlt, BsStarFill } from 'react-icons/bs';
 const ClubRatingDetails = ({ club }: { club: TClub }) => {
       return (
             <div className="bg-[#f4fcf5] rounded-xl p-6 border-t-[5px] border-t-primary ">
+                  <p className='text-[18px] mb-2'>{club?.name}</p>
                   <div className="flex items-center gap-2 mb-4">
                         {/* <RiGoogleLine size={24} color="#FFC313" /> */}
                         <div className="flex items-center gap-2">

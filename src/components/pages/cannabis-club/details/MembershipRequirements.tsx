@@ -14,9 +14,9 @@ import { TClub } from '@/redux/features/club/clubApi';
 
 const MembershipRequirements: FC<{ club: TClub }> = ({ club }) => {
       return (
-            <div className="bg-white rounded-xl p-6 space-y-6">
+            <div className="bg-white rounded-xl py-6 space-y-6">
                   {/* Top Requirements */}
-                  <div className="flex items-center gap-4">
+                  <div className="flex flex-col lg:flex-row gap-4">
                         <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-full">
                               <span>
                                     <TiBusinessCard size={20} color="#009343" />
@@ -41,11 +41,13 @@ const MembershipRequirements: FC<{ club: TClub }> = ({ club }) => {
 
                   {/* Languages */}
                   <div className="space-y-2">
-                        <div className="flex items-center gap-2">
-                              <span>
-                                    <LanguagesIcon color="#009343" />
-                              </span>{' '}
-                              <span className="text-sm ">Languages Spoken:</span>
+                        <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
+                              <div className='flex  gap-2'>
+                                    <span>
+                                          <LanguagesIcon color="#009343" />
+                                    </span>{' '}
+                                    <span className="text-sm ">Languages Spoken:</span>
+                              </div>
                               <div className="flex items-center gap-2">
                                     <Image src={FlagIT} width={26} height={24} alt="Italian flag" />
                                     <Image src={FlagES} width={26} height={24} alt="Spanish flag" />
