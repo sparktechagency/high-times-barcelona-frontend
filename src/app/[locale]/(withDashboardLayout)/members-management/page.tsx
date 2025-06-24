@@ -56,17 +56,8 @@ const MemberManagement: React.FC = () => {
                   dataIndex: 'name',
                   key: 'name',
                   render: (_: any, record: any) => (
-                        <ul>
-                              { Array.isArray(record.name) && record?.name?.maps((name: string, index: number) => {
-                                    console.log(record?.name);
-                                    return (
-                                          <li key={index} className="text-base font-semibold">
-                                                {name}
-                                          </li>
-                                    );
-                              })}
-                        </ul>
-                  ),
+                        console.log(record)
+                  )
             },
             {
                   title: 'Email',
