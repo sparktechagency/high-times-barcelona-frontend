@@ -17,6 +17,8 @@ const MemberManagement: React.FC = () => {
             { name: 'limit', value: 8 },
       ]);
 
+
+      console.log(membersData)
       const handleDelete = async (id: string) => {
             try {
                   const res = await deleteMember(id).unwrap();
@@ -56,8 +58,17 @@ const MemberManagement: React.FC = () => {
                   dataIndex: 'name',
                   key: 'name',
                   render: (_: any, record: any) => (
-                        console.log(record)
-                  )
+                        <ul>
+                              { Array.isArray(record) && record?.map((name: string, index: number) => {
+                                    console.log(name);
+                                    return (
+                                          <li key={index} className="text-base font-semibold">
+                                                {name}
+                                          </li>
+                                    );
+                              })}
+                        </ul>
+                  ),
             },
             {
                   title: 'Email',
