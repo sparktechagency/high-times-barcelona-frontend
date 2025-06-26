@@ -9,7 +9,7 @@ const CannabisClubDetailsPage = ({ params }: { params: { id: string } }) => {
 
       return (
             <div>
-                  <PageHeader title="Mano Verde" />
+                  <PageHeader title={`${club?.name}`} />
                   <CannabisClubDetails club={club!} />
             </div>
       );
