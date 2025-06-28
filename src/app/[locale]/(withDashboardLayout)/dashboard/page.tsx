@@ -216,6 +216,7 @@ const ClubsManagement: React.FC = () => {
                   },
             },
       ];
+
       const body = (
             <Form
                   requiredMark={false}
@@ -227,15 +228,15 @@ const ClubsManagement: React.FC = () => {
                   <Title level={5}>Club Details</Title>
 
                   <Row gutter={[16, 16]}>
-                        <Col span={12}>
-                              <Form.Item name="image" rules={[{ required: true, message: 'Please upload an image' }]}>
-                                    <Upload maxCount={1} beforeUpload={() => false} accept="image/*" listType="picture" multiple={false}>
-                                          <Button>Upload Image</Button>
-                                    </Upload>
-                              </Form.Item>
+                        <Col span={12} className=''>
+                        <Form.Item name="image" rules={[{ required: true, message: 'Please upload an image' }]}>
+                              <Upload maxCount={1} beforeUpload={() => false} accept="image/*" listType="picture" multiple={false}>
+                                    <Button >Upload Image</Button>
+                              </Upload>
+                        </Form.Item>
                         </Col>
                         <Col span={12}>
-                              <Form.Item label="Rating" name="rating" rules={[{ required: true, message: 'Please enter the Club Rating' }]}>
+                              <Form.Item label="Rating" name="rating" rules={[{ required: true, message: 'Please enter the Rating' }]}>
                                     <Input />
                               </Form.Item>
                         </Col>
@@ -359,6 +360,7 @@ const ClubsManagement: React.FC = () => {
                   </Flex>
             </Form>
       );
+
       return (
             <div>
                   <Flex style={{ justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>

@@ -1,9 +1,16 @@
 import { TClub } from '@/redux/features/club/clubApi';
 import { getImageUrl } from '@/utils/getImageUrl';
+import dayjs from 'dayjs';
 import Image from 'next/image';
 import { BsClock, BsStarFill } from 'react-icons/bs';
 
 const ClubCard = ({ club, onClick }: { club: TClub; onClick?: () => void }) => {
+      const now = dayjs(); // Current time
+
+      const openingTime = dayjs(dayjs().format('YYYY-MM-DD') + ' ' + club.openingHour);
+      const closingTime = dayjs(dayjs().format('YYYY-MM-DD') + ' ' + club.closingHour);
+
+      const isValid = now.isAfter(openingTime) && now.isBefore(closingTime);
       return (
             <div className="relative w-full h-[200px] rounded-xl overflow-hidden cursor-pointer group" onClick={onClick}>
                   {/* Background Image with Gradient Overlay */}
@@ -31,10 +38,10 @@ const ClubCard = ({ club, onClick }: { club: TClub; onClick?: () => void }) => {
                               </div>
                               <div
                                     className={`px-3 py-1 rounded-full text-sm font-medium ${
-                                          club?.isOpen ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
+                                          isValid ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
                                     }`}
                               >
-                                    {club?.isOpen ? 'Open' : 'Closed'}
+                                    {isValid ? 'Open' : 'Closed'}
                               </div>
                         </div>
                   </div>
