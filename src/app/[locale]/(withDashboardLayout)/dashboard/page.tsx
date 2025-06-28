@@ -226,12 +226,19 @@ const ClubsManagement: React.FC = () => {
             >
                   <Title level={5}>Club Details</Title>
 
-                  <Row>
-                        <Form.Item name="image" rules={[{ required: true, message: 'Please upload an image' }]}>
-                              <Upload maxCount={1} beforeUpload={() => false} accept="image/*" listType="picture" multiple={false}>
-                                    <Button>Upload Image</Button>
-                              </Upload>
-                        </Form.Item>
+                  <Row gutter={[16, 16]}>
+                        <Col span={12}>
+                              <Form.Item name="image" rules={[{ required: true, message: 'Please upload an image' }]}>
+                                    <Upload maxCount={1} beforeUpload={() => false} accept="image/*" listType="picture" multiple={false}>
+                                          <Button>Upload Image</Button>
+                                    </Upload>
+                              </Form.Item>
+                        </Col>
+                        <Col span={12}>
+                              <Form.Item label="Rating" name="rating" rules={[{ required: true, message: 'Please enter the Club Rating' }]}>
+                                    <Input />
+                              </Form.Item>
+                        </Col>
                   </Row>
                   <Row gutter={[16, 16]}>
                         <Col span={12}>
